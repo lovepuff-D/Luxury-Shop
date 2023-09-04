@@ -1,0 +1,228 @@
+body {
+  display: flex;
+  flex-direction: column;
+  gap: mobile(80);
+  
+  @media screen and (min-width: $desktop_media) {
+    gap: tablet(120);
+  }
+  @media screen and (min-width: $desktop_media_static) {
+    gap: desktop(120);
+  }
+}
+
+.wrapper-highlight {
+  background: var(--light-gray);
+  padding: mobile(80) 0;
+  
+  .section-header__text {
+    color: var(--black);
+  }
+  
+  @media screen and (min-width: $desktop_media) {
+    padding: tablet(150) 0;
+  }
+  @media screen and (min-width: $desktop_media_static) {
+    padding: desktop(150) 0;
+  }
+}
+
+.container {
+  max-width: mobile(382);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  
+  @media screen and (min-width: $desktop_media) {
+    max-width: tablet(1368);
+  }
+  
+  @media screen and (min-width: $desktop_media_static) {
+    max-width: desktop(1368);
+  }
+}
+
+/*** Header ***/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: mobile(20) 0;
+  
+  svg {
+    width: mobile(24);
+    height: mobile(24);
+  }
+  
+  &__side {
+    display: flex;
+    align-items: center;
+    gap: mobile(16);
+  }
+  &__burger {}
+  &__search {
+    &--mobile {
+    }
+    &--desktop {
+      display: none;
+    }
+  }
+  
+  &__chat, &__phone-number {
+    display: none;
+  }
+  
+  &__logo {
+    svg {
+      width: mobile(136);
+      height: mobile(24.03);
+    }
+  }
+  
+  &__shopping-cart {
+    position: relative;
+    
+    & > div {
+      position: absolute;
+      top: mobile(10);
+      left: mobile(15);
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      width: mobile(16);
+      height: mobile(16);
+      padding: mobile(2.5) mobile(4.5);
+      
+      background: var(--main-red);
+      
+      border-width: mobile(2);
+      border-style: solid;
+      border-color: var(--white);
+      border-radius: 50%;
+  
+      text-align: center;
+      color: var(--white);
+      
+      font-family: Lato, "san-serif", "serif";
+      font-size: mobile(12);
+      line-height: mobile(10);
+      font-weight: 700;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop_media) {
+  .header {
+    padding: tablet(24) 0;
+    
+    svg {
+      width: tablet(24);
+      height: tablet(24);
+    }
+    
+    &__side {
+      display: flex;
+      gap: tablet(24);
+    }
+    &__burger {
+      display: none;
+    }
+    &__search {
+      &--mobile {
+        display: none;
+      }
+      &--desktop {
+        display: block;
+      }
+    }
+    
+    &__chat, &__phone-number {
+      display: flex;
+      gap: tablet(8);
+      align-items: center;
+      @include r-16-tb;
+      font-variant-numeric: lining-nums proportional-nums;
+    }
+    
+    &__logo {
+      svg {
+        width: tablet(180);
+        height: tablet(31.8);
+      }
+    }
+    
+    &__shopping-cart {
+      
+      & > div {
+        top: tablet(10);
+        left: tablet(15);
+        
+        width: auto;
+        height: auto;
+        padding: tablet(2.5) tablet(4.5);
+        
+        border-width: tablet(2);
+        font-size: tablet(12);
+        line-height: tablet(10);
+      }
+    }
+  }
+}
+@media screen and (min-width: $desktop_media_static) {
+  .header {
+    padding: desktop(24) 0;
+    
+    svg {
+      width: desktop(24);
+      height: desktop(24);
+    }
+    
+    &__side {
+      gap: desktop(24);
+    }
+    
+    &__chat, &__phone-number {
+      display: flex;
+      gap: desktop(8);
+      align-items: center;
+      @include r-16-dp;
+    }
+    
+    &__logo {
+      svg {
+        width: desktop(180);
+        height: desktop(31.8);
+      }
+    }
+    
+    &__shopping-cart {
+      & > div {
+        top: desktop(10);
+        left: desktop(15);
+        
+        width: auto;
+        height: auto;
+        padding: desktop(2.5) desktop(4.5);
+        
+        border-width: desktop(2);
+        font-size: desktop(12);
+        line-height: desktop(10);
+      }
+    }
+  }
+}
+
+/*** Footer ***/
+.footer-wrapper {}
+
+.footer {}
+
+@media screen and (min-width: $desktop_media) {
+
+}
+@media screen and (min-width: $desktop_media_static) {
+
+}
+/***/

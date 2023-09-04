@@ -1,0 +1,18 @@
+@use "sass:math";
+
+@function mobile($pxValue) {
+  @return #{calc($pxValue / $mobile)}rem;
+}
+@function tablet($pxValue) {
+  @return #{calc($pxValue / $desktop)}rem;
+}
+@function desktop($pxValue) {
+  @return #{$pxValue}px;
+}
+
+@function pxToRem($pxValue, $layout: $mobile) {
+  @if ($layout == $mobile) {
+    @return #{calc($pxValue / $mobile)}rem;
+  }
+  @return #{calc($pxValue / $desktop)}rem;
+}

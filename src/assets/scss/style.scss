@@ -1,0 +1,34 @@
+// Fonts
+@import "fonts";
+
+// Mixins & Variables
+@import "src/assets/scss/utils/variables";
+@import "src/assets/scss/utils/functions";
+@import "src/assets/scss/utils/mixins";
+
+// Base
+@import "src/assets/scss/base/reset";
+@import "src/assets/scss/base/base";
+@import "src/assets/scss/base/typography";
+@import "src/assets/scss/base/wysiwyg";
+
+// Animations
+@import "src/assets/scss/animations/easing";
+@import "src/assets/scss/animations/keyframe";
+
+// Components
+@import "src/assets/scss/components/accordion";
+@import "src/assets/scss/components/breadcrumbs";
+@import "src/assets/scss/components/dropdown";
+@import "src/assets/scss/components/button";
+@import "src/assets/scss/components/card";
+@import "src/assets/scss/components/input";
+@import "src/assets/scss/components/select";
+@import "src/assets/scss/components/form";
+@import "src/assets/scss/components/checkbox";
+@import "src/assets/scss/components/modal";
+@import "src/assets/scss/components/slider";
+@import "src/assets/scss/components/widgets";
+
+// Layout
+@import "src/assets/scss/layout/layout";

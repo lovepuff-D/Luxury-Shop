@@ -1,0 +1,63 @@
+/*button:focus {
+  outline: 1px solid var(--black);
+  border-radius: 2px;
+}*/
+
+.btn {
+  /*overflow: hidden;
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  border-width: mobile(1);
+  border-style: solid;
+  border-color: transparent;
+  border-radius: mobile(100);
+  
+  transition: all 300ms;
+  cursor: pointer;
+  
+  @include text-medium;
+  font-size: mobile(16);
+  line-height: mobile(24);*/
+}
+
+// Colors
+.btn--white-bg {
+  background-color: var(--white);
+  outline-color: var(--white);
+  color: var(--black);
+  
+  &:hover {
+    background-color: unset;
+    color: var(--white);
+  }
+}
+
+.btn--black-outline {
+  color: var(--black);
+  outline-color: var(--black);
+  
+  &:hover {
+    color: var(--white);
+    background: var(--black);
+  }
+}
+
+
+// Sizes
+.btn--m {
+  padding: mobile(10) mobile(24);
+}
+
+.btn--l {
+  padding: mobile(20) mobile(32);
+}
+
+@media screen and (min-width: $desktop_media) {
+}
+
+@media screen and (min-width: $desktop_media_static) {
+}

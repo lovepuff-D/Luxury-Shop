@@ -1,0 +1,43 @@
+// Hero
+.hero {
+  position: relative;
+  overflow: hidden;
+  /*padding: mobile(144) 0 mobile(80);*/
+  padding-bottom: mobile(80);
+  color: var(--white);
+  /*background: url("/src/assets/img/hero-bg.png");*/
+  background-size: cover;
+  border-end-start-radius: mobile(32);
+  border-end-end-radius: mobile(32);
+  
+  h1 {
+    @include seo-heading-1-mb;
+    margin-top: mobile(144);
+    margin-bottom: mobile(32);
+  }
+  
+  p {
+    @include text-medium;
+    font-size: mobile(18);
+    line-height: mobile(30);
+  }
+  
+  & + .workflow-wrapper {
+    .solution-item-side {
+      order: 0 !important;
+    }
+  }
+  
+  & + .solution {
+    .solution-item-side {
+      order: 1;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop_media) {
+}
+
+@media screen and (min-width: $desktop_media_static) {
+}
+// ---

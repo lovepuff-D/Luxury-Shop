@@ -1,0 +1,39 @@
+.search-input {
+  display: flex;
+  align-items: center;
+  
+  padding: mobile(4) 0 mobile(4) mobile(16);
+  
+  border-width: 0;
+  border-bottom-width: mobile(1);
+  border-style: solid;
+  border-color: var(--g-10);
+  
+  @include mobile-text;
+  
+  input {
+    &::placeholder {
+      color: var(--g-50);
+    }
+  }
+}
+
+@media screen and (min-width: $desktop_media) {
+  .search-input {
+    padding: tablet(4) 0 tablet(4) tablet(16);
+    
+    border-bottom-width: tablet(1);
+  
+    @include r-16-tb;
+  }
+}
+
+@media screen and (min-width: $desktop_media_static) {
+  .search-input {
+    padding: desktop(4) 0 desktop(4) desktop(16);
+    
+    border-bottom-width: desktop(1);
+  
+    @include r-16-dp;
+  }
+}

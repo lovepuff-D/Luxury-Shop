@@ -1,0 +1,159 @@
+/*
+.wysiwyg {
+  h1 {
+    margin-top: 64px;
+    margin-bottom: 32px;
+  }
+  h2,
+  h3 {
+    margin-top: 48px;
+    margin-bottom: 24px;
+  }
+  // Base
+  p + p,
+  ul + p,
+  ol + p {
+    margin-top: 16px;
+  }
+  p + ul,
+  ul + ol,
+  ol + ul {
+    margin-top: 24px;
+  }
+  a:not([class]) {
+    color: var(--primary-red);
+    text-decoration: underline;
+  }
+  ul:not([class]):not([vocab]) {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    li {
+      position: relative;
+      padding-left: 14px;
+      &::before {
+        content: "";
+        background-image: url("data:image/svg+xml,%3Csvg width='6' height='7' viewBox='0 0 6 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='3' cy='3.68457' r='3' fill='white'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        left: 0;
+        top: 9px;
+      }
+    }
+  }
+  ol:not([class]) {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    counter-reset: ol-counter;
+    list-style: none;
+    li {
+      position: relative;
+      padding-left: 22px;
+      counter-increment: ol-counter;
+      &::before {
+        content: counter(ol-counter) ".";
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+  // Pictures
+  .picture {
+    margin: 24px 0;
+    img {
+      max-width: 100%;
+    }
+  }
+  .picture-right,
+  .picture-left {
+    margin: 24px 0;
+    img {
+      margin: 0 auto;
+    }
+  }
+  // Table
+  .main-table {
+    margin: 24px 0;
+  }
+  // Other
+  .bonus-card-list,
+  .loyal-card-list,
+  .gm-providers-list {
+    margin-top: 24px;
+  }
+  .ins-block,
+  .game-card-grid {
+    margin-top: 32px;
+  }
+  .step-card-list {
+    margin-top: 48px;
+  }
+  .reviews {
+    margin-top: 32px;
+  }
+  .conclusion {
+    margin-top: 64px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .wysiwyg {
+    h1 {
+      margin-top: 80px;
+      margin-bottom: 40px;
+    }
+    h2 {
+      margin-top: 80px;
+      margin-bottom: 32px;
+    }
+    h3 {
+      margin-top: 48px;
+      margin-bottom: 24px;
+    }
+    // Base
+    p + p {
+      margin-top: 16px;
+    }
+    p + ul,
+    ul + ol,
+    ol + ul {
+      margin-top: 32px;
+    }
+    // Pictures
+    .picture {
+      margin: 40px 0;
+    }
+    .picture-right {
+      float: right;
+      margin: 0 0 0 32px;
+    }
+    .picture-left {
+      float: left;
+      margin: 0 32px 0 0;
+    }
+    // Table
+    .main-table {
+      margin: 32px 0;
+    }
+    // Other
+    .bonus-card-list {
+      margin-top: 32px;
+    }
+    .loyal-card-list {
+      margin-top: 32px;
+    }
+    .ins-block {
+      margin-top: 48px;
+    }
+    .step-card-list {
+      margin-top: 66px;
+    }
+    .conclusion {
+      margin-top: 80px;
+    }
+  }
+}
+*/

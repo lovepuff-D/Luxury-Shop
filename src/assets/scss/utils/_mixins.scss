@@ -1,0 +1,163 @@
+@mixin font-setting {
+  font-feature-settings: "clig" off, "liga" off;
+  font-style: normal;
+}
+
+@mixin text-light {
+  @include font-setting;
+  font-weight: 300;
+}
+
+@mixin text-regular {
+  @include font-setting;
+  font-weight: 400;
+}
+
+@mixin text-medium {
+  @include font-setting;
+  font-weight: 500;
+}
+
+@mixin text-semi-bold {
+  @include font-setting;
+  font-weight: 600;
+}
+
+@mixin text-bold {
+  @include font-setting;
+  font-weight: 700;
+}
+
+// Seo Headings
+@mixin seo-heading {
+  font-family: Iskry, "san-serif", "serif";
+}
+
+@mixin seo-heading-1-mb {
+  @include seo-heading;
+  @include text-regular;
+  font-size: mobile(38);
+  line-height: mobile(41.8);
+  letter-spacing: -2%;
+}
+
+@mixin seo-heading-1-tb {
+  @include text-regular;
+  @include seo-heading;
+  font-size: tablet(76);
+  line-height: tablet(82);
+}
+
+@mixin seo-heading-1-dp {
+  @include text-regular;
+  @include seo-heading;
+  font-size: desktop(76);
+  line-height: desktop(82);
+}
+
+@mixin seo-heading-2-mb {
+  @include text-regular;
+  @include seo-heading;
+  font-size: mobile(32);
+  line-height: mobile(35.2);
+  letter-spacing: -2%;
+}
+
+@mixin seo-heading-2-tb {
+  @include text-regular;
+  @include seo-heading;
+  font-size: tablet(48);
+  line-height: tablet(62);
+}
+
+@mixin seo-heading-2-dp {
+  @include text-regular;
+  @include seo-heading;
+  font-size: desktop(48);
+  line-height: desktop(62);
+}
+
+@mixin seo-heading-3-mb {
+  @include text-regular;
+  @include seo-heading;
+  font-size: mobile(26);
+  line-height: mobile(28.6);
+  letter-spacing: -2%;
+}
+
+@mixin seo-heading-3-tb {
+  @include text-regular;
+  @include seo-heading;
+  font-size: tablet(36);
+  line-height: tablet(48);
+}
+
+@mixin seo-heading-3-dp {
+  @include text-regular;
+  @include seo-heading;
+  font-size: desktop(36);
+  line-height: desktop(48);
+}
+
+// Headings
+@mixin heading-56-mb {
+  font-size: mobile(56);
+  line-height: mobile(72);
+  @include text-medium;
+}
+
+@mixin heading-56-tb {
+  font-size: tablet(56);
+  line-height: tablet(72);
+  @include text-medium;
+}
+
+@mixin heading-56-dp {
+  font-size: desktop(56);
+  line-height: desktop(72);
+  @include text-medium;
+}
+
+
+@mixin mobile-text {
+  @include text-regular;
+  font-size: mobile(16);
+  line-height: mobile(20.8);
+  letter-spacing: -2%;
+}
+
+@mixin r-16-mb {
+  @include text-regular;
+  font-size: mobile(16);
+  line-height: mobile(24);
+}
+
+@mixin r-16-tb {
+  @include text-regular;
+  font-size: tablet(16);
+  line-height: tablet(24);
+}
+
+@mixin r-16-dp {
+  @include text-regular;
+  font-size: desktop(16);
+  line-height: desktop(24);
+}
+
+@mixin r-18-mb {
+  @include text-regular;
+  font-size: mobile(18);
+  line-height: mobile(28);
+}
+
+@mixin r-18-tb {
+  @include text-regular;
+  font-size: tablet(18);
+  line-height: tablet(28);
+}
+
+@mixin r-18-dp {
+  @include text-regular;
+  font-size: desktop(18);
+  line-height: desktop(28);
+}
