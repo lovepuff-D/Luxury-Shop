@@ -1,3 +1,43 @@
+// Menu
+
+.menu-wrapper {
+  background: #F7F7F7;
+}
+
+.menu-desktop {
+  display: none;
+}
+
+@media screen and (min-width: $desktop_media) {
+  .menu-desktop {
+    display: flex;
+    justify-content: center;
+    padding: tablet(16) 0;
+    
+    ul {
+      display: flex;
+      gap: tablet(32);
+      
+      a {
+        @include r-16-tb;
+      }
+    }
+  }
+}
+@media screen and (min-width: $desktop_media_static) {
+  .menu-desktop {
+    padding: desktop(16) 0;
+    
+    ul {
+      gap: desktop(32);
+      
+      a {
+        @include r-16-dp;
+      }
+    }
+  }
+}
+
 // Hero
 .hero {
   position: relative;
