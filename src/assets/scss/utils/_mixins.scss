@@ -132,6 +132,24 @@
   letter-spacing: -2%;
 }
 
+@mixin r-14-mb {
+  @include text-regular;
+  font-size: mobile(14);
+  line-height: mobile(20);
+}
+
+@mixin r-14-tb {
+  @include text-regular;
+  font-size: tablet(14);
+  line-height: tablet(20);
+}
+
+@mixin r-14-dp {
+  @include text-regular;
+  font-size: desktop(14);
+  line-height: desktop(20);
+}
+
 @mixin r-16-mb {
   @include text-regular;
   font-size: mobile(16);
@@ -219,6 +237,24 @@
   @include text-regular;
   font-size: desktop(28);
   line-height: desktop(38);
+}
+
+@mixin m-18-mb {
+  @include text-medium;
+  font-size: mobile(18);
+  line-height: mobile(28);
+}
+
+@mixin m-18-tb {
+  @include text-medium;
+  font-size: tablet(18);
+  line-height: tablet(28);
+}
+
+@mixin m-18-dp {
+  @include text-medium;
+  font-size: desktop(18);
+  line-height: desktop(28);
 }
 
 @mixin m-20-mb {

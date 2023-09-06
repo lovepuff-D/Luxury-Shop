@@ -425,44 +425,8 @@
   gap: mobile(24);
   
   &__img {
-	width: tablet(940);
-	
 	img {
 	  margin-bottom: mobile(16);
-	}
-  }
-  &__contacts {
-	display: flex;
-	flex-direction: column;
-	gap: mobile(24);
-	
-	& > div {
-	  display: flex;
-	  flex-direction: column;
-	  gap: mobile(12);
-	  
-	  p {
-		@include text-semi-bold;
-		font-size: mobile(18);
-		line-height: mobile(23.4);
-		letter-spacing: -2%;
-		color: var(--g-40);
-	  }
-	  
-	  a {
-		display: flex;
-		align-items: center;
-		gap: mobile(8);
-		
-		@include text-medium;
-		font-size: mobile(16);
-		line-height: mobile(24);
-		
-		svg {
-		  width: mobile(24);
-		  height: mobile(24);
-		}
-	  }
 	}
   }
 }
@@ -475,31 +439,14 @@
 	
 	&__img {
 	  flex-shrink: 0;
+	  width: tablet(940);
 	  
 	  img {
 		margin-bottom: tablet(16);
 	  }
-	}
-	&__contacts {
-	  gap: tablet(24);
 	  
-	  & > div {
-		gap: tablet(12);
-		
-		p {
-		  @include m-20-tb;
-		  letter-spacing: initial;
-		}
-		
-		a {
-		  gap: tablet(8);
-		  @include r-20-tb;
-		  
-		  svg {
-			width: tablet(24);
-			height: tablet(24);
-		  }
-		}
+	  p {
+		@include r-16-tb;
 	  }
 	}
   }
@@ -515,26 +462,9 @@
 	  img {
 		margin-bottom: desktop(16);
 	  }
-	}
-	&__contacts {
-	  gap: desktop(24);
 	  
-	  & > div {
-		gap: desktop(12);
-		
-		p {
-		  @include m-20-dp;
-		}
-		
-		a {
-		  gap: desktop(8);
-		  @include r-20-dp;
-		  
-		  svg {
-			width: desktop(24);
-			height: desktop(24);
-		  }
-		}
+	  p {
+		@include r-16-dp;
 	  }
 	}
   }

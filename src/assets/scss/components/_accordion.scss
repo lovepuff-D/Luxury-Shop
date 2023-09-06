@@ -16,21 +16,36 @@
 	justify-content: space-between;
 	align-items: center;
 	cursor: pointer;
+	gap: mobile(20);
   }
   
   &__title {
-	@include mobile-h3;
+	@include text-semi-bold;
+	font-size: mobile(18);
+	line-height: mobile(24);
+	letter-spacing: mobile(0.5);
   }
   
   &__icon {
 	svg, g {
 	  transition: all 300ms;
 	}
+	
+	svg {
+	  width: mobile(24);
+	  height: mobile(24);
+	}
   }
   
   &__content {
 	display: none;
 	margin-top: mobile(24);
+  }
+}
+
+.accordion--extra-header {
+  .accordion__title {
+	@include mobile-h3;
   }
 }
 
@@ -41,6 +56,10 @@
 	  
 	  g {
 		opacity: 1;
+		
+		path:nth-child(2) {
+		  display: none;
+		}
 	  }
 	}
   }
@@ -52,6 +71,10 @@
 
 @media screen and (min-width: $desktop_media) {
   .accordion {
+	&__header {
+	  gap: tablet(20);
+	}
+	
 	&__item {
 	  border-width: tablet(1);
 	  
@@ -66,8 +89,15 @@
 	
 	&__title {
 	  @include text-semi-bold;
-	  font-size: tablet(32);
-	  line-height: tablet(38.4);
+	  font-size: tablet(30) !important;
+	  line-height: tablet(36) !important;
+	}
+ 
+	&__icon {
+	  svg {
+		width: tablet(24);
+		height: tablet(24);
+	  }
 	}
 	
 	&__content {
@@ -78,6 +108,10 @@
 
 @media screen and (min-width: $desktop_media_static) {
   .accordion {
+	&__header {
+	  gap: desktop(20);
+	}
+	
 	&__item {
 	  border-width: desktop(1);
 	  
@@ -91,8 +125,15 @@
 	}
 	
 	&__title {
-	  font-size: desktop(32);
-	  line-height: desktop(38.4);
+	  font-size: desktop(30) !important;
+	  line-height: desktop(36) !important;
+	}
+ 
+	&__icon {
+	  svg {
+		width: desktop(24);
+		height: desktop(24);
+	  }
 	}
 	
 	&__content {

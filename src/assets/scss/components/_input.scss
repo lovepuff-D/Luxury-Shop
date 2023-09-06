@@ -37,3 +37,34 @@
     @include r-16-dp;
   }
 }
+
+.main-input {
+  width: 100%;
+  padding: mobile(16);
+  border-bottom: mobile(1) solid var(--g-10);
+  
+  @include r-16-mb;
+  color: var(--black);
+  
+  &::placeholder {
+    color: var(--g-50);
+  }
+}
+
+@media screen and (min-width: $desktop_media) {
+  .main-input {
+    width: auto;
+    padding: tablet(16);
+    border-bottom-width: tablet(1);
+    
+    @include r-16-tb;
+  }
+}
+@media screen and (min-width: $desktop_media_static) {
+  .main-input {
+    padding: desktop(16);
+    border-bottom-width: desktop(1);
+    
+    @include r-16-dp;
+  }
+}
