@@ -24,36 +24,110 @@
   line-height: mobile(24);*/
 }
 
-// Colors
-.btn--white-bg {
-  background-color: var(--white);
-  outline-color: var(--white);
-  color: var(--black);
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: mobile(8);
   
-  &:hover {
-    background-color: unset;
-    color: var(--white);
+  @include text-medium;
+  font-size: mobile(18);
+  line-height: mobile(19.8);
+  text-transform: uppercase;
+  transition: all 300ms;
+  
+  @media screen and (min-width: $desktop_media) {
+	gap: tablet(8);
+	font-size: tablet(18);
+	line-height: tablet(19.8);
+  }
+  @media screen and (min-width: $desktop_media_static) {
+	gap: desktop(8);
+	font-size: desktop(18);
+	line-height: desktop(19.8);
   }
 }
 
-.btn--black-outline {
-  color: var(--black);
-  outline-color: var(--black);
+.btn-xs {
+  font-size: mobile(14);
+  line-height: mobile(15.4);
   
-  &:hover {
-    color: var(--white);
-    background: var(--black);
+  @media screen and (min-width: $desktop_media) {
+	font-size: tablet(14);
+	line-height: tablet(15.4);
+  }
+  @media screen and (min-width: $desktop_media_static) {
+	font-size: desktop(14);
+	line-height: desktop(15.4);
   }
 }
 
-
-// Sizes
-.btn--m {
-  padding: mobile(10) mobile(24);
+.btn-link {
+  width: max-content;
+  border-width: 0;
+  border-style: solid;
+  border-bottom-width: mobile(1);
+  
+  svg {
+	width: mobile(24);
+	height: mobile(24);
+  }
+  
+  &--white {
+	color: var(--white);
+	border-color: var(--white);
+  }
+  
+  &--black {
+	color: var(--black);
+	border-color: var(--black);
+  }
+  
+  @media screen and (min-width: $desktop_media) {
+	border-bottom-width: tablet(1);
+	
+	svg {
+	  width: tablet(24);
+	  height: tablet(24);
+	}
+  }
+  
+  @media screen and (min-width: $desktop_media_static) {
+	border-bottom-width: desktop(1);
+	
+	svg {
+	  width: desktop(24);
+	  height: desktop(24);
+	}
+  }
 }
 
-.btn--l {
-  padding: mobile(20) mobile(32);
+.btn-flat {
+  border-width: mobile(1);
+  border-style: solid;
+  
+  padding: mobile(18) mobile(32);
+  
+  &--main {
+	border-color: var(--gold);
+	background: var(--gold);
+	color: var(--white);
+  }
+  
+  &--outline {
+	border-color: var(--gold);
+	color:var(--gold);
+	background: var(--white);
+  }
+  
+  @media screen and (min-width: $desktop_media) {
+	border-width: tablet(1);
+	padding: tablet(18) tablet(32);
+  }
+  @media screen and (min-width: $desktop_media_static) {
+	border-width: desktop(1);
+	padding: desktop(18) desktop(32);
+  }
 }
 
 @media screen and (min-width: $desktop_media) {

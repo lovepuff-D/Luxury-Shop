@@ -1,4 +1,4 @@
-body, main {
+main {
   display: flex;
   flex-direction: column;
   gap: mobile(80);
@@ -12,18 +12,14 @@ body, main {
 }
 
 .wrapper-highlight {
-  background: var(--light-gray);
+  background: var(--grey);
   padding: mobile(80) 0;
   
-  .section-header__text {
-    color: var(--black);
-  }
-  
   @media screen and (min-width: $desktop_media) {
-    padding: tablet(150) 0;
+    padding: tablet(120) 0;
   }
   @media screen and (min-width: $desktop_media_static) {
-    padding: desktop(150) 0;
+    padding: desktop(120) 0;
   }
 }
 
@@ -143,7 +139,6 @@ body, main {
       gap: tablet(8);
       align-items: center;
       @include r-16-tb;
-      font-variant-numeric: lining-nums proportional-nums;
     }
     
     &__logo {
@@ -210,6 +205,42 @@ body, main {
         font-size: desktop(12);
         line-height: desktop(10);
       }
+    }
+  }
+}
+
+// Section-Header
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  
+  & > div:nth-child(2) {
+    display: none;
+  }
+  
+  & + * {
+    margin-top: mobile(32);
+  }
+}
+
+@media screen and (min-width: $desktop_media) {
+  .section-header {
+    align-items: center;
+    
+    & > div:nth-child(2) {
+      display: block;
+    }
+    
+    & + * {
+      margin-top: tablet(64);
+    }
+  }
+}
+@media screen and (min-width: $desktop_media_static) {
+  .section-header {
+    & + * {
+      margin-top: desktop(64);
     }
   }
 }

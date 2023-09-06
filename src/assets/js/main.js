@@ -1,10 +1,11 @@
+import "./modules/accordion.js";
+
 /* import "./modules/teleport.js";
 import "./modules/marquee.js";
 import "./modules/togglers.js";
 import "./modules/form.js";
 import "./modules/video.js";
 import "./modules/timeSlider.js";
-import "./modules/accordion.js";
 
 import "./modules/slider.js"; */
 

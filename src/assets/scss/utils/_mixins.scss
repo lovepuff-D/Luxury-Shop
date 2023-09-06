@@ -99,6 +99,12 @@
   line-height: desktop(48);
 }
 
+@mixin mobile-h3 {
+  @include text-semi-bold;
+  font-size: mobile(24);
+  line-height: desktop(28.8);
+}
+
 // Headings
 @mixin heading-56-mb {
   font-size: mobile(56);
@@ -160,4 +166,75 @@
   @include text-regular;
   font-size: desktop(18);
   line-height: desktop(28);
+}
+
+@mixin r-20-mb {
+  @include text-regular;
+  font-size: mobile(20);
+  line-height: mobile(30);
+}
+
+@mixin r-20-tb {
+  @include text-regular;
+  font-size: tablet(20);
+  line-height: tablet(30);
+}
+
+@mixin r-20-dp {
+  @include text-regular;
+  font-size: desktop(20);
+  line-height: desktop(30);
+}
+
+@mixin r-24-mb {
+  @include text-regular;
+  font-size: mobile(24);
+  line-height: mobile(36);
+}
+
+@mixin r-24-tb {
+  @include text-regular;
+  font-size: tablet(24);
+  line-height: tablet(36);
+}
+
+@mixin r-24-dp {
+  @include text-regular;
+  font-size: desktop(24);
+  line-height: desktop(36);
+}
+@mixin r-28-mb {
+  @include text-regular;
+  font-size: mobile(28);
+  line-height: mobile(38);
+}
+
+@mixin r-28-tb {
+  @include text-regular;
+  font-size: tablet(28);
+  line-height: tablet(38);
+}
+
+@mixin r-28-dp {
+  @include text-regular;
+  font-size: desktop(28);
+  line-height: desktop(38);
+}
+
+@mixin m-20-mb {
+  @include text-medium;
+  font-size: mobile(20);
+  line-height: mobile(30);
+}
+
+@mixin m-20-tb {
+  @include text-medium;
+  font-size: tablet(20);
+  line-height: tablet(30);
+}
+
+@mixin m-20-dp {
+  @include text-medium;
+  font-size: desktop(20);
+  line-height: desktop(30);
 }

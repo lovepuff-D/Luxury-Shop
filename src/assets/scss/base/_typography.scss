@@ -1,41 +1,65 @@
 h1 {
   @include seo-heading-1-mb;
 }
+
+h1 + p {
+  margin-top: mobile(24);
+}
+
 h2 {
   @include seo-heading-2-mb;
 }
+
+h2 + p, h3 + p {
+  margin-top: mobile(12);
+}
+
 h3 {
   @include seo-heading-3-mb;
 }
+
 p {
   @include mobile-text;
 }
 
 @media screen and (min-width: $desktop_media) {
   h1 {
-    @include seo-heading-1-tb;
+	@include seo-heading-1-tb;
+  }
+  h1 + p {
+	margin-top: tablet(16);
   }
   h2 {
-    @include seo-heading-2-tb;
+	@include seo-heading-2-tb;
+  }
+  h2 + p, h3 + p {
+	margin-top: tablet(8);
   }
   h3 {
-    @include seo-heading-3-tb;
+	@include seo-heading-3-tb;
   }
   p {
-  @include r-18-tb;
+	@include r-18-tb;
+  }
 }
-}
+
 @media screen and (min-width: $desktop_media_static) {
   h1 {
-    @include seo-heading-1-dp;
+	@include seo-heading-1-dp;
+  }
+  h1 + p {
+	margin-top: desktop(16);
   }
   h2 {
-    @include seo-heading-2-dp;
+	@include seo-heading-2-dp;
+  }
+  h2 + p, h3 + p {
+	margin-top: desktop(8);
   }
   h3 {
-    @include seo-heading-3-dp;
+	@include seo-heading-3-dp;
   }
   p {
-  @include r-18-dp;
-}
+	@include r-18-dp;
+  }
 }

@@ -1,7 +1,12 @@
 <extends src="layouts/main.html">
     <block name="body">
         <include src="components/layout/header.html"></include>
-        <main></main>
+        <include src="components/widget/hero.html"></include>
+        <main>
+            <include src="components/widget/product-list.html"></include>
+            <include src="components/widget/product-slider.html"></include>
+            <include src="components/widget/addresses.html"></include>
+        </main>
         <!--<include src="components/footer.html"></include>-->
     </block>
 </extends>

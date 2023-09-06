@@ -1,0 +1,541 @@
+// Product-card
+
+.product-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: mobile(24);
+  grid-column-gap: mobile(16);
+}
+
+.product-slider {
+  display: flex;
+  flex-wrap: nowrap;
+  
+  & > div {
+	&:not(:last-child) {
+	  margin-right: mobile(16);
+	}
+  }
+}
+
+.product-list + .btn, .product-slider + .btn {
+  width: 100%;
+  margin-top: mobile(32);
+}
+
+@media screen and (min-width: $desktop_media) {
+  .product-list {
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-row-gap: tablet(48);
+	grid-column-gap: tablet(24);
+  }
+  
+  .product-slider {
+	& > div {
+	  &:not(:last-child) {
+		margin-right: tablet(24);
+	  }
+	}
+  }
+  
+  .product-list + .btn, .product-slider + .btn {
+	display: none;
+  }
+}
+
+@media screen and (min-width: $desktop_media_static) {
+  .product-list {
+	grid-row-gap: desktop(48);
+	grid-column-gap: desktop(24);
+  }
+  
+  .product-slider {
+	& > div {
+	  &:not(:last-child) {
+		margin-right: desktop(24);
+	  }
+	}
+  }
+}
+
+.product-card {
+  &__img {
+	img {
+	  width: 100%;
+	  object-fit: cover;
+	}
+  }
+  
+  &__cost {
+	display: flex;
+	align-items: center;
+	
+	div {
+	  @include text-medium;
+	}
+	
+	div:nth-child(1) {
+	}
+	
+	div:nth-child(2) {
+	  text-decoration: line-through;
+	  color: var(--g-50);
+	}
+  }
+  
+  &__action {
+	display: flex;
+	justify-content: space-between;
+  }
+  
+  &__like {
+	svg {
+	  width: mobile(24);
+	  height: mobile(24);
+	}
+  }
+  
+  &__like--active {
+	svg path {
+	  fill: var(--main-red);
+	  stroke: var(--main-red);
+	}
+  }
+}
+
+.product-card--simplified {
+  .product-card {
+	&__img {
+	  margin-bottom: mobile(6);
+	}
+	
+	&__name {
+	  margin-bottom: mobile(4);
+	}
+	
+	&__cost {
+	  gap: mobile(12);
+	  margin-bottom: mobile(8);
+	  
+	  div:nth-child(1) {
+		font-size: mobile(18);
+		line-height: mobile(21.6);
+	  }
+	  
+	  div:nth-child(2) {
+		font-size: mobile(14);
+		line-height: mobile(16.8);
+	  }
+	}
+	
+	&__action {
+	  .btn {
+		font-size: mobile(14);
+		line-height: mobile(15.4);
+	  }
+	}
+  }
+}
+
+.product-card--extended {
+  min-width: mobile(250);
+  background: var(--grey);
+  padding-bottom: mobile(16);
+  
+  & > div:not(.product-card__img) {
+	padding: 0 mobile(12);
+  }
+  
+  .product-card {
+	&__production {
+	  display: flex;
+	  align-items: center;
+	  gap: mobile(8);
+	  padding: mobile(12) !important;
+	}
+	
+	&__company-logo {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  
+	  width: mobile(40);
+	  height: mobile(40);
+	  padding: mobile(4);
+	  
+	  background: var(--white);
+	  
+	  border-width: mobile(1);
+	  border-style: solid;
+	  border-color: var(--g-10);
+	  border-radius: 50%;
+	}
+	
+	&__company-name {
+	  @include text-medium;
+	  font-size: mobile(14);
+	  line-height: mobile(16.8);
+	}
+	
+	&__img {
+	  margin-bottom: mobile(16);
+	}
+	
+	&__name {
+	  margin-bottom: mobile(12);
+	  font-size: mobile(18);
+	  line-height: mobile(19.8);
+	}
+	
+	&__cost {
+	  gap: mobile(12);
+	  margin-bottom: mobile(24);
+	  
+	  div:nth-child(1) {
+		font-size: mobile(22);
+		line-height: mobile(24.2);
+	  }
+	  
+	  div:nth-child(2) {
+		font-size: mobile(14);
+		line-height: mobile(16.8);
+	  }
+	}
+	
+	/*&__action {
+	  .btn {
+		font-size: mobile(14);
+		line-height: mobile(15.4);
+	  }
+	}*/
+  }
+}
+
+@media screen and (min-width: $desktop_media) {
+  .product-card {
+	&__like {
+	  svg {
+		width: tablet(24);
+		height: tablet(24);
+	  }
+	}
+  }
+  
+  .product-card--simplified {
+	.product-card {
+	  &__img {
+		margin-bottom: tablet(12);
+	  }
+	  
+	  &__name {
+		margin-bottom: tablet(4);
+	  }
+	  
+	  &__cost {
+		gap: tablet(12);
+		margin-bottom: tablet(8);
+		
+		div:nth-child(1) {
+		  @include r-20-tb;
+		}
+		
+		div:nth-child(2) {
+		  font-size: tablet(16);
+		  line-height: tablet(24);
+		}
+	  }
+	  
+	  &__action {
+		.btn {
+		  font-size: tablet(14);
+		  line-height: tablet(15.4);
+		}
+	  }
+	}
+  }
+  
+  .product-card--extended {
+	min-width: tablet(432);
+	padding-bottom: tablet(16);
+	
+	& > div:not(.product-card__img) {
+	  padding: 0 tablet(16);
+	}
+	
+	.product-card {
+	  &__production {
+		gap: tablet(8);
+		padding: tablet(16) !important;
+	  }
+	  
+	  &__company-logo {
+		width: tablet(40);
+		height: tablet(40);
+		padding: tablet(4);
+		
+		border-width: tablet(1);
+	  }
+	  
+	  &__company-name {
+		font-size: tablet(14);
+		line-height: tablet(16.8);
+	  }
+	  
+	  &__img {
+		margin-bottom: tablet(16);
+	  }
+	  
+	  &__name {
+		margin-bottom: tablet(12);
+		@include r-24-tb;
+	  }
+	  
+	  &__cost {
+		gap: tablet(12);
+		margin-bottom: tablet(24);
+		
+		div:nth-child(1) {
+		  @include r-28-tb
+		}
+		
+		div:nth-child(2) {
+		  font-size: tablet(16);
+		  line-height: tablet(24);
+		}
+	  }
+	  
+	  /*&__action {
+		.btn {
+		  font-size: mobile(14);
+		  line-height: mobile(15.4);
+		}
+	  }*/
+	}
+  }
+}
+
+@media screen and (min-width: $desktop_media_static) {
+  .product-card {
+	&__like {
+	  svg {
+		width: desktop(24);
+		height: desktop(24);
+	  }
+	}
+  }
+  
+  .product-card--simplified {
+	.product-card {
+	  &__img {
+		margin-bottom: desktop(12);
+	  }
+	  
+	  &__name {
+		margin-bottom: desktop(4);
+	  }
+	  
+	  &__cost {
+		gap: desktop(12);
+		margin-bottom: desktop(8);
+		
+		div:nth-child(1) {
+		  @include r-20-dp;
+		}
+		
+		div:nth-child(2) {
+		  font-size: desktop(16);
+		  line-height: desktop(24);
+		}
+	  }
+	  
+	  &__action {
+		.btn {
+		  font-size: desktop(14);
+		  line-height: desktop(15.4);
+		}
+	  }
+	}
+  }
+  
+  .product-card--extended {
+	min-width: desktop(432);
+	padding-bottom: desktop(16);
+	
+	& > div:not(.product-card__img) {
+	  padding: 0 desktop(16);
+	}
+	
+	.product-card {
+	  &__production {
+		gap: desktop(8);
+		padding: desktop(16) !important;
+	  }
+	  
+	  &__company-logo {
+		width: desktop(40);
+		height: desktop(40);
+		padding: desktop(4);
+		
+		border-width: desktop(1);
+	  }
+	  
+	  &__company-name {
+		font-size: desktop(14);
+		line-height: desktop(16.8);
+	  }
+	  
+	  &__img {
+		margin-bottom: desktop(16);
+	  }
+	  
+	  &__name {
+		margin-bottom: desktop(12);
+		@include r-24-dp;
+	  }
+	  
+	  &__cost {
+		gap: desktop(12);
+		margin-bottom: desktop(24);
+		
+		div:nth-child(1) {
+		  @include r-28-dp
+		}
+		
+		div:nth-child(2) {
+		  font-size: desktop(16);
+		  line-height: desktop(24);
+		}
+	  }
+	  
+	  /*&__action {
+		.btn {
+		  font-size: mobile(14);
+		  line-height: mobile(15.4);
+		}
+	  }*/
+	}
+  }
+}
+
+// Address Card
+
+.address-card {
+  display: flex;
+  flex-direction: column;
+  gap: mobile(24);
+  
+  &__img {
+	width: tablet(940);
+	
+	img {
+	  margin-bottom: mobile(16);
+	}
+  }
+  &__contacts {
+	display: flex;
+	flex-direction: column;
+	gap: mobile(24);
+	
+	& > div {
+	  display: flex;
+	  flex-direction: column;
+	  gap: mobile(12);
+	  
+	  p {
+		@include text-semi-bold;
+		font-size: mobile(18);
+		line-height: mobile(23.4);
+		letter-spacing: -2%;
+		color: var(--g-40);
+	  }
+	  
+	  a {
+		display: flex;
+		align-items: center;
+		gap: mobile(8);
+		
+		@include text-medium;
+		font-size: mobile(16);
+		line-height: mobile(24);
+		
+		svg {
+		  width: mobile(24);
+		  height: mobile(24);
+		}
+	  }
+	}
+  }
+}
+
+@media screen and (min-width: $desktop_media) {
+  .address-card {
+	display: flex;
+	flex-direction: row;
+	gap: tablet(44);
+	
+	&__img {
+	  flex-shrink: 0;
+	  
+	  img {
+		margin-bottom: tablet(16);
+	  }
+	}
+	&__contacts {
+	  gap: tablet(24);
+	  
+	  & > div {
+		gap: tablet(12);
+		
+		p {
+		  @include m-20-tb;
+		  letter-spacing: initial;
+		}
+		
+		a {
+		  gap: tablet(8);
+		  @include r-20-tb;
+		  
+		  svg {
+			width: tablet(24);
+			height: tablet(24);
+		  }
+		}
+	  }
+	}
+  }
+}
+
+@media screen and (min-width: $desktop_media_static) {
+  .address-card {
+	gap: desktop(44);
+	
+	&__img {
+	  width: desktop(940);
+	  
+	  img {
+		margin-bottom: desktop(16);
+	  }
+	}
+	&__contacts {
+	  gap: desktop(24);
+	  
+	  & > div {
+		gap: desktop(12);
+		
+		p {
+		  @include m-20-dp;
+		}
+		
+		a {
+		  gap: desktop(8);
+		  @include r-20-dp;
+		  
+		  svg {
+			width: desktop(24);
+			height: desktop(24);
+		  }
+		}
+	  }
+	}
+  }
+}
