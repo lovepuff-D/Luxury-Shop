@@ -2,13 +2,7 @@
   &__item {
 	border-bottom: mobile(1) solid var(--g-10);
 	
-	&:first-child {
-	  padding-bottom: mobile(20);
-	}
-	
-	&:not(:first-child) {
-	  padding: mobile(20) 0;
-	}
+	padding: mobile(20) 0;
   }
   
   &__header {
@@ -27,6 +21,8 @@
   }
   
   &__icon {
+	transition: all 300ms;
+	
 	svg, g {
 	  transition: all 300ms;
 	}
@@ -43,15 +39,55 @@
   }
 }
 
-.accordion--extra-header {
+.accordion--xl-header {
   .accordion__title {
 	@include mobile-h3;
+  }
+}
+
+.accordion--xs {
+  .accordion__item {
+	padding: mobile(16) 0;
+  }
+  
+  .accordion__title {
+	@include text-medium;
+	font-size: mobile(18);
+	line-height: mobile(23.4);
+	letter-spacing: mobile(-0.36);
+  }
+}
+
+@media screen and (min-width: $desktop_media) {
+  .accordion--xs {
+	.accordion__item {
+	  padding: tablet(16) 0;
+	}
+	
+	.accordion__title {
+	  @include m-18-tb;
+	  letter-spacing: normal;
+	}
+  }
+}
+
+@media screen and (min-width: $desktop_media_static) {
+  .accordion--xs {
+	.accordion__item {
+	  
+	  padding: desktop(16) 0;
+	}
+	
+	.accordion__title {
+	  @include m-18-dp;
+	}
   }
 }
 
 .accordion__item--active {
   .accordion__icon {
 	svg {
+	  opacity: 0.3;
 	  transform: rotate(180deg);
 	  
 	  g {
@@ -78,13 +114,7 @@
 	&__item {
 	  border-width: tablet(1);
 	  
-	  &:first-child {
-		padding-bottom: tablet(32);
-	  }
-	  
-	  &:not(:first-child) {
-		padding: tablet(32) 0;
-	  }
+	  padding: tablet(32) 0;
 	}
 	
 	&__title {
@@ -92,7 +122,7 @@
 	  font-size: tablet(30) !important;
 	  line-height: tablet(36) !important;
 	}
- 
+	
 	&__icon {
 	  svg {
 		width: tablet(24);
@@ -115,20 +145,14 @@
 	&__item {
 	  border-width: desktop(1);
 	  
-	  &:first-child {
-		padding-bottom: desktop(32);
-	  }
-	  
-	  &:not(:first-child) {
 		padding: desktop(32) 0;
-	  }
 	}
 	
 	&__title {
 	  font-size: desktop(30) !important;
 	  line-height: desktop(36) !important;
 	}
- 
+	
 	&__icon {
 	  svg {
 		width: desktop(24);

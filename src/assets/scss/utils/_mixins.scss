@@ -239,6 +239,24 @@
   line-height: desktop(38);
 }
 
+@mixin m-16-mb {
+  @include text-medium;
+  font-size: mobile(16);
+  line-height: mobile(24);
+}
+
+@mixin m-16-tb {
+  @include text-medium;
+  font-size: tablet(16);
+  line-height: tablet(24);
+}
+
+@mixin m-16-dp {
+  @include text-medium;
+  font-size: desktop(16);
+  line-height: desktop(24);
+}
+
 @mixin m-18-mb {
   @include text-medium;
   font-size: mobile(18);
@@ -273,4 +291,22 @@
   @include text-medium;
   font-size: desktop(20);
   line-height: desktop(30);
+}
+
+@mixin m-22-mb {
+  @include text-medium;
+  font-size: mobile(22);
+  line-height: mobile(32);
+}
+
+@mixin m-22-tb {
+  @include text-medium;
+  font-size: tablet(22);
+  line-height: tablet(32);
+}
+
+@mixin m-22-dp {
+  @include text-medium;
+  font-size: desktop(22);
+  line-height: desktop(32);
 }

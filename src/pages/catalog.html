@@ -1,9 +1,780 @@
 <extends src="layouts/main.html">
   <block name="body">
     <include src="components/layout/header.html"></include>
-    <include src="components/widget/hero.html"></include>
     <main>
+      <section class="hero-wrapper">
+        <div class="container">
+          <div class="hero">
+            <div>
+              <h2>L'art du temps: Catalogue de nos montres</h2>
+            </div>
+            <div>
+              <p>Découvrez une collection de modèles exquis qui incarnent le plus haut savoir-faire et le design
+                innovant</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-banner">
+          <div class="hero-banner__item">
+            <img src="/src/assets/img/Hero/hero-slider-1.png" alt="">
+            <div>
+              <h2>Nouvelle collection</h2>
+              <p>L'art du temps dans la nouvelle collection</p>
+              <a href="/" class="btn btn-link btn-link--white">
+                <span>DÉCOUVRIR</span>
+                <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1469_19021)"><path d="M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_1469_19021"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                </svg>
+              </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="catalog">
+            <div class="catalog__header">
+              <button class="btn btn-flat btn-flat--outline catalog__filter-btn">
+                  <span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1471_30277)">
+<path d="M3.19688 5.75438C3.09929 5.64697 3.03495 5.51357 3.01167 5.37033C2.98839 5.22709 3.00716 5.08018 3.06571 4.94739C3.12426 4.81461 3.22008 4.70167 3.34154 4.62226C3.463 4.54284 3.60489 4.50038 3.75001 4.5H20.25C20.3953 4.50001 20.5374 4.54222 20.6592 4.62149C20.7809 4.70076 20.877 4.81368 20.9358 4.94654C20.9946 5.07939 21.0135 5.22646 20.9903 5.36987C20.9671 5.51328 20.9027 5.64686 20.805 5.75438L14.4544 12.5334C14.3242 12.6725 14.2518 12.8558 14.2519 13.0463V18.2484C14.252 18.3719 14.2215 18.4936 14.1633 18.6025C14.1051 18.7114 14.0209 18.8043 13.9181 18.8728L10.9181 20.8725C10.8053 20.9483 10.6739 20.992 10.5381 20.9989C10.4024 21.0058 10.2673 20.9757 10.1473 20.9118C10.0273 20.8478 9.92696 20.7525 9.85699 20.6359C9.78701 20.5193 9.75003 20.386 9.75001 20.25V13.0463C9.75007 12.8558 9.67767 12.6725 9.54751 12.5334L3.19688 5.75438Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1471_30277">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                  </span>
+                <span>Filtre</span>
+              </button>
+              <button class="catalog__sort-btn">
+                <span>Trier par</span>
+                <span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1469_21533)">
+<path d="M13 6L8 11L3 6" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1469_21533">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                  </span>
+              </button>
+              <p class="catalog__qty-result">Affichage de 10 résultats of 30</p>
+            </div>
+            <div class="catalog__body">
+              <div class="filter">
+                <div class="filter__header">
+                  <p>Filtre</p>
+                  <button>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1471_30349)">
+<path d="M18.75 5.25L5.25 18.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.75 18.75L5.25 5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1471_30349">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                  </button>
+                </div>
+                <div class="filter__body">
+                  <div class="accordion accordion--xs">
+                    <div class="accordion__item accordion__item--active">
+                      <div class="accordion__header">
+                        <div class="accordion__title">Marques en vedette</div>
+                        <div class="accordion__icon">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1683_5339)">
+                              <path d="M3.75 12H20.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M12 3.75V20.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_1683_5339">
+                                <rect width="24" height="24" fill="white"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="accordion__content">
+                        <div class="filter__group">
+                          <div class="filter__item">
+                            <div></div>
+                            <div>Tous</div>
+                          </div>
+                          <div class="filter__item filter__item--active">
+                            <div></div>
+                            <div>Festina</div>
+                          </div>
+                          <div class="filter__item">
+                            <div></div>
+                            <div>Armani Exchange</div>
+                          </div>
+                          <div class="filter__item filter__item--active">
+                            <div></div>
+                            <div>Fossil</div>
+                          </div>
+                          <div class="filter__item">
+                            <div></div>
+                            <div>Diesel</div>
+                          </div>
+                          <div class="filter__item">
+                            <div></div>
+                            <div>Timberland</div>
+                          </div>
+                          <div class="filter__item">
+                            <div></div>
+                            <div>Versus by Versace</div>
+                          </div>
+                          <div class="filter__item">
+                            <div></div>
+                            <div>Maserati</div>
+                          </div>
+                          <div class="filter__item">
+                            <div></div>
+                            <div>Nautica</div>
+                          </div>
+                          <div class="filter__item">
+                            <div></div>
+                            <div>Morellato</div>
+                          </div>
+                          <div class="filter__item filter__item--active">
+                            <div></div>
+                            <div>Trussardi</div>
+                          </div>
+                          <div class="filter__item">
+                            <div></div>
+                            <div>Cerruti</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion__item accordion__item--active">
+                      <div class="accordion__header">
+                        <div class="accordion__title">Sexe</div>
+                        <div class="accordion__icon">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1683_5339)">
+                              <path d="M3.75 12H20.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M12 3.75V20.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_1683_5339">
+                                <rect width="24" height="24" fill="white"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="accordion__content">
+                        <div class="filter__group">
+                          <div class="filter__item">
+                            <div></div>
+                            <div>Tous</div>
+                          </div>
+                          <div class="filter__item filter__item--active">
+                            <div></div>
+                            <div>Montres pour hommes</div>
+                          </div>
+                          <div class="filter__item">
+                            <div></div>
+                            <div>Montres pour Femmes</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion__item accordion__item--active">
+                      <div class="accordion__header">
+                        <div class="accordion__title">Point de prix</div>
+                        <div class="accordion__icon">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1683_5339)">
+                              <path d="M3.75 12H20.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M12 3.75V20.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_1683_5339">
+                                <rect width="24" height="24" fill="white"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="accordion__content">
+                        <div class="filter__group">
+                          <div class="filter__item">
+                            <div></div>
+                            <div>Jusqu'à 10 000 DA (8)</div>
+                          </div>
+                          <div class="filter__item">
+                            <div></div>
+                            <div>10 000 - 15 000 DA (25)</div>
+                          </div>
+                          <div class="filter__item">
+                            <div></div>
+                            <div>15 000 - 20 000 DA (57)</div>
+                          </div>
+                          <div class="filter__item filter__item--active">
+                            <div></div>
+                            <div>20 000 DA + (25)</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn btn-flat btn-flat--outline btn-text-black">
+                  appliquer (82)
+                </div>
+              </div>
+              <div class="catalog__product-list">
+                <div class="product-list">
+                  <div class="product-card product-card--simplified">
+                    <div class="product-card__img">
+                      <img src="/src/assets/img/Products/1.png" alt="">
+                    </div>
+                    <div class="product-card__name">FESTINA/f20576_1</div>
+                    <div class="product-card__cost">
+                      <div>30 000 DA</div>
+                      <div>36 000 DA</div>
+                    </div>
+                    <div class="product-card__action">
+                      <a href="/" class="btn btn-link btn-link--black">
+                        <span>Voir plus</span>
+                        <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1469_19021)"><path d="M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_1469_19021"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                </svg>
+              </span>
+                      </a>
+                      <button class="product-card__like product-card__like--active">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1636_2389)">
+                            <path d="M11.875 19.0192C11.875 19.0192 3 14.2404 3 8.60817C3 7.38601 3.4855 6.2139 4.3497 5.3497C5.2139 4.4855 6.38601 4 7.60817 4C9.53593 4 11.1872 5.05049 11.875 6.73077C12.5628 5.05049 14.2141 4 16.1418 4C17.364 4 18.5361 4.4855 19.4003 5.3497C20.2645 6.2139 20.75 7.38601 20.75 8.60817C20.75 14.2404 11.875 19.0192 11.875 19.0192Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1636_2389">
+                              <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-card product-card--simplified">
+                    <div class="product-card__img">
+                      <img src="/src/assets/img/Products/2.png" alt="">
+                    </div>
+                    <div class="product-card__name">FESTINA/f20576_1</div>
+                    <div class="product-card__cost">
+                      <div>30 000 DA</div>
+                      <div>36 000 DA</div>
+                    </div>
+                    <div class="product-card__action">
+                      <a href="/" class="btn btn-link btn-link--black">
+                        <span>Voir plus</span>
+                        <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1469_19021)"><path d="M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_1469_19021"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                </svg>
+              </span>
+                      </a>
+                      <button class="product-card__like">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1636_2389)">
+                            <path d="M11.875 19.0192C11.875 19.0192 3 14.2404 3 8.60817C3 7.38601 3.4855 6.2139 4.3497 5.3497C5.2139 4.4855 6.38601 4 7.60817 4C9.53593 4 11.1872 5.05049 11.875 6.73077C12.5628 5.05049 14.2141 4 16.1418 4C17.364 4 18.5361 4.4855 19.4003 5.3497C20.2645 6.2139 20.75 7.38601 20.75 8.60817C20.75 14.2404 11.875 19.0192 11.875 19.0192Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1636_2389">
+                              <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-card product-card--simplified">
+                    <div class="product-card__img">
+                      <img src="/src/assets/img/Products/3.png" alt="">
+                    </div>
+                    <div class="product-card__name">FESTINA/f20576_1</div>
+                    <div class="product-card__cost">
+                      <div>30 000 DA</div>
+                      <div>36 000 DA</div>
+                    </div>
+                    <div class="product-card__action">
+                      <a href="/" class="btn btn-link btn-link--black">
+                        <span>Voir plus</span>
+                        <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1469_19021)"><path d="M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_1469_19021"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                </svg>
+              </span>
+                      </a>
+                      <button class="product-card__like">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1636_2389)">
+                            <path d="M11.875 19.0192C11.875 19.0192 3 14.2404 3 8.60817C3 7.38601 3.4855 6.2139 4.3497 5.3497C5.2139 4.4855 6.38601 4 7.60817 4C9.53593 4 11.1872 5.05049 11.875 6.73077C12.5628 5.05049 14.2141 4 16.1418 4C17.364 4 18.5361 4.4855 19.4003 5.3497C20.2645 6.2139 20.75 7.38601 20.75 8.60817C20.75 14.2404 11.875 19.0192 11.875 19.0192Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1636_2389">
+                              <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-card product-card--simplified">
+                    <div class="product-card__img">
+                      <img src="/src/assets/img/Products/4.png" alt="">
+                    </div>
+                    <div class="product-card__name">FESTINA/f20576_1</div>
+                    <div class="product-card__cost">
+                      <div>30 000 DA</div>
+                      <div>36 000 DA</div>
+                    </div>
+                    <div class="product-card__action">
+                      <a href="/" class="btn btn-link btn-link--black">
+                        <span>Voir plus</span>
+                        <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1469_19021)"><path d="M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_1469_19021"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                </svg>
+              </span>
+                      </a>
+                      <button class="product-card__like">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1636_2389)">
+                            <path d="M11.875 19.0192C11.875 19.0192 3 14.2404 3 8.60817C3 7.38601 3.4855 6.2139 4.3497 5.3497C5.2139 4.4855 6.38601 4 7.60817 4C9.53593 4 11.1872 5.05049 11.875 6.73077C12.5628 5.05049 14.2141 4 16.1418 4C17.364 4 18.5361 4.4855 19.4003 5.3497C20.2645 6.2139 20.75 7.38601 20.75 8.60817C20.75 14.2404 11.875 19.0192 11.875 19.0192Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1636_2389">
+                              <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-card product-card--simplified">
+                    <div class="product-card__img">
+                      <img src="/src/assets/img/Products/5.png" alt="">
+                    </div>
+                    <div class="product-card__name">FESTINA/f20576_1</div>
+                    <div class="product-card__cost">
+                      <div>30 000 DA</div>
+                      <div>36 000 DA</div>
+                    </div>
+                    <div class="product-card__action">
+                      <a href="/" class="btn btn-link btn-link--black">
+                        <span>Voir plus</span>
+                        <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1469_19021)"><path d="M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_1469_19021"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                </svg>
+              </span>
+                      </a>
+                      <button class="product-card__like">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1636_2389)">
+                            <path d="M11.875 19.0192C11.875 19.0192 3 14.2404 3 8.60817C3 7.38601 3.4855 6.2139 4.3497 5.3497C5.2139 4.4855 6.38601 4 7.60817 4C9.53593 4 11.1872 5.05049 11.875 6.73077C12.5628 5.05049 14.2141 4 16.1418 4C17.364 4 18.5361 4.4855 19.4003 5.3497C20.2645 6.2139 20.75 7.38601 20.75 8.60817C20.75 14.2404 11.875 19.0192 11.875 19.0192Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1636_2389">
+                              <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-card product-card--simplified">
+                    <div class="product-card__img">
+                      <img src="/src/assets/img/Products/6.png" alt="">
+                    </div>
+                    <div class="product-card__name">FESTINA/f20576_1</div>
+                    <div class="product-card__cost">
+                      <div>30 000 DA</div>
+                      <div>36 000 DA</div>
+                    </div>
+                    <div class="product-card__action">
+                      <a href="/" class="btn btn-link btn-link--black">
+                        <span>Voir plus</span>
+                        <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1469_19021)"><path d="M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_1469_19021"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                </svg>
+              </span>
+                      </a>
+                      <button class="product-card__like">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1636_2389)">
+                            <path d="M11.875 19.0192C11.875 19.0192 3 14.2404 3 8.60817C3 7.38601 3.4855 6.2139 4.3497 5.3497C5.2139 4.4855 6.38601 4 7.60817 4C9.53593 4 11.1872 5.05049 11.875 6.73077C12.5628 5.05049 14.2141 4 16.1418 4C17.364 4 18.5361 4.4855 19.4003 5.3497C20.2645 6.2139 20.75 7.38601 20.75 8.60817C20.75 14.2404 11.875 19.0192 11.875 19.0192Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1636_2389">
+                              <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-card product-card--simplified">
+                    <div class="product-card__img">
+                      <img src="/src/assets/img/Products/7.png" alt="">
+                    </div>
+                    <div class="product-card__name">FESTINA/f20576_1</div>
+                    <div class="product-card__cost">
+                      <div>30 000 DA</div>
+                      <div>36 000 DA</div>
+                    </div>
+                    <div class="product-card__action">
+                      <a href="/" class="btn btn-link btn-link--black">
+                        <span>Voir plus</span>
+                        <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1469_19021)"><path d="M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_1469_19021"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                </svg>
+              </span>
+                      </a>
+                      <button class="product-card__like">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1636_2389)">
+                            <path d="M11.875 19.0192C11.875 19.0192 3 14.2404 3 8.60817C3 7.38601 3.4855 6.2139 4.3497 5.3497C5.2139 4.4855 6.38601 4 7.60817 4C9.53593 4 11.1872 5.05049 11.875 6.73077C12.5628 5.05049 14.2141 4 16.1418 4C17.364 4 18.5361 4.4855 19.4003 5.3497C20.2645 6.2139 20.75 7.38601 20.75 8.60817C20.75 14.2404 11.875 19.0192 11.875 19.0192Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1636_2389">
+                              <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-card product-card--simplified">
+                    <div class="product-card__img">
+                      <img src="/src/assets/img/Products/8.png" alt="">
+                    </div>
+                    <div class="product-card__name">FESTINA/f20576_1</div>
+                    <div class="product-card__cost">
+                      <div>30 000 DA</div>
+                      <div>36 000 DA</div>
+                    </div>
+                    <div class="product-card__action">
+                      <a href="/" class="btn btn-link btn-link--black">
+                        <span>Voir plus</span>
+                        <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1469_19021)"><path d="M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_1469_19021"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                </svg>
+              </span>
+                      </a>
+                      <button class="product-card__like">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1636_2389)">
+                            <path d="M11.875 19.0192C11.875 19.0192 3 14.2404 3 8.60817C3 7.38601 3.4855 6.2139 4.3497 5.3497C5.2139 4.4855 6.38601 4 7.60817 4C9.53593 4 11.1872 5.05049 11.875 6.73077C12.5628 5.05049 14.2141 4 16.1418 4C17.364 4 18.5361 4.4855 19.4003 5.3497C20.2645 6.2139 20.75 7.38601 20.75 8.60817C20.75 14.2404 11.875 19.0192 11.875 19.0192Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1636_2389">
+                              <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-card product-card--simplified">
+                    <div class="product-card__img">
+                      <img src="/src/assets/img/Products/1.png" alt="">
+                    </div>
+                    <div class="product-card__name">FESTINA/f20576_1</div>
+                    <div class="product-card__cost">
+                      <div>30 000 DA</div>
+                      <div>36 000 DA</div>
+                    </div>
+                    <div class="product-card__action">
+                      <a href="/" class="btn btn-link btn-link--black">
+                        <span>Voir plus</span>
+                        <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1469_19021)"><path d="M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_1469_19021"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                </svg>
+              </span>
+                      </a>
+                      <button class="product-card__like product-card__like--active">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1636_2389)">
+                            <path d="M11.875 19.0192C11.875 19.0192 3 14.2404 3 8.60817C3 7.38601 3.4855 6.2139 4.3497 5.3497C5.2139 4.4855 6.38601 4 7.60817 4C9.53593 4 11.1872 5.05049 11.875 6.73077C12.5628 5.05049 14.2141 4 16.1418 4C17.364 4 18.5361 4.4855 19.4003 5.3497C20.2645 6.2139 20.75 7.38601 20.75 8.60817C20.75 14.2404 11.875 19.0192 11.875 19.0192Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1636_2389">
+                              <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-card product-card--simplified">
+                    <div class="product-card__img">
+                      <img src="/src/assets/img/Products/2.png" alt="">
+                    </div>
+                    <div class="product-card__name">FESTINA/f20576_1</div>
+                    <div class="product-card__cost">
+                      <div>30 000 DA</div>
+                      <div>36 000 DA</div>
+                    </div>
+                    <div class="product-card__action">
+                      <a href="/" class="btn btn-link btn-link--black">
+                        <span>Voir plus</span>
+                        <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1469_19021)"><path d="M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_1469_19021"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                </svg>
+              </span>
+                      </a>
+                      <button class="product-card__like">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1636_2389)">
+                            <path d="M11.875 19.0192C11.875 19.0192 3 14.2404 3 8.60817C3 7.38601 3.4855 6.2139 4.3497 5.3497C5.2139 4.4855 6.38601 4 7.60817 4C9.53593 4 11.1872 5.05049 11.875 6.73077C12.5628 5.05049 14.2141 4 16.1418 4C17.364 4 18.5361 4.4855 19.4003 5.3497C20.2645 6.2139 20.75 7.38601 20.75 8.60817C20.75 14.2404 11.875 19.0192 11.875 19.0192Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1636_2389">
+                              <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-card product-card--simplified">
+                    <div class="product-card__img">
+                      <img src="/src/assets/img/Products/3.png" alt="">
+                    </div>
+                    <div class="product-card__name">FESTINA/f20576_1</div>
+                    <div class="product-card__cost">
+                      <div>30 000 DA</div>
+                      <div>36 000 DA</div>
+                    </div>
+                    <div class="product-card__action">
+                      <a href="/" class="btn btn-link btn-link--black">
+                        <span>Voir plus</span>
+                        <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1469_19021)"><path d="M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_1469_19021"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                </svg>
+              </span>
+                      </a>
+                      <button class="product-card__like">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1636_2389)">
+                            <path d="M11.875 19.0192C11.875 19.0192 3 14.2404 3 8.60817C3 7.38601 3.4855 6.2139 4.3497 5.3497C5.2139 4.4855 6.38601 4 7.60817 4C9.53593 4 11.1872 5.05049 11.875 6.73077C12.5628 5.05049 14.2141 4 16.1418 4C17.364 4 18.5361 4.4855 19.4003 5.3497C20.2645 6.2139 20.75 7.38601 20.75 8.60817C20.75 14.2404 11.875 19.0192 11.875 19.0192Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1636_2389">
+                              <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-card product-card--simplified">
+                    <div class="product-card__img">
+                      <img src="/src/assets/img/Products/4.png" alt="">
+                    </div>
+                    <div class="product-card__name">FESTINA/f20576_1</div>
+                    <div class="product-card__cost">
+                      <div>30 000 DA</div>
+                      <div>36 000 DA</div>
+                    </div>
+                    <div class="product-card__action">
+                      <a href="/" class="btn btn-link btn-link--black">
+                        <span>Voir plus</span>
+                        <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1469_19021)"><path d="M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_1469_19021"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                </svg>
+              </span>
+                      </a>
+                      <button class="product-card__like">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1636_2389)">
+                            <path d="M11.875 19.0192C11.875 19.0192 3 14.2404 3 8.60817C3 7.38601 3.4855 6.2139 4.3497 5.3497C5.2139 4.4855 6.38601 4 7.60817 4C9.53593 4 11.1872 5.05049 11.875 6.73077C12.5628 5.05049 14.2141 4 16.1418 4C17.364 4 18.5361 4.4855 19.4003 5.3497C20.2645 6.2139 20.75 7.38601 20.75 8.60817C20.75 14.2404 11.875 19.0192 11.875 19.0192Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1636_2389">
+                              <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-card product-card--simplified">
+                    <div class="product-card__img">
+                      <img src="/src/assets/img/Products/5.png" alt="">
+                    </div>
+                    <div class="product-card__name">FESTINA/f20576_1</div>
+                    <div class="product-card__cost">
+                      <div>30 000 DA</div>
+                      <div>36 000 DA</div>
+                    </div>
+                    <div class="product-card__action">
+                      <a href="/" class="btn btn-link btn-link--black">
+                        <span>Voir plus</span>
+                        <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1469_19021)"><path d="M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_1469_19021"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                </svg>
+              </span>
+                      </a>
+                      <button class="product-card__like">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1636_2389)">
+                            <path d="M11.875 19.0192C11.875 19.0192 3 14.2404 3 8.60817C3 7.38601 3.4855 6.2139 4.3497 5.3497C5.2139 4.4855 6.38601 4 7.60817 4C9.53593 4 11.1872 5.05049 11.875 6.73077C12.5628 5.05049 14.2141 4 16.1418 4C17.364 4 18.5361 4.4855 19.4003 5.3497C20.2645 6.2139 20.75 7.38601 20.75 8.60817C20.75 14.2404 11.875 19.0192 11.875 19.0192Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1636_2389">
+                              <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-card product-card--simplified">
+                    <div class="product-card__img">
+                      <img src="/src/assets/img/Products/6.png" alt="">
+                    </div>
+                    <div class="product-card__name">FESTINA/f20576_1</div>
+                    <div class="product-card__cost">
+                      <div>30 000 DA</div>
+                      <div>36 000 DA</div>
+                    </div>
+                    <div class="product-card__action">
+                      <a href="/" class="btn btn-link btn-link--black">
+                        <span>Voir plus</span>
+                        <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1469_19021)"><path d="M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_1469_19021"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                </svg>
+              </span>
+                      </a>
+                      <button class="product-card__like">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1636_2389)">
+                            <path d="M11.875 19.0192C11.875 19.0192 3 14.2404 3 8.60817C3 7.38601 3.4855 6.2139 4.3497 5.3497C5.2139 4.4855 6.38601 4 7.60817 4C9.53593 4 11.1872 5.05049 11.875 6.73077C12.5628 5.05049 14.2141 4 16.1418 4C17.364 4 18.5361 4.4855 19.4003 5.3497C20.2645 6.2139 20.75 7.38601 20.75 8.60817C20.75 14.2404 11.875 19.0192 11.875 19.0192Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1636_2389">
+                              <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-card product-card--simplified">
+                    <div class="product-card__img">
+                      <img src="/src/assets/img/Products/7.png" alt="">
+                    </div>
+                    <div class="product-card__name">FESTINA/f20576_1</div>
+                    <div class="product-card__cost">
+                      <div>30 000 DA</div>
+                      <div>36 000 DA</div>
+                    </div>
+                    <div class="product-card__action">
+                      <a href="/" class="btn btn-link btn-link--black">
+                        <span>Voir plus</span>
+                        <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1469_19021)"><path d="M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_1469_19021"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                </svg>
+              </span>
+                      </a>
+                      <button class="product-card__like">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1636_2389)">
+                            <path d="M11.875 19.0192C11.875 19.0192 3 14.2404 3 8.60817C3 7.38601 3.4855 6.2139 4.3497 5.3497C5.2139 4.4855 6.38601 4 7.60817 4C9.53593 4 11.1872 5.05049 11.875 6.73077C12.5628 5.05049 14.2141 4 16.1418 4C17.364 4 18.5361 4.4855 19.4003 5.3497C20.2645 6.2139 20.75 7.38601 20.75 8.60817C20.75 14.2404 11.875 19.0192 11.875 19.0192Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1636_2389">
+                              <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-card product-card--simplified">
+                    <div class="product-card__img">
+                      <img src="/src/assets/img/Products/8.png" alt="">
+                    </div>
+                    <div class="product-card__name">FESTINA/f20576_1</div>
+                    <div class="product-card__cost">
+                      <div>30 000 DA</div>
+                      <div>36 000 DA</div>
+                    </div>
+                    <div class="product-card__action">
+                      <a href="/" class="btn btn-link btn-link--black">
+                        <span>Voir plus</span>
+                        <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1469_19021)"><path d="M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_1469_19021"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                </svg>
+              </span>
+                      </a>
+                      <button class="product-card__like">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1636_2389)">
+                            <path d="M11.875 19.0192C11.875 19.0192 3 14.2404 3 8.60817C3 7.38601 3.4855 6.2139 4.3497 5.3497C5.2139 4.4855 6.38601 4 7.60817 4C9.53593 4 11.1872 5.05049 11.875 6.73077C12.5628 5.05049 14.2141 4 16.1418 4C17.364 4 18.5361 4.4855 19.4003 5.3497C20.2645 6.2139 20.75 7.38601 20.75 8.60817C20.75 14.2404 11.875 19.0192 11.875 19.0192Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1636_2389">
+                              <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__action">
+                  <button class="btn btn-flat btn-flat--main btn-show-more">Afficher plus</button>
+                  <div class="pagination">
+                    <button class="pagination__arrow pagination__arrow--disabled">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1469_21656)">
+                          <path d="M15 4.5L7.5 12L15 19.5" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1469_21656">
+                            <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0)"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </button>
+                    <button class="pagination__item pagination__item--active">1</button>
+                    <button class="pagination__item">2</button>
+                    <button class="pagination__item">3</button>
+                    <button class="pagination__ellipsis">...</button>
+                    <button class="pagination__item">10</button>
+                    <button class="pagination__arrow">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1469_21669)">
+                          <path d="M9 4.5L16.5 12L9 19.5" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1469_21669">
+                            <rect width="24" height="24" fill="white"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <include src="components/widget/addresses.html"></include>
+      <include src="components/widget/advantages.html"></include>
       <include src="components/widget/subscribe.html"></include>
       <include src="components/widget/faq.html"></include>
     </main>
