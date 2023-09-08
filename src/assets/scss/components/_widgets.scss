@@ -574,12 +574,6 @@
 	}
   }
   
-  .accordion__content p {
-	font-size: mobile(18);
-	line-height: mobile(24);
-	letter-spacing: mobile(0.5);
-  }
-  
   @media screen and (min-width: $desktop_media) {
 	gap: tablet(24);
 	
@@ -595,10 +589,6 @@
 	  }
 	}
 	
-	.accordion__content p {
-	  @include r-16-tb;
-	  letter-spacing: normal;
-	}
   }
   @media screen and (min-width: $desktop_media_static) {
 	gap: desktop(24);
@@ -615,9 +605,6 @@
 	  }
 	}
 	
-	.accordion__content p {
-	  @include r-16-dp;
-	}
   }
 }
 
@@ -1490,7 +1477,7 @@
 	line-height: mobile(15.4);
 	letter-spacing: mobile(-0.28);
   }
- 
+  
   &__stars {
 	display: flex;
 	gap: mobile(6);
@@ -1513,7 +1500,7 @@
 	  overflow: hidden;
 	  color: var(--g-80);
 	}
- 
+	
 	p, button {
 	  font-size: mobile(16);
 	  line-height: mobile(17.6);
@@ -1559,7 +1546,7 @@
 	  line-height: tablet(15.4);
 	  letter-spacing: tablet(-0.28);
 	}
- 
+	
 	&__stars {
 	  gap: tablet(6);
 	  
