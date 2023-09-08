@@ -58,31 +58,18 @@
   }
 }
 
-@media screen and (min-width: $desktop_media) {
-  .accordion--xs {
-	.accordion__item {
-	  padding: tablet(16) 0;
-	}
-	
-	.accordion__title {
-	  @include m-18-tb;
-	  letter-spacing: normal;
-	}
+.accordion--md {
+  .accordion__item {
+	padding: mobile(16) 0;
+  }
+  
+  .accordion__title {
+	@include text-medium;
+	font-size: mobile(24);
+	line-height: mobile(36);
   }
 }
 
-@media screen and (min-width: $desktop_media_static) {
-  .accordion--xs {
-	.accordion__item {
-	  
-	  padding: desktop(16) 0;
-	}
-	
-	.accordion__title {
-	  @include m-18-dp;
-	}
-  }
-}
 
 .accordion__item--active {
   .accordion__icon {
@@ -134,6 +121,27 @@
 	  margin-top: tablet(24);
 	}
   }
+  
+  .accordion--xs {
+	.accordion__item {
+	  padding: tablet(16) 0;
+	}
+	
+	.accordion__title {
+	  @include m-18-tb;
+	  letter-spacing: normal;
+	}
+  }
+  
+  .accordion--md {
+	.accordion__item {
+	  padding: tablet(32) 0;
+	}
+	
+	.accordion__title {
+	  @include m-24-tb;
+	}
+  }
 }
 
 @media screen and (min-width: $desktop_media_static) {
@@ -162,6 +170,27 @@
 	
 	&__content {
 	  margin-top: desktop(24);
+	}
+  }
+  
+  .accordion--xs {
+	.accordion__item {
+	  
+	  padding: desktop(16) 0;
+	}
+	
+	.accordion__title {
+	  @include m-18-dp;
+	}
+  }
+  
+  .accordion--md {
+	.accordion__item {
+	  padding: desktop(32) 0;
+	}
+	
+	.accordion__title {
+	  @include m-24-dp;
 	}
   }
 }

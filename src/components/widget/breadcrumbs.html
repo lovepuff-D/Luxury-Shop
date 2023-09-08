@@ -1,7 +1,13 @@
-<div class="breadcrumbs">
-  <ul>
-    <for loop="item in items">
-      <li><a href="/">{{ item }}</a></li>
-    </for>
-  </ul>
+{% macro list(items) %}
+<div class="container">
+  <div class="breadcrumbs">
+    <ul>
+      {% for item in items %}
+      <li>
+        <a href={{ item.src }}>{{ item.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
+{% endmacro %}

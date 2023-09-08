@@ -146,37 +146,11 @@
 	padding: 0 mobile(12);
   }
   
+  .product-produce-by {
+	padding: mobile(12) !important;
+  }
+  
   .product-card {
-	&__production {
-	  display: flex;
-	  align-items: center;
-	  gap: mobile(8);
-	  padding: mobile(12) !important;
-	}
-	
-	&__company-logo {
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	  
-	  width: mobile(40);
-	  height: mobile(40);
-	  padding: mobile(4);
-	  
-	  background: var(--white);
-	  
-	  border-width: mobile(1);
-	  border-style: solid;
-	  border-color: var(--g-10);
-	  border-radius: 50%;
-	}
-	
-	&__company-name {
-	  @include text-medium;
-	  font-size: mobile(14);
-	  line-height: mobile(16.8);
-	}
-	
 	&__img {
 	  margin-bottom: mobile(16);
 	}
@@ -210,6 +184,36 @@
 	}*/
   }
 }
+
+.product-produce-by {
+  display: flex;
+  align-items: center;
+  gap: mobile(8);
+  
+  &__company-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	width: mobile(40);
+	height: mobile(40);
+	padding: mobile(4);
+	
+	background: var(--white);
+	
+	border-width: mobile(1);
+	border-style: solid;
+	border-color: var(--g-10);
+	border-radius: 50%;
+  }
+  
+  &__company-name {
+	@include text-medium;
+	font-size: mobile(14);
+	line-height: mobile(16.8);
+  }
+}
+
 
 @media screen and (min-width: $desktop_media) {
   .product-card {
@@ -261,26 +265,12 @@
 	& > div:not(.product-card__img) {
 	  padding: 0 tablet(16);
 	}
-	
+ 
+	.product-produce-by {
+	  padding: tablet(16) !important;
+	}
+ 
 	.product-card {
-	  &__production {
-		gap: tablet(8);
-		padding: tablet(16) !important;
-	  }
-	  
-	  &__company-logo {
-		width: tablet(40);
-		height: tablet(40);
-		padding: tablet(4);
-		
-		border-width: tablet(1);
-	  }
-	  
-	  &__company-name {
-		font-size: tablet(14);
-		line-height: tablet(16.8);
-	  }
-	  
 	  &__img {
 		margin-bottom: tablet(16);
 	  }
@@ -312,6 +302,24 @@
 	  }*/
 	}
   }
+  
+  .product-produce-by {
+	gap: tablet(8);
+ 
+	&__company-logo {
+	  width: tablet(40);
+	  height: tablet(40);
+	  padding: tablet(4);
+	
+	  border-width: tablet(1);
+	}
+ 
+	&__company-name {
+	  font-size: tablet(14);
+	  line-height: tablet(16.8);
+	}
+  }
+  
 }
 
 @media screen and (min-width: $desktop_media_static) {
@@ -364,26 +372,12 @@
 	& > div:not(.product-card__img) {
 	  padding: 0 desktop(16);
 	}
-	
+ 
+	.product-produce-by {
+	  padding: desktop(16) !important;
+	}
+ 
 	.product-card {
-	  &__production {
-		gap: desktop(8);
-		padding: desktop(16) !important;
-	  }
-	  
-	  &__company-logo {
-		width: desktop(40);
-		height: desktop(40);
-		padding: desktop(4);
-		
-		border-width: desktop(1);
-	  }
-	  
-	  &__company-name {
-		font-size: desktop(14);
-		line-height: desktop(16.8);
-	  }
-	  
 	  &__img {
 		margin-bottom: desktop(16);
 	  }
@@ -415,6 +409,24 @@
 	  }*/
 	}
   }
+  
+  .product-produce-by {
+	gap: desktop(8);
+ 
+	&__company-logo {
+	  width: desktop(40);
+	  height: desktop(40);
+	  padding: desktop(4);
+	
+	  border-width: desktop(1);
+	}
+ 
+	&__company-name {
+	  font-size: desktop(14);
+	  line-height: desktop(16.8);
+	}
+  }
+  
 }
 
 // Address Card

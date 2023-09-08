@@ -144,7 +144,6 @@
       </div>
     </div>
   </div>
-
   <div class="menu-wrapper">
     <div class="container">
       <div class="menu-desktop">
@@ -160,4 +159,6 @@
       </div>
     </div>
   </div>
+  {% import "src/components/widget/breadcrumbs.html" as breadcrumbs %}
+  {{ breadcrumbs.list([{ name: "Maison", src: "/" }, { name: "Montre", src: "/montre" }]) }}
 </header>

@@ -20,5 +20,6 @@ import "./modules/scroll.js";
 import "./modules/select.js";
 
 // import styles bundle
-import "swiper/css";
 */
+
+import "swiper/css";

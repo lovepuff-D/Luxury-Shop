@@ -2,11 +2,12 @@ import vituum from 'vituum'
 import posthtml from '@vituum/vite-plugin-posthtml'
 import viteJoinMediaQueries from 'vite-join-media-queries';
 import posthtmlExpressions from 'posthtml-expressions';
+import nunjucks from '@vituum/vite-plugin-nunjucks'
 
 export default {
-    plugins: [vituum(), posthtml({
+    plugins: [vituum(), nunjucks(), posthtml({
         root: './src',
-        plugins: [posthtmlExpressions()]
+        plugins: []
     }), {
         name: "custom-hmr",
         enforce: "post",

@@ -310,3 +310,21 @@
   font-size: desktop(22);
   line-height: desktop(32);
 }
+
+@mixin m-24-mb {
+  @include text-medium;
+  font-size: mobile(24);
+  line-height: mobile(36);
+}
+
+@mixin m-24-tb {
+  @include text-medium;
+  font-size: tablet(24);
+  line-height: tablet(36);
+}
+
+@mixin m-24-dp {
+  @include text-medium;
+  font-size: desktop(24);
+  line-height: desktop(36);
+}

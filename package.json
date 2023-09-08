@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@vituum/vite-plugin-nunjucks": "^1.0.0",
     "@vituum/vite-plugin-posthtml": "^1.0.0",
     "cssnano": "^6.0.1",
     "postcss-combine-media-query": "^1.0.1",
