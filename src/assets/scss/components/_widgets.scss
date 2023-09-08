@@ -48,25 +48,46 @@
   flex-direction: column;
 }
 
+.hero-inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: mobile(32);
+  padding-top: mobile(32);
+  
+  &--without-pt {
+	padding-top: 0 !important;
+  }
+}
+
+.hero-wrapper__advantages-wrapper {
+  margin-top: mobile(80);
+}
+
 .hero {
   display: flex;
   flex-direction: column;
-  gap: mobile(24);
-  padding: mobile(32) 0;
-  text-align: center;
+  gap: mobile(16);
+  /*padding: mobile(32) 0;*/
   
   h1 {
   }
+  
+  .btn {
+	display: none;
+  }
+}
+
+.hero_index-page {
+  width: 90%;
+  gap: mobile(24);
+  margin: 0 auto;
+  text-align: center;
   
   p {
 	@include text-regular;
 	font-size: mobile(18);
 	line-height: mobile(23.4);
-	letter-spacing: -2%;
-  }
-  
-  .btn {
-	display: none;
+	letter-spacing: mobile(0.36);
   }
 }
 
@@ -116,14 +137,9 @@
 @media screen and (min-width: $desktop_media) {
   .hero {
 	flex-direction: row;
+	justify-content: space-between;
 	gap: tablet(64);
-	padding: tablet(64) 0;
-	text-align: left;
-	
-	p {
-	  @include r-18-tb;
-	  letter-spacing: normal;
-	}
+	/*padding: tablet(64) 0;*/
 	
 	.btn {
 	  display: inline-flex;
@@ -138,6 +154,32 @@
 	}
   }
   
+  .hero_index-page {
+	width: auto;
+	margin: unset;
+	text-align: left;
+ 
+	p {
+	  @include r-18-tb;
+	  letter-spacing: normal;
+	}
+  }
+  
+  .hero-inner-wrapper {
+	gap: tablet(64);
+	padding-top: tablet(64);
+  }
+  
+  .hero-wrapper__advantages-wrapper {
+	order: 2;
+	margin-top: tablet(90);
+  }
+  
+  .hero-wrapper__stories-wrapper {
+	margin-top: tablet(90);
+	order: 1;
+  }
+  
   .hero-banner {
 	&__item {
 	  img {
@@ -147,6 +189,7 @@
 	  
 	  & > div {
 		padding-bottom: tablet(40);
+		@include r-16-tb;
 		
 		.btn {
 		  margin-top: tablet(24);
@@ -163,11 +206,7 @@
 @media screen and (min-width: $desktop_media_static) {
   .hero {
 	gap: desktop(64);
-	padding: desktop(64) 0;
-	
-	p {
-	  @include r-18-dp;
-	}
+	/*padding: desktop(64) 0;*/
 	
 	& > div:nth-child(2) {
 	  gap: desktop(32);
@@ -175,6 +214,20 @@
 	}
   }
   
+  .hero_index-page {
+	p {
+	  @include r-18-dp;
+	}
+  }
+  
+  .hero-inner-wrapper {
+	gap: desktop(64);
+	padding-top: desktop(64);
+  }
+  
+  .hero-wrapper__stories-wrapper {
+	margin-top: desktop(90);
+  }
   .hero-banner {
 	&__item {
 	  img {
@@ -183,6 +236,7 @@
 	  
 	  & > div {
 		padding-bottom: desktop(40);
+		@include r-16-dp;
 		
 		.btn {
 		  margin-top: desktop(24);
@@ -256,10 +310,6 @@
 	&__content {
 	  @include r-20-tb;
 	}
-  }
-  
-  .advantages-wrapper {
-	order: 2;
   }
 }
 
@@ -336,10 +386,6 @@
 }
 
 @media screen and (min-width: $desktop_media) {
-  .stories-wrapper {
-	order: 1;
-  }
-  
   .stories {
 	justify-content: space-between;
 	gap: tablet(32);
@@ -560,6 +606,7 @@
   &__tab {
 	width: max-content;
 	white-space: nowrap;
+	padding: mobile(8) 0;
 	
 	@include r-18-mb;
 	
@@ -576,6 +623,7 @@
 	gap: tablet(24);
 	
 	&__tab {
+	  padding: tablet(8) 0;
 	  @include r-20-tb;
 	  
 	  &:not(:last-child) {
@@ -592,6 +640,7 @@
 	gap: desktop(24);
 	
 	&__tab {
+	  padding: desktop(8) 0;
 	  @include r-20-dp;
 	  
 	  &:not(:last-child) {
@@ -1176,7 +1225,7 @@
 	}
 	
 	&__slider {
-	  display: none;
+	  display: none !important;
 	}
 	
 	/*.swiper-wrapper {

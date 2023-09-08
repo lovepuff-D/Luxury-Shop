@@ -38,7 +38,7 @@
   @include text-regular;
   font-size: mobile(38);
   line-height: mobile(41.8);
-  letter-spacing: -2%;
+  letter-spacing: mobile(-0.76);
 }
 
 @mixin seo-heading-1-tb {
@@ -46,6 +46,7 @@
   @include seo-heading;
   font-size: tablet(76);
   line-height: tablet(82);
+  letter-spacing: normal;
 }
 
 @mixin seo-heading-1-dp {
@@ -53,6 +54,7 @@
   @include seo-heading;
   font-size: desktop(76);
   line-height: desktop(82);
+  letter-spacing: normal;
 }
 
 @mixin seo-heading-2-mb {
@@ -68,6 +70,7 @@
   @include seo-heading;
   font-size: tablet(48);
   line-height: tablet(62);
+  letter-spacing: normal;
 }
 
 @mixin seo-heading-2-dp {
@@ -75,6 +78,7 @@
   @include seo-heading;
   font-size: desktop(48);
   line-height: desktop(62);
+  letter-spacing: normal;
 }
 
 @mixin seo-heading-3-mb {
@@ -90,6 +94,7 @@
   @include seo-heading;
   font-size: tablet(36);
   line-height: tablet(48);
+  letter-spacing: normal;
 }
 
 @mixin seo-heading-3-dp {
@@ -97,6 +102,7 @@
   @include seo-heading;
   font-size: desktop(36);
   line-height: desktop(48);
+  letter-spacing: normal;
 }
 
 @mixin mobile-h3 {
@@ -129,7 +135,7 @@
   @include text-regular;
   font-size: mobile(16);
   line-height: mobile(20.8);
-  letter-spacing: -2%;
+  letter-spacing: mobile(-0.36);
 }
 
 @mixin r-14-mb {

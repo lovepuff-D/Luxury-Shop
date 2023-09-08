@@ -76,6 +76,7 @@
 	  @include text-semi-bold;
 	  font-size: tablet(30);
 	  line-height: tablet(36);
+	  letter-spacing: normal;
 	}
 	
 	&__icon {
@@ -210,6 +211,10 @@
 
 .filter__accordion {
   .accordion__item {
+	&:first-child {
+	  padding-top: 0;
+	}
+	
 	padding: mobile(16) 0;
   }
   
@@ -269,6 +274,7 @@
 	margin-top: mobile(12);
 	
 	p {
+	  width: 80%;
 	  font-size: mobile(18);
 	  line-height: mobile(24);
 	  letter-spacing: mobile(0.5);
@@ -290,6 +296,7 @@
 	  margin-top: tablet(12);
 	  
 	  p {
+		width: 80%;
 		@include r-16-tb;
 		letter-spacing: normal;
 	  }
@@ -310,6 +317,7 @@
 	  margin-top: desktop(12);
 	  
 	  p {
+		width: 80%;
 		@include r-16-dp;
 	  }
 	}

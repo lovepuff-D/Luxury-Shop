@@ -63,6 +63,12 @@
   &--black {
 	color: var(--black);
 	border-color: var(--black);
+	
+	svg {
+	  path {
+		  stroke: var(--black);
+	  }
+	}
   }
   
   @media screen and (min-width: $desktop_media) {
@@ -99,7 +105,7 @@
   &--outline {
 	border-color: var(--gold);
 	color:var(--gold);
-	background: var(--white);
+	/*background: var(--white);*/
   }
   
   @media screen and (min-width: $desktop_media) {

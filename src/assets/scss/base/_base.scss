@@ -21,6 +21,7 @@ body {
   
   @media screen and (min-width: $desktop_media) {
 	@include r-18-tb;
+    letter-spacing: normal;
   }
   @media screen and (min-width: $desktop_media_static) {
 	@include r-18-dp;

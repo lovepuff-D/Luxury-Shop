@@ -284,6 +284,10 @@ main {
 	  width: mobile(260);
 	  height: mobile(45);
 	}
+	
+	.social-media {
+	  display: none;
+	}
   }
   
   &__menu {
@@ -370,6 +374,10 @@ main {
 	  & > svg {
 		width: tablet(260);
 		height: tablet(45);
+	  }
+	  
+	  .social-media {
+		display: flex;
 	  }
 	}
 	
