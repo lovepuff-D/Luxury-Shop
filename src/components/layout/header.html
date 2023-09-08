@@ -41,7 +41,7 @@
               </clipPath>
             </defs>
           </svg>
-          <p>LIVE CHAT</p>
+          <span>LIVE CHAT</span>
         </button>
         <div class="header__phone-number">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -159,6 +159,8 @@
       </div>
     </div>
   </div>
-  {% import "src/components/widget/breadcrumbs.html" as breadcrumbs %}
-  {{ breadcrumbs.list([{ name: "Maison", src: "/" }, { name: "Montre", src: "/montre" }]) }}
+  {% if isShowBreadcrumbs %}
+    {% import "src/components/widget/breadcrumbs.html" as breadcrumbs %}
+    {{ breadcrumbs.list(breadcrumbsItem) }}
+  {% endif %}
 </header>

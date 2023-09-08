@@ -1,6 +1,8 @@
 <extends src="layouts/main.html">
   <block name="body">
-    <include src="components/layout/header.html"></include>
+    {% set isShowBreadcrumbs = true %}
+    {% set breadcrumbsItem = [{ name: "Maison", src: "/" }, { name: "Montre", src: "/montre" }] %}
+    {% include "src/components/layout/header.html" %}
     <main>
       <section class="hero-wrapper">
         <div class="container">

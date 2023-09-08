@@ -344,7 +344,6 @@
 	justify-content: space-between;
 	gap: tablet(32);
 	padding: 0;
-	margin-top: tablet(90);
 	
 	&__circle-wrapper {
 	  width: tablet(94);
@@ -365,7 +364,6 @@
 @media screen and (min-width: $desktop_media_static) {
   .stories {
 	gap: desktop(32);
-	margin-top: desktop(90);
 	
 	&__circle-wrapper {
 	  width: desktop(94);
