@@ -14,7 +14,10 @@
   line-height: mobile(19.8);
   letter-spacing: mobile(-0.36);
   text-transform: uppercase;
-  transition: all 300ms;
+  
+  &, svg, svg path {
+	transition: all 300ms;
+  }
   
   @media screen and (min-width: $desktop_media) {
 	gap: tablet(8);
@@ -53,6 +56,19 @@
   svg {
 	width: mobile(24);
 	height: mobile(24);
+  }
+  
+  &, svg path {
+	transition: all 300ms;
+  }
+  
+  &:hover {
+	color: var(--gold);
+	border-color: var(--gold);
+	
+	svg path {
+	  stroke: var(--gold);
+	}
   }
   
   &--white {
@@ -100,12 +116,40 @@
 	border-color: var(--gold);
 	background: var(--gold);
 	color: var(--white);
+	
+	&:hover {
+	  border-color: #C6973E;
+	  background: #C6973E;
+	}
+ 
+	&[disabled] {
+	  border-color: var(--g-50);
+	  background: var(--g-50);
+	}
   }
   
   &--outline {
 	border-color: var(--gold);
 	color:var(--gold);
 	/*background: var(--white);*/
+ 
+	&:hover {
+	  border-color: var(--gold);
+	  background: var(--gold);
+	  color: var(--white);
+	  
+	  svg {
+		path {
+		  fill: var(--white);
+		}
+	  }
+	}
+ 
+	&[disabled] {
+	  border-color: var(--g-50);
+	  color: var(--g-50);
+	  background: transparent;
+	}
   }
   
   @media screen and (min-width: $desktop_media) {

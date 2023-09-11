@@ -463,3 +463,188 @@
 	}
   }
 }
+
+// product-checkout-card
+
+.product-checkout-card {
+  display: flex;
+  
+  &__img {
+	flex-shrink: 0;
+	margin-right: mobile(16);
+	img {
+	  width: mobile(100);
+	  height: mobile(100);
+	}
+  }
+  
+  &__body {
+	display: flex;
+	flex-direction: column;
+	margin-right: mobile(32);
+  }
+  
+  &__name {
+	margin-bottom: mobile(8);
+ 
+	@include text-medium;
+	font-size: mobile(20);
+	line-height: mobile(26);
+	letter-spacing: mobile(-0.4);
+  }
+  
+  &__cost {
+	margin-bottom: mobile(16);
+	
+	span {
+	  @include text-medium;
+	  font-size: mobile(16);
+	  line-height: mobile(17.6);
+	  letter-spacing: mobile(-0.32);
+	}
+	
+	span:first-child {
+	  color: var(--g-60);
+	}
+  }
+  
+  &__qty {
+	display: flex;
+	gap: mobile(16);
+	margin-top: auto;
+	
+	input {
+	  text-align: center;
+	  width: mobile(16);
+	  
+	  font-size: mobile(22);
+	  line-height: mobile(24.2);
+	  letter-spacing: mobile(-0.44);
+	}
+ 
+	svg {
+	  width: mobile(16);
+	  height: mobile(16);
+	}
+  }
+  
+  &__action {
+	margin-left: auto;
+	
+	svg {
+	  width: mobile(24);
+	  height: mobile(24);
+	}
+  }
+}
+
+@media screen and (min-width: $desktop_media) {
+  .product-checkout-card {
+	&__img {
+	  flex-shrink: 0;
+	  margin-right: tablet(16);
+	  img {
+		width: tablet(100);
+		height: tablet(100);
+	  }
+	}
+	
+	&__body {
+	  margin-right: tablet(32);
+	}
+	
+	&__name {
+	  margin-bottom: tablet(8);
+	  
+	  @include m-20-tb;
+	  letter-spacing: normal;
+	}
+	
+	&__cost {
+	  margin-bottom: tablet(16);
+	  
+	  span {
+		@include r-16-tb;
+		letter-spacing: normal;
+	  }
+	}
+	
+	&__qty {
+	  gap: tablet(16);
+	  
+	  input {
+		width: tablet(16);
+		
+		@include m-20-tb;
+		letter-spacing: normal;
+	 
+		-moz-appearance: textfield;
+	  }
+	  
+	  svg {
+		width: tablet(16);
+		height: tablet(16);
+	  }
+	}
+	
+	&__action {
+	  svg {
+		width: tablet(24);
+		height: tablet(24);
+	  }
+	}
+  }
+}
+
+@media screen and (min-width: $desktop_media_static) {
+  .product-checkout-card {
+	&__img {
+	  margin-right: desktop(16);
+	  img {
+		width: desktop(100);
+		height: desktop(100);
+	  }
+	}
+	
+	&__body {
+	  margin-right: desktop(32);
+	}
+	
+	&__name {
+	  margin-bottom: desktop(8);
+	  
+	  @include m-20-dp;
+	}
+	
+	&__cost {
+	  margin-bottom: desktop(16);
+	  
+	  span {
+		@include r-16-dp;
+	  }
+	}
+	
+	&__qty {
+	  gap: desktop(16);
+	  
+	  input {
+		width: desktop(16);
+		
+		@include m-20-dp;
+	  }
+	  
+	  svg {
+		width: desktop(16);
+		height: desktop(16);
+	  }
+	}
+	
+	&__action {
+	  svg {
+		width: desktop(24);
+		height: desktop(24);
+	  }
+	}
+  }
+}
+

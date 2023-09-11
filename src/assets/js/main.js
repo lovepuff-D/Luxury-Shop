@@ -1,7 +1,10 @@
 import "./modules/accordion.js";
 import "./modules/slider.js";
+import "./modules/teleport.js";
+import "./modules/togglers.js";
+import "./modules/floating-blocks.js";
 
-/* import "./modules/teleport.js";
+/*
 import "./modules/marquee.js";
 import "./modules/togglers.js";
 import "./modules/form.js";

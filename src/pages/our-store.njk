@@ -1,0 +1,40 @@
+<extends src="layouts/main.html">
+  <block name="body">
+    {% set isShowBreadcrumbs = true %}
+    {% set breadcrumbsItem = [{ name: "Maison", src: "/" }, { name: "Nos magasins", src: "/out-store" }] %}
+    {% include "src/components/layout/header.html" %}
+    <main>
+      <section class="hero-wrapper">
+        <div class="hero-inner-wrapper hero-inner-wrapper--without-pt">
+          <div class="container">
+            <div class="hero">
+              <div>
+                <h2>Choisissez votre magasin le plus proche</h2>
+              </div>
+              <div>
+                <p>Nous sommes fiers de nos emplacements à Alger, Constantine et Oran et notre équipe vous attend avec impatience</p>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="hero-banner">
+              <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d150832.38358194157!2d-0.6812445941255579!3d35.748997784654414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7e8854841f537d%3A0x4187f63762f7290f!2sOran%2C%20Algeria!5e0!3m2!1sen!2sru!4v1694461357333!5m2!1sen!2sru" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+
+        </div>
+      </section>
+      <include src="components/widget/addresses.html"></include>
+      <include src="components/widget/advantages.html"></include>
+      <include src="components/widget/subscribe.html"></include>
+      <include src="components/widget/faq.html"></include>
+    </main>
+    <include src="components/layout/footer.html"></include>
+  </block>
+</extends>

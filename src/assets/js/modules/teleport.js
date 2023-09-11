@@ -1,4 +1,3 @@
-/*
 window.addEventListener('DOMContentLoaded', () => {
   const mobileMenu = document.querySelector('.mobile-menu')
   if (mobileMenu) {
@@ -8,4 +7,4 @@ window.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(plug)
     plug.replaceWith(mobileMenu)
   }
-})*/
+})

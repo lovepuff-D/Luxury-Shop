@@ -14,7 +14,11 @@ button[data-services-list-prev-slide-handler], button[data-services-list-next-sl
   border-radius: 50%;
   background-color: rgba(white, 70%);
   
-  transition: opacity 300ms;
+  transition: all 300ms;
+  
+  &:hover {
+	background-color: var(--white);
+  }
   
   svg {
 	width: mobile(16);
@@ -175,7 +179,7 @@ button[data-services-list-next-slide-handler] {
 	}
 	
 	.product-card {
-	  width: tablet(431);
+	  width: tablet(440);
 	}
 	
 	.swiper-wrapper > div {
@@ -189,7 +193,7 @@ button[data-services-list-next-slide-handler] {
 @media screen and (min-width: $desktop_media_static) {
   .product-slider {
 	.product-card {
-	  width: desktop(431);
+	  width: desktop(440);
 	}
 	
 	.swiper-wrapper > div {

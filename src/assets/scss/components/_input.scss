@@ -49,6 +49,12 @@
   @include r-16-mb;
   color: var(--black);
   
+  transition: border-color 300ms;
+  
+  &:focus {
+    border-color: var(--gold);
+  }
+  
   &::placeholder {
     color: var(--g-50);
   }

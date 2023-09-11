@@ -25,6 +25,12 @@
  
 	a {
 	  @include mobile-text;
+	  transition: all 300ms;
+	  
+	  &:hover {
+		border-color: var(--gold);
+		color: var(--gold);
+	  }
 	}
   }
 }

@@ -40,10 +40,13 @@ main {
 
 /*** Header ***/
 .header {
+  position: relative;
+  z-index: 6;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: mobile(20) 0;
+  background: var(--white);
   
   svg {
 	width: mobile(24);
@@ -146,6 +149,14 @@ main {
 	  gap: tablet(8);
 	  align-items: center;
 	  @include r-16-tb;
+	  
+	  a {
+		transition: all 300ms;
+		
+		&:hover {
+		  color: var(--gold);
+		}
+	  }
 	}
 	
 	&__logo {
@@ -290,42 +301,6 @@ main {
 	}
   }
   
-  &__menu {
-	ul {
-	  display: flex;
-	  flex-direction: column;
-	  gap: mobile(24);
-	  
-	  li {
-		@include text-semi-bold;
-		font-size: mobile(18);
-		line-height: mobile(24);
-		letter-spacing: mobile(0.5);
-	  }
-	}
-  }
-  
-  &__divider {
-	width: 100%;
-	height: mobile(1);
-	background: var(--g-10);
-  }
-  
-  &__contacts {
-	display: flex;
-	flex-direction: column;
-	gap: mobile(40);
-	
-	.contacts {
-	  max-width: mobile(247);
-	  margin: 0 auto;
-	}
-  }
-  
-  &__contacts-header {
-	
-  }
-  
   &__copyright {
 	display: flex;
 	flex-direction: column;
@@ -342,6 +317,11 @@ main {
 	  letter-spacing: inherit;
 	}
   }
+  
+  .contacts-list {
+	max-width: mobile(247);
+	margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: $desktop_media) {
@@ -353,8 +333,8 @@ main {
   .footer {
 	gap: tablet(64);
 	text-align: left;
- 
-	&__contacts, &__menu {
+	
+	.contacts-card, .list-menu {
 	  width: tablet(232);
 	}
 	
@@ -381,51 +361,32 @@ main {
 	  }
 	}
 	
-	&__menu {
-	  order: -1;
-	  
-	  ul {
-		gap: tablet(24);
-		
-		li {
-		  @include m-18-tb;
-		  letter-spacing: normal;
-		}
-	  }
-	}
-	
-	&__divider {
+	.divider {
 	  display: none;
 	}
-	
-	&__contacts {
-	  display: flex;
-	  flex-direction: column;
-	  gap: tablet(40);
-	  
+ 
+	.contacts-card {
 	  .social-media {
 		display: none;
 	  }
-	  
-	  .contacts {
-		max-width: none;
-		margin: 0;
-	  }
 	}
- 
-	.contacts {
+	
+	.contacts-list {
+	  max-width: none;
+	  margin: 0;
+	  
 	  & > div {
 		p {
 		  @include m-18-tb;
 		}
-	 
+		
 		a {
 		  @include r-16-tb;
 		}
 	  }
 	}
 	
-	&__contacts-header {
+	.contacts-card .contacts-card-header {
 	  display: none;
 	}
 	
@@ -459,8 +420,8 @@ main {
   
   .footer {
 	gap: desktop(64);
- 
-	&__contacts, &__menu {
+	
+	.contacts-card, .list-menu {
 	  width: desktop(232);
 	}
 	
@@ -477,32 +438,22 @@ main {
 	  }
 	}
 	
-	&__menu {
-	  ul {
-		gap: desktop(24);
-		
-		li {
-		  @include m-18-dp;
-		}
-	  }
-	}
-	
-	&__contacts {
+	.contacts-card {
 	  gap: desktop(40);
 	}
- 
-	.contacts {
+	
+	.contacts-list {
 	  & > div {
 		p {
 		  @include m-18-dp;
 		}
-	 
+		
 		a {
 		  @include r-16-dp;
 		}
 	  }
 	}
- 
+	
 	&__copyright {
 	  padding: desktop(24) 0;
 	  
@@ -515,6 +466,6 @@ main {
 	  }
 	}
   }
+  
 }
-
 /***/

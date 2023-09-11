@@ -19,7 +19,7 @@
           </div>
           <div class="hero-banner">
             <div class="hero-banner__item">
-              <img src="/src/assets/img/Hero/hero-slider-2.png" alt="">
+              <img src="/src/assets/img/hero/hero-slider-2.png" alt="">
               <div>
                 <h2>Montre</h2>
                 <p>Nouvelle collection de montres Festina</p>
@@ -39,7 +39,7 @@
         <div class="container">
           <div class="catalog">
             <div class="catalog__header">
-              <button class="btn btn-flat btn-flat--outline catalog__filter-btn">
+              <button data-open-filter-frame class="btn btn-flat btn-flat--outline catalog__filter-btn">
                   <span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1471_30277)">
@@ -54,7 +54,12 @@
                   </span>
                 <span>Filtre</span>
               </button>
-              <button class="catalog__sort-btn">
+              <button
+                data-open-sort-dropdown
+                data-floating-reference-el
+                data-bind-floating-el="sort-dropdown"
+                class="catalog__sort-btn"
+              >
                 <span>Trier par</span>
                 <span>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -75,7 +80,7 @@
               <div class="filter">
                 <div class="filter__header">
                   <p>Filtre</p>
-                  <button>
+                  <button data-close-filter-frame>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1471_30349)">
 <path d="M18.75 5.25L5.25 18.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -235,15 +240,15 @@
                     </div>
                   </div>
                 </div>
-                <div class="btn btn-flat btn-flat--outline btn-text-black">
+                <button class="btn btn-flat btn-flat--outline btn-text-black">
                   appliquer (82)
-                </div>
+                </button>
               </div>
               <div class="catalog__product-list">
                 <div class="product-list">
                   <div class="product-card product-card--simplified">
                     <div class="product-card__img">
-                      <img src="/src/assets/img/Products/1.png" alt="">
+                      <img src="/src/assets/img/products/1.png" alt="">
                     </div>
                     <div class="product-card__name">FESTINA/f20576_1</div>
                     <div class="product-card__cost">
@@ -283,7 +288,7 @@
                   </div>
                   <div class="product-card product-card--simplified">
                     <div class="product-card__img">
-                      <img src="/src/assets/img/Products/2.png" alt="">
+                      <img src="/src/assets/img/products/2.png" alt="">
                     </div>
                     <div class="product-card__name">FOSSIL/FS5687</div>
                     <div class="product-card__cost">
@@ -322,7 +327,7 @@
                   </div>
                   <div class="product-card product-card--simplified">
                     <div class="product-card__img">
-                      <img src="/src/assets/img/Products/3.png" alt="">
+                      <img src="/src/assets/img/products/3.png" alt="">
                     </div>
                     <div class="product-card__name">FESTINA/f20576_1</div>
                     <div class="product-card__cost">
@@ -361,7 +366,7 @@
                   </div>
                   <div class="product-card product-card--simplified">
                     <div class="product-card__img">
-                      <img src="/src/assets/img/Products/4.png" alt="">
+                      <img src="/src/assets/img/products/4.png" alt="">
                     </div>
                     <div class="product-card__name">festina/F20523_1</div>
                     <div class="product-card__cost">
@@ -400,7 +405,7 @@
                   </div>
                   <div class="product-card product-card--simplified">
                     <div class="product-card__img">
-                      <img src="/src/assets/img/Products/5.png" alt="">
+                      <img src="/src/assets/img/products/5.png" alt="">
                     </div>
                     <div class="product-card__name">ARMANI EXCHANGE</div>
                     <div class="product-card__cost">
@@ -439,7 +444,7 @@
                   </div>
                   <div class="product-card product-card--simplified">
                     <div class="product-card__img">
-                      <img src="/src/assets/img/Products/6.png" alt="">
+                      <img src="/src/assets/img/products/6.png" alt="">
                     </div>
                     <div class="product-card__name">FESTINA/F20545_1</div>
                     <div class="product-card__cost">
@@ -478,7 +483,7 @@
                   </div>
                   <div class="product-card product-card--simplified">
                     <div class="product-card__img">
-                      <img src="/src/assets/img/Products/7.png" alt="">
+                      <img src="/src/assets/img/products/7.png" alt="">
                     </div>
                     <div class="product-card__name">FOSSIL/bq2491</div>
                     <div class="product-card__cost">
@@ -517,7 +522,7 @@
                   </div>
                   <div class="product-card product-card--simplified">
                     <div class="product-card__img">
-                      <img src="/src/assets/img/Products/8.png" alt="">
+                      <img src="/src/assets/img/products/8.png" alt="">
                     </div>
                     <div class="product-card__name">FESTINA/F20549_1</div>
                     <div class="product-card__cost">
@@ -557,7 +562,7 @@
                   </div>
                   <div class="product-card product-card--simplified">
                     <div class="product-card__img">
-                      <img src="/src/assets/img/Products/1.png" alt="">
+                      <img src="/src/assets/img/products/1.png" alt="">
                     </div>
                     <div class="product-card__name">FESTINA/f20576_1</div>
                     <div class="product-card__cost">
@@ -597,7 +602,7 @@
                   </div>
                   <div class="product-card product-card--simplified">
                     <div class="product-card__img">
-                      <img src="/src/assets/img/Products/2.png" alt="">
+                      <img src="/src/assets/img/products/2.png" alt="">
                     </div>
                     <div class="product-card__name">FOSSIL/FS5687</div>
                     <div class="product-card__cost">
@@ -636,7 +641,7 @@
                   </div>
                   <div class="product-card product-card--simplified">
                     <div class="product-card__img">
-                      <img src="/src/assets/img/Products/3.png" alt="">
+                      <img src="/src/assets/img/products/3.png" alt="">
                     </div>
                     <div class="product-card__name">FESTINA/f20576_1</div>
                     <div class="product-card__cost">
@@ -675,7 +680,7 @@
                   </div>
                   <div class="product-card product-card--simplified">
                     <div class="product-card__img">
-                      <img src="/src/assets/img/Products/4.png" alt="">
+                      <img src="/src/assets/img/products/4.png" alt="">
                     </div>
                     <div class="product-card__name">festina/F20523_1</div>
                     <div class="product-card__cost">
@@ -714,7 +719,7 @@
                   </div>
                   <div class="product-card product-card--simplified">
                     <div class="product-card__img">
-                      <img src="/src/assets/img/Products/5.png" alt="">
+                      <img src="/src/assets/img/products/5.png" alt="">
                     </div>
                     <div class="product-card__name">ARMANI EXCHANGE</div>
                     <div class="product-card__cost">
@@ -753,7 +758,7 @@
                   </div>
                   <div class="product-card product-card--simplified">
                     <div class="product-card__img">
-                      <img src="/src/assets/img/Products/6.png" alt="">
+                      <img src="/src/assets/img/products/6.png" alt="">
                     </div>
                     <div class="product-card__name">FESTINA/F20545_1</div>
                     <div class="product-card__cost">
@@ -792,7 +797,7 @@
                   </div>
                   <div class="product-card product-card--simplified">
                     <div class="product-card__img">
-                      <img src="/src/assets/img/Products/7.png" alt="">
+                      <img src="/src/assets/img/products/7.png" alt="">
                     </div>
                     <div class="product-card__name">FOSSIL/bq2491</div>
                     <div class="product-card__cost">
@@ -831,7 +836,7 @@
                   </div>
                   <div class="product-card product-card--simplified">
                     <div class="product-card__img">
-                      <img src="/src/assets/img/Products/8.png" alt="">
+                      <img src="/src/assets/img/products/8.png" alt="">
                     </div>
                     <div class="product-card__name">FESTINA/F20549_1</div>
                     <div class="product-card__cost">
@@ -915,5 +920,12 @@
       <include src="components/widget/faq.html"></include>
     </main>
     <include src="components/layout/footer.html"></include>
+    <div data-floating-el="sort-dropdown" class="sort-dropdown">
+      <button>Best matches</button>
+      <button>Price low to high</button>
+      <button>Price high to low</button>
+      <button>Product name A - Z</button>
+      <button>Product name Z - A</button>
+    </div>
   </block>
 </extends>

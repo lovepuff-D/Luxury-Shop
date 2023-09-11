@@ -7,6 +7,219 @@
     </head>
     <body>
       <block name="body"></block>
+      <div class="overlay"></div>
+      <div data-floating-el="basket-side" data-floating-offset="24" class="basket-side">
+        <div class="basket-side__header">
+          <p>Panier <span>(3)</span></p>
+          <button data-close-basket-side>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1792_15141)">
+                <path d="M18.75 5.25L5.25 18.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.75 18.75L5.25 5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_1792_15141">
+                  <rect width="24" height="24" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+        <div class="divider"></div>
+        <div class="basket-side__body">
+          <div class="checkout-list">
+            <div class="product-checkout-card">
+              <div class="product-checkout-card__img">
+                <img src="/src/assets/img/products/1.png" alt="">
+              </div>
+              <div class="product-checkout-card__body">
+                <p class="product-checkout-card__name">Festina / F20622/C</p>
+                <div class="product-checkout-card__cost">
+                  <span>Prix:</span>
+                  <span>30 000 DA</span>
+                </div>
+                <div class="product-checkout-card__qty">
+                  <button data-add-qty>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_1471_28957)">
+                        <path d="M2.5 8H13.5" stroke="#8E8E8E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1471_28957">
+                          <rect width="16" height="16" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                  <input type="number" disabled value="1">
+                  <button data-remove-qty>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_1471_28961)">
+                        <path d="M2.5 8H13.5" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8 2.5V13.5" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1471_28961">
+                          <rect width="16" height="16" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="product-checkout-card__action">
+                <button data-delete-product-from-cart>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1471_28965)">
+                      <path d="M20.25 5.25H3.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9.75 9.75V15.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M14.25 9.75V15.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M18.75 5.25V19.5C18.75 19.6989 18.671 19.8897 18.5303 20.0303C18.3897 20.171 18.1989 20.25 18 20.25H6C5.80109 20.25 5.61032 20.171 5.46967 20.0303C5.32902 19.8897 5.25 19.6989 5.25 19.5V5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M15.75 5.25V3.75C15.75 3.35218 15.592 2.97064 15.3107 2.68934C15.0294 2.40804 14.6478 2.25 14.25 2.25H9.75C9.35218 2.25 8.97064 2.40804 8.68934 2.68934C8.40804 2.97064 8.25 3.35218 8.25 3.75V5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1471_28965">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-checkout-card">
+              <div class="product-checkout-card__img">
+                <img src="/src/assets/img/products/1.png" alt="">
+              </div>
+              <div class="product-checkout-card__body">
+                <p class="product-checkout-card__name">Festina / F20540/A</p>
+                <div class="product-checkout-card__cost">
+                  <span>Prix:</span>
+                  <span>34 000 DA</span>
+                </div>
+                <div class="product-checkout-card__qty">
+                  <button data-add-qty>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_1471_28957)">
+                        <path d="M2.5 8H13.5" stroke="#8E8E8E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1471_28957">
+                          <rect width="16" height="16" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                  <input type="number" disabled value="1">
+                  <button data-remove-qty>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_1471_28961)">
+                        <path d="M2.5 8H13.5" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8 2.5V13.5" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1471_28961">
+                          <rect width="16" height="16" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="product-checkout-card__action">
+                <button data-delete-product-from-cart>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1471_28965)">
+                      <path d="M20.25 5.25H3.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9.75 9.75V15.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M14.25 9.75V15.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M18.75 5.25V19.5C18.75 19.6989 18.671 19.8897 18.5303 20.0303C18.3897 20.171 18.1989 20.25 18 20.25H6C5.80109 20.25 5.61032 20.171 5.46967 20.0303C5.32902 19.8897 5.25 19.6989 5.25 19.5V5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M15.75 5.25V3.75C15.75 3.35218 15.592 2.97064 15.3107 2.68934C15.0294 2.40804 14.6478 2.25 14.25 2.25H9.75C9.35218 2.25 8.97064 2.40804 8.68934 2.68934C8.40804 2.97064 8.25 3.35218 8.25 3.75V5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1471_28965">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-checkout-card">
+              <div class="product-checkout-card__img">
+                <img src="/src/assets/img/products/1.png" alt="">
+              </div>
+              <div class="product-checkout-card__body">
+                <p class="product-checkout-card__name">Festina / F20649/B </p>
+                <div class="product-checkout-card__cost">
+                  <span>Prix:</span>
+                  <span>28 000 DA</span>
+                </div>
+                <div class="product-checkout-card__qty">
+                  <button data-add-qty>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_1471_28957)">
+                        <path d="M2.5 8H13.5" stroke="#8E8E8E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1471_28957">
+                          <rect width="16" height="16" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                  <input type="number" disabled value="1">
+                  <button data-remove-qty>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_1471_28961)">
+                        <path d="M2.5 8H13.5" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8 2.5V13.5" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1471_28961">
+                          <rect width="16" height="16" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="product-checkout-card__action">
+                <button data-delete-product-from-cart>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1471_28965)">
+                      <path d="M20.25 5.25H3.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9.75 9.75V15.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M14.25 9.75V15.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M18.75 5.25V19.5C18.75 19.6989 18.671 19.8897 18.5303 20.0303C18.3897 20.171 18.1989 20.25 18 20.25H6C5.80109 20.25 5.61032 20.171 5.46967 20.0303C5.32902 19.8897 5.25 19.6989 5.25 19.5V5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M15.75 5.25V3.75C15.75 3.35218 15.592 2.97064 15.3107 2.68934C15.0294 2.40804 14.6478 2.25 14.25 2.25H9.75C9.35218 2.25 8.97064 2.40804 8.68934 2.68934C8.40804 2.97064 8.25 3.35218 8.25 3.75V5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1471_28965">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="basket-side__total">
+            <span>Total:</span>
+            <span>92 000 DA</span>
+          </div>
+        </div>
+        <div class="basket-side__actions">
+          <a href="/checkout.html" class="btn btn-link btn-link--black">
+            <span>Votre panier</span>
+            <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1469_19021)"><path d="M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_1469_19021"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                </svg>
+          </span>
+          </a>
+          <a href="/checkout.html" class="btn btn-flat btn-flat--main">Commander</a>
+        </div>
+      </div>
       <script type="module" src="/src/assets/js/main.js"></script>
     </body>
 </html>

@@ -1,0 +1,345 @@
+<extends src="layouts/main.html">
+  <block name="body">
+    {% set isShowBreadcrumbs = true %}
+    {% set breadcrumbsItem = [{ name: "Maison", src: "/" }, { name: "Payment repid", src: "/payment_repid" }] %}
+    {% include "src/components/layout/header.html" %}
+    <main>
+      <section>
+        <div class="container">
+          <div class="checkout-section">
+            <div class="checkout-list">
+              <div class="product-checkout-card">
+                <div class="product-checkout-card__img">
+                  <img src="/src/assets/img/products/1.png" alt="">
+                </div>
+                <div class="product-checkout-card__body">
+                  <p class="product-checkout-card__name">Festina / F20622/C</p>
+                  <div class="product-checkout-card__cost">
+                    <span>Prix:</span>
+                    <span>30 000 DA</span>
+                  </div>
+                  <div class="product-checkout-card__qty">
+                    <button data-add-qty>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1471_28957)">
+                          <path d="M2.5 8H13.5" stroke="#8E8E8E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1471_28957">
+                            <rect width="16" height="16" fill="white"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </button>
+                    <input type="number" disabled value="1">
+                    <button data-remove-qty>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1471_28961)">
+                          <path d="M2.5 8H13.5" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M8 2.5V13.5" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1471_28961">
+                            <rect width="16" height="16" fill="white"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="product-checkout-card__action">
+                  <button data-delete-product-from-cart>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_1471_28965)">
+                        <path d="M20.25 5.25H3.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.75 9.75V15.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14.25 9.75V15.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.75 5.25V19.5C18.75 19.6989 18.671 19.8897 18.5303 20.0303C18.3897 20.171 18.1989 20.25 18 20.25H6C5.80109 20.25 5.61032 20.171 5.46967 20.0303C5.32902 19.8897 5.25 19.6989 5.25 19.5V5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15.75 5.25V3.75C15.75 3.35218 15.592 2.97064 15.3107 2.68934C15.0294 2.40804 14.6478 2.25 14.25 2.25H9.75C9.35218 2.25 8.97064 2.40804 8.68934 2.68934C8.40804 2.97064 8.25 3.35218 8.25 3.75V5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1471_28965">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="product-checkout-card">
+                <div class="product-checkout-card__img">
+                  <img src="/src/assets/img/products/1.png" alt="">
+                </div>
+                <div class="product-checkout-card__body">
+                  <p class="product-checkout-card__name">Festina / F20540/A</p>
+                  <div class="product-checkout-card__cost">
+                    <span>Prix:</span>
+                    <span>34 000 DA</span>
+                  </div>
+                  <div class="product-checkout-card__qty">
+                    <button data-add-qty>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1471_28957)">
+                          <path d="M2.5 8H13.5" stroke="#8E8E8E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1471_28957">
+                            <rect width="16" height="16" fill="white"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </button>
+                    <input type="number" disabled value="1">
+                    <button data-remove-qty>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1471_28961)">
+                          <path d="M2.5 8H13.5" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M8 2.5V13.5" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1471_28961">
+                            <rect width="16" height="16" fill="white"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="product-checkout-card__action">
+                  <button data-delete-product-from-cart>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_1471_28965)">
+                        <path d="M20.25 5.25H3.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.75 9.75V15.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14.25 9.75V15.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.75 5.25V19.5C18.75 19.6989 18.671 19.8897 18.5303 20.0303C18.3897 20.171 18.1989 20.25 18 20.25H6C5.80109 20.25 5.61032 20.171 5.46967 20.0303C5.32902 19.8897 5.25 19.6989 5.25 19.5V5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15.75 5.25V3.75C15.75 3.35218 15.592 2.97064 15.3107 2.68934C15.0294 2.40804 14.6478 2.25 14.25 2.25H9.75C9.35218 2.25 8.97064 2.40804 8.68934 2.68934C8.40804 2.97064 8.25 3.35218 8.25 3.75V5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1471_28965">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="product-checkout-card">
+                <div class="product-checkout-card__img">
+                  <img src="/src/assets/img/products/1.png" alt="">
+                </div>
+                <div class="product-checkout-card__body">
+                  <p class="product-checkout-card__name">Festina / F20649/B </p>
+                  <div class="product-checkout-card__cost">
+                    <span>Prix:</span>
+                    <span>28 000 DA</span>
+                  </div>
+                  <div class="product-checkout-card__qty">
+                    <button data-add-qty>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1471_28957)">
+                          <path d="M2.5 8H13.5" stroke="#8E8E8E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1471_28957">
+                            <rect width="16" height="16" fill="white"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </button>
+                    <input type="number" disabled value="1">
+                    <button data-remove-qty>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1471_28961)">
+                          <path d="M2.5 8H13.5" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M8 2.5V13.5" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1471_28961">
+                            <rect width="16" height="16" fill="white"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="product-checkout-card__action">
+                  <button data-delete-product-from-cart>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_1471_28965)">
+                        <path d="M20.25 5.25H3.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.75 9.75V15.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14.25 9.75V15.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.75 5.25V19.5C18.75 19.6989 18.671 19.8897 18.5303 20.0303C18.3897 20.171 18.1989 20.25 18 20.25H6C5.80109 20.25 5.61032 20.171 5.46967 20.0303C5.32902 19.8897 5.25 19.6989 5.25 19.5V5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15.75 5.25V3.75C15.75 3.35218 15.592 2.97064 15.3107 2.68934C15.0294 2.40804 14.6478 2.25 14.25 2.25H9.75C9.35218 2.25 8.97064 2.40804 8.68934 2.68934C8.40804 2.97064 8.25 3.35218 8.25 3.75V5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1471_28965">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="checkout-order">
+              <div class="checkout-order-sum">
+                <div class="checkout-order-sum__header">
+                  Résumé de la commande
+                </div>
+                <div class="checkout-order-sum__info">
+                  <div>
+                    <div>Coût:</div>
+                    <div>92 000 DA</div>
+                  </div>
+                  <div>
+                    <div>Frais de livraison:</div>
+                    <div>0. 00 DA</div>
+                  </div>
+                  <div class="divider"></div>
+                  <div>
+                    <div>Total:</div>
+                    <div>92 000 DA</div>
+                  </div>
+                </div>
+              </div>
+              <div class="checkout-order-form">
+                <div class="checkout-order-form__header">
+                  Remplissez votre numéro de téléphone
+                </div>
+                <form>
+                  <input type="text" class="main-input" placeholder="Name *">
+                  <input type="text" class="main-input" placeholder="Téléphone *">
+                  <input type="text" class="main-input" placeholder="Adresse *">
+                </form>
+                <div class="checkout-order-form__actions">
+                  <button data-add-to-cart class="btn btn-flat btn-flat--main">Commander</button>
+                  <button data-show-contact-modal class="btn btn-flat btn-flat--outline">
+                  <span><svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1471_29160)">
+<path
+  d="M18.3547 4.55156C16.3906 2.58281 13.775 1.5 10.9953 1.5C5.25781 1.5 0.589062 6.16875 0.589062 11.9062C0.589062 13.7391 1.06719 15.5297 1.97656 17.1094L0.5 22.5L6.01719 21.0516C7.53594 21.8813 9.24687 22.3172 10.9906 22.3172H10.9953C16.7281 22.3172 21.5 17.6484 21.5 11.9109C21.5 9.13125 20.3188 6.52031 18.3547 4.55156ZM10.9953 20.5641C9.43906 20.5641 7.91562 20.1469 6.58906 19.3594L6.275 19.1719L3.00313 20.0297L3.875 16.8375L3.66875 16.5094C2.80156 15.1313 2.34688 13.5422 2.34688 11.9062C2.34688 7.13906 6.22812 3.25781 11 3.25781C13.3109 3.25781 15.4812 4.15781 17.1125 5.79375C18.7437 7.42969 19.7469 9.6 19.7422 11.9109C19.7422 16.6828 15.7625 20.5641 10.9953 20.5641ZM15.7391 14.0859C15.4813 13.9547 14.2016 13.3266 13.9625 13.2422C13.7234 13.1531 13.55 13.1109 13.3766 13.3734C13.2031 13.6359 12.7063 14.2172 12.5516 14.3953C12.4016 14.5688 12.2469 14.5922 11.9891 14.4609C10.4609 13.6969 9.45781 13.0969 8.45 11.3672C8.18281 10.9078 8.71719 10.9406 9.21406 9.94687C9.29844 9.77344 9.25625 9.62344 9.19062 9.49219C9.125 9.36094 8.60469 8.08125 8.38906 7.56094C8.17813 7.05469 7.9625 7.125 7.80313 7.11563C7.65313 7.10625 7.47969 7.10625 7.30625 7.10625C7.13281 7.10625 6.85156 7.17188 6.6125 7.42969C6.37344 7.69219 5.70312 8.32031 5.70312 9.6C5.70312 10.8797 6.63594 12.1172 6.7625 12.2906C6.89375 12.4641 8.59531 15.0891 11.2062 16.2188C12.8562 16.9312 13.5031 16.9922 14.3281 16.8703C14.8297 16.7953 15.8656 16.2422 16.0812 15.6328C16.2969 15.0234 16.2969 14.5031 16.2313 14.3953C16.1703 14.2781 15.9969 14.2125 15.7391 14.0859Z" fill="#D6AC5E"
+/>
+</g>
+<defs>
+<clipPath id="clip0_1471_29160">
+<rect width="21" height="24" fill="white" transform="translate(0.5)"/>
+</clipPath>
+</defs>
+</svg>
+</span>
+                    <span>Contactez-nous</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <include src="components/widget/advantages.html"></include>
+      <include src="components/widget/subscribe.html"></include>
+      <include src="components/widget/faq.html"></include>
+    </main>
+    <include src="components/layout/footer.html"></include>
+  </block>
+  <div data-contact-modal class="modal">
+    <div class="modal__header">
+      <p>Contactez-nous</p>
+      <button data-close-modal>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_1469_25747)">
+            <path d="M18.75 5.25L5.25 18.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18.75 18.75L5.25 5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_1469_25747">
+              <rect width="24" height="24" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </button>
+    </div>
+    <div class="modal__content">
+      <div class="contacts-card gap-xs">
+        <div class="contacts-list">
+          <div>
+            <p>Clients de Service</p>
+            <a href="tel:023 804 474">
+                    <span>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1471_30625)">
+<path
+  d="M15.4116 13.6257C15.5154 13.5566 15.6349 13.5145 15.7591 13.5032C15.8834 13.4919 16.0085 13.5118 16.1231 13.561L20.5444 15.542C20.6934 15.6057 20.8177 15.7159 20.8989 15.8562C20.98 15.9964 21.0135 16.1592 20.9944 16.3201C20.8487 17.4086 20.3127 18.4071 19.486 19.13C18.6593 19.8529 17.5982 20.2509 16.5 20.2501C13.1185 20.2501 9.87548 18.9068 7.48439 16.5157C5.0933 14.1246 3.75 10.8816 3.75 7.5001C3.74916 6.40192 4.1472 5.3408 4.87009 4.5141C5.59298 3.6874 6.59152 3.15138 7.68 3.00573C7.84091 2.98661 8.00367 3.02012 8.14394 3.10124C8.28422 3.18236 8.39444 3.30673 8.45812 3.45573L10.4391 7.88073C10.4877 7.99438 10.5076 8.1183 10.4968 8.24146C10.486 8.36463 10.4449 8.48321 10.3772 8.58666L8.37375 10.9689C8.30268 11.0761 8.26066 11.1999 8.25179 11.3283C8.24291 11.4566 8.26749 11.585 8.32312 11.701C9.09844 13.2882 10.7391 14.9092 12.3309 15.677C12.4475 15.7324 12.5766 15.7564 12.7053 15.7467C12.834 15.737 12.958 15.6939 13.065 15.6217L15.4116 13.6257Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+/>
+</g>
+<defs>
+<clipPath id="clip0_1471_30625">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                    </span>
+              <span>023 804 474</span>
+            </a>
+            <a href="mailto:contact@luxuryshopdz.com">
+                    <span>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1471_30630)">
+<path d="M3 5.25H21V18C21 18.1989 20.921 18.3897 20.7803 18.5303C20.6397 18.671 20.4489 18.75 20.25 18.75H3.75C3.55109 18.75 3.36032 18.671 3.21967 18.5303C3.07902 18.3897 3 18.1989 3 18V5.25Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21 5.25L12 13.5L3 5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1471_30630">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                    </span>
+              <span>contact@luxuryshopdz.com</span>
+            </a>
+          </div>
+          <div>
+            <p>Technique de soutien</p>
+            <a href="tel:021 436 272">
+                    <span>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1471_30625)">
+<path
+  d="M15.4116 13.6257C15.5154 13.5566 15.6349 13.5145 15.7591 13.5032C15.8834 13.4919 16.0085 13.5118 16.1231 13.561L20.5444 15.542C20.6934 15.6057 20.8177 15.7159 20.8989 15.8562C20.98 15.9964 21.0135 16.1592 20.9944 16.3201C20.8487 17.4086 20.3127 18.4071 19.486 19.13C18.6593 19.8529 17.5982 20.2509 16.5 20.2501C13.1185 20.2501 9.87548 18.9068 7.48439 16.5157C5.0933 14.1246 3.75 10.8816 3.75 7.5001C3.74916 6.40192 4.1472 5.3408 4.87009 4.5141C5.59298 3.6874 6.59152 3.15138 7.68 3.00573C7.84091 2.98661 8.00367 3.02012 8.14394 3.10124C8.28422 3.18236 8.39444 3.30673 8.45812 3.45573L10.4391 7.88073C10.4877 7.99438 10.5076 8.1183 10.4968 8.24146C10.486 8.36463 10.4449 8.48321 10.3772 8.58666L8.37375 10.9689C8.30268 11.0761 8.26066 11.1999 8.25179 11.3283C8.24291 11.4566 8.26749 11.585 8.32312 11.701C9.09844 13.2882 10.7391 14.9092 12.3309 15.677C12.4475 15.7324 12.5766 15.7564 12.7053 15.7467C12.834 15.737 12.958 15.6939 13.065 15.6217L15.4116 13.6257Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+/>
+</g>
+<defs>
+<clipPath id="clip0_1471_30625">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                    </span>
+              <span>021 436 272</span>
+            </a>
+            <a href="mailto:support@luxuryshopdz.com ">
+                    <span>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1471_30630)">
+<path d="M3 5.25H21V18C21 18.1989 20.921 18.3897 20.7803 18.5303C20.6397 18.671 20.4489 18.75 20.25 18.75H3.75C3.55109 18.75 3.36032 18.671 3.21967 18.5303C3.07902 18.3897 3 18.1989 3 18V5.25Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21 5.25L12 13.5L3 5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1471_30630">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                    </span>
+              <span>support@luxuryshopdz.com </span>
+            </a>
+          </div>
+        </div>
+        <div class="divider"></div>
+        {% set socialMediaClass = '' %}
+        {% include "src/components/widget/social-media.html" %}
+      </div>
+    </div>
+  </div>
+</extends>

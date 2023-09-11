@@ -46,7 +46,9 @@
         <div class="header__phone-number">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_1612_13288)">
-              <path d="M15.4116 13.6252C15.5154 13.5561 15.6349 13.514 15.7591 13.5027C15.8834 13.4914 16.0085 13.5113 16.1231 13.5606L20.5444 15.5415C20.6934 15.6052 20.8177 15.7154 20.8989 15.8557C20.98 15.9959 21.0135 16.1587 20.9944 16.3196C20.8487 17.4081 20.3127 18.4066 19.486 19.1295C18.6593 19.8524 17.5982 20.2505 16.5 20.2496C13.1185 20.2496 9.87548 18.9063 7.48439 16.5152C5.0933 14.1241 3.75 10.8811 3.75 7.49961C3.74916 6.40143 4.1472 5.34032 4.87009 4.51361C5.59298 3.68691 6.59152 3.15089 7.68 3.00524C7.84091 2.98612 8.00368 3.01963 8.14395 3.10075C8.28422 3.18187 8.39444 3.30624 8.45813 3.45524L10.4391 7.88024C10.4877 7.99389 10.5076 8.11781 10.4968 8.24098C10.486 8.36414 10.4449 8.48272 10.3772 8.58618L8.37375 10.9684C8.30269 11.0756 8.26066 11.1994 8.25179 11.3278C8.24291 11.4561 8.26749 11.5846 8.32313 11.7006C9.09844 13.2877 10.7391 14.9087 12.3309 15.6765C12.4475 15.7319 12.5766 15.7559 12.7053 15.7462C12.834 15.7365 12.958 15.6934 13.065 15.6212L15.4116 13.6252Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path
+                d="M15.4116 13.6252C15.5154 13.5561 15.6349 13.514 15.7591 13.5027C15.8834 13.4914 16.0085 13.5113 16.1231 13.5606L20.5444 15.5415C20.6934 15.6052 20.8177 15.7154 20.8989 15.8557C20.98 15.9959 21.0135 16.1587 20.9944 16.3196C20.8487 17.4081 20.3127 18.4066 19.486 19.1295C18.6593 19.8524 17.5982 20.2505 16.5 20.2496C13.1185 20.2496 9.87548 18.9063 7.48439 16.5152C5.0933 14.1241 3.75 10.8811 3.75 7.49961C3.74916 6.40143 4.1472 5.34032 4.87009 4.51361C5.59298 3.68691 6.59152 3.15089 7.68 3.00524C7.84091 2.98612 8.00368 3.01963 8.14395 3.10075C8.28422 3.18187 8.39444 3.30624 8.45813 3.45524L10.4391 7.88024C10.4877 7.99389 10.5076 8.11781 10.4968 8.24098C10.486 8.36414 10.4449 8.48272 10.3772 8.58618L8.37375 10.9684C8.30269 11.0756 8.26066 11.1994 8.25179 11.3278C8.24291 11.4561 8.26749 11.5846 8.32313 11.7006C9.09844 13.2877 10.7391 14.9087 12.3309 15.6765C12.4475 15.7319 12.5766 15.7559 12.7053 15.7462C12.834 15.7365 12.958 15.6934 13.065 15.6212L15.4116 13.6252Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              />
             </g>
             <defs>
               <clipPath id="clip0_1612_13288">
@@ -107,22 +109,24 @@
       </a>
       <div class="header__side">
         <div class="header__search header__search--desktop">
-          <div class="search-input">
-            <input placeholder="Search" type="text">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_1471_28797)">
-                <path d="M10.5 18C14.6421 18 18 14.6421 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M15.8047 15.8035L21.0012 21" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </g>
-              <defs>
-                <clipPath id="clip0_1471_28797">
-                  <rect width="24" height="24" fill="white"/>
-                </clipPath>
-              </defs>
-            </svg>
-          </div>
+          <form class="search-input">
+            <input placeholder="Search" type="text" name="search">
+            <button type="submit">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1471_28797)">
+                  <path d="M10.5 18C14.6421 18 18 14.6421 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M15.8047 15.8035L21.0012 21" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_1471_28797">
+                    <rect width="24" height="24" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+          </form>
         </div>
-        <button class="header__favorite">
+        <a href="/" class="header__favorite">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_1471_28913)">
               <path d="M12 20.25C12 20.25 2.25 15 2.25 8.8125C2.25 7.46984 2.78337 6.18217 3.73277 5.23277C4.68217 4.28337 5.96984 3.75 7.3125 3.75C9.43031 3.75 11.2444 4.90406 12 6.75C12.7556 4.90406 14.5697 3.75 16.6875 3.75C18.0302 3.75 19.3178 4.28337 20.2672 5.23277C21.2166 6.18217 21.75 7.46984 21.75 8.8125C21.75 15 12 20.25 12 20.25Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -133,8 +137,13 @@
               </clipPath>
             </defs>
           </svg>
-        </button>
-        <button class="header__shopping-cart">
+        </a>
+        <button
+          data-open-basket-side
+          data-floating-reference-el
+          data-bind-floating-el="basket-side"
+          class="header__shopping-cart"
+        >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20.25 6.75H3.75C3.33579 6.75 3 7.08579 3 7.5V18.75C3 19.1642 3.33579 19.5 3.75 19.5H20.25C20.6642 19.5 21 19.1642 21 18.75V7.5C21 7.08579 20.6642 6.75 20.25 6.75Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M8.25 9V6C8.25 5.00544 8.64509 4.05161 9.34835 3.34835C10.0516 2.64509 11.0054 2.25 12 2.25C12.9946 2.25 13.9484 2.64509 14.6517 3.34835C15.3549 4.05161 15.75 5.00544 15.75 6V9" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -159,8 +168,102 @@
       </div>
     </div>
   </div>
+  <div class="mobile-menu">
+    <div class="list-menu">
+      <ul>
+        <li><a href="/">Catalogue</a></li>
+        <li><a href="/">Les Services</a></li>
+        <li><a href="/">À propos de l'entreprise</a></li>
+        <li><a href="/">Statut de la commande</a></li>
+        <li><a href="/">Confidentialité</a></li>
+      </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="contacts-card">
+      <div class="contacts-card-header">
+        <h2>Suivez-vous</h2>
+        <p>Contactez-nous, de manière pratique</p>
+      </div>
+      {% include "src/components/widget/social-media.html" %}
+      <div class="contacts-list">
+        <div>
+          <p>Clients de Service</p>
+          <a href="tel:023 804 474">
+                    <span>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1471_30625)">
+<path
+  d="M15.4116 13.6257C15.5154 13.5566 15.6349 13.5145 15.7591 13.5032C15.8834 13.4919 16.0085 13.5118 16.1231 13.561L20.5444 15.542C20.6934 15.6057 20.8177 15.7159 20.8989 15.8562C20.98 15.9964 21.0135 16.1592 20.9944 16.3201C20.8487 17.4086 20.3127 18.4071 19.486 19.13C18.6593 19.8529 17.5982 20.2509 16.5 20.2501C13.1185 20.2501 9.87548 18.9068 7.48439 16.5157C5.0933 14.1246 3.75 10.8816 3.75 7.5001C3.74916 6.40192 4.1472 5.3408 4.87009 4.5141C5.59298 3.6874 6.59152 3.15138 7.68 3.00573C7.84091 2.98661 8.00367 3.02012 8.14394 3.10124C8.28422 3.18236 8.39444 3.30673 8.45812 3.45573L10.4391 7.88073C10.4877 7.99438 10.5076 8.1183 10.4968 8.24146C10.486 8.36463 10.4449 8.48321 10.3772 8.58666L8.37375 10.9689C8.30268 11.0761 8.26066 11.1999 8.25179 11.3283C8.24291 11.4566 8.26749 11.585 8.32312 11.701C9.09844 13.2882 10.7391 14.9092 12.3309 15.677C12.4475 15.7324 12.5766 15.7564 12.7053 15.7467C12.834 15.737 12.958 15.6939 13.065 15.6217L15.4116 13.6257Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+/>
+</g>
+<defs>
+<clipPath id="clip0_1471_30625">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                    </span>
+            <span>023 804 474</span>
+          </a>
+          <a href="mailto:contact@luxuryshopdz.com">
+                    <span>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1471_30630)">
+<path d="M3 5.25H21V18C21 18.1989 20.921 18.3897 20.7803 18.5303C20.6397 18.671 20.4489 18.75 20.25 18.75H3.75C3.55109 18.75 3.36032 18.671 3.21967 18.5303C3.07902 18.3897 3 18.1989 3 18V5.25Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21 5.25L12 13.5L3 5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1471_30630">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                    </span>
+            <span>contact@luxuryshopdz.com</span>
+          </a>
+        </div>
+        <div>
+          <p>Technique de soutien</p>
+          <a href="tel:021 436 272">
+                    <span>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1471_30625)">
+<path
+  d="M15.4116 13.6257C15.5154 13.5566 15.6349 13.5145 15.7591 13.5032C15.8834 13.4919 16.0085 13.5118 16.1231 13.561L20.5444 15.542C20.6934 15.6057 20.8177 15.7159 20.8989 15.8562C20.98 15.9964 21.0135 16.1592 20.9944 16.3201C20.8487 17.4086 20.3127 18.4071 19.486 19.13C18.6593 19.8529 17.5982 20.2509 16.5 20.2501C13.1185 20.2501 9.87548 18.9068 7.48439 16.5157C5.0933 14.1246 3.75 10.8816 3.75 7.5001C3.74916 6.40192 4.1472 5.3408 4.87009 4.5141C5.59298 3.6874 6.59152 3.15138 7.68 3.00573C7.84091 2.98661 8.00367 3.02012 8.14394 3.10124C8.28422 3.18236 8.39444 3.30673 8.45812 3.45573L10.4391 7.88073C10.4877 7.99438 10.5076 8.1183 10.4968 8.24146C10.486 8.36463 10.4449 8.48321 10.3772 8.58666L8.37375 10.9689C8.30268 11.0761 8.26066 11.1999 8.25179 11.3283C8.24291 11.4566 8.26749 11.585 8.32312 11.701C9.09844 13.2882 10.7391 14.9092 12.3309 15.677C12.4475 15.7324 12.5766 15.7564 12.7053 15.7467C12.834 15.737 12.958 15.6939 13.065 15.6217L15.4116 13.6257Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+/>
+</g>
+<defs>
+<clipPath id="clip0_1471_30625">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                    </span>
+            <span>021 436 272</span>
+          </a>
+          <a href="mailto:support@luxuryshopdz.com ">
+                    <span>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1471_30630)">
+<path d="M3 5.25H21V18C21 18.1989 20.921 18.3897 20.7803 18.5303C20.6397 18.671 20.4489 18.75 20.25 18.75H3.75C3.55109 18.75 3.36032 18.671 3.21967 18.5303C3.07902 18.3897 3 18.1989 3 18V5.25Z" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21 5.25L12 13.5L3 5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1471_30630">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                    </span>
+            <span>support@luxuryshopdz.com </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <a href="/catalog.html" class="btn btn-flat btn-flat--main">Catalogue</a>
+  </div>
   {% if isShowBreadcrumbs %}
-    {% import "src/components/widget/breadcrumbs.html" as breadcrumbs %}
-    {{ breadcrumbs.list(breadcrumbsItem) }}
+  {% import "src/components/widget/breadcrumbs.html" as breadcrumbs %}
+  {{ breadcrumbs.list(breadcrumbsItem) }}
   {% endif %}
 </header>

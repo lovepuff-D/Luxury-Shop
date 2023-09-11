@@ -1,7 +1,91 @@
-/*
 const mobileMenuBtn = document.querySelector('.header__burger')
 if (mobileMenuBtn) {
+  const mobileMenu = document.querySelector('.mobile-menu')
   mobileMenuBtn.addEventListener('click', () => {
-    document.body.classList.toggle('mobile-menu-is-active')
+    mobileMenu.classList.toggle('mobile-menu--active')
+    freezeBody()
   })
-}*/
+}
+
+const openFilterBtn = document.querySelector('button[data-open-filter-frame]')
+const closeFilterBtn = document.querySelector('button[data-close-filter-frame]')
+const filterFrame = document.querySelector('.filter')
+
+if (openFilterBtn && filterFrame) {
+  openFilterBtn.addEventListener('click', () => {
+    filterFrame.classList.add('filter--active')
+    freezeBody()
+  })
+  closeFilterBtn.addEventListener('click', () => {
+    filterFrame.classList.remove('filter--active')
+    freezeBody()
+  })
+}
+
+const addToCartBtn = document.querySelector('button[data-add-to-cart]')
+const showContactModalBtn = document.querySelector('button[data-show-contact-modal]')
+
+const closeModal = document.querySelector('button[data-close-modal]')
+const overlay = document.querySelector('.overlay')
+
+if (closeModal) {
+  closeModal.addEventListener('click', () => {
+    const activeModal = document.querySelector('.modal.is-active')
+    if (activeModal) {
+      activeModal.classList.remove('is-active')
+      overlay.classList.remove('is-active')
+    }
+  })
+}
+
+if (addToCartBtn) {
+  const checkoutFrame = document.querySelector('.modal[data-checkout-modal]')
+
+  overlay.addEventListener('click', () => {
+    overlay.classList.remove('is-active')
+    checkoutFrame.classList.remove('is-active')
+  })
+  addToCartBtn.addEventListener('click', () => {
+    overlay.classList.add('is-active')
+    checkoutFrame.classList.add('is-active')
+  })
+}
+if (showContactModalBtn) {
+  const contactFrame = document.querySelector('.modal[data-contact-modal]')
+
+  overlay.addEventListener('click', () => {
+    overlay.classList.remove('is-active')
+    contactFrame.classList.remove('is-active')
+  })
+  showContactModalBtn.addEventListener('click', () => {
+    overlay.classList.add('is-active')
+    contactFrame.classList.add('is-active')
+  })
+}
+
+const openBasketSideBtn = document.querySelector('button[data-open-basket-side]')
+
+if (openBasketSideBtn) {
+  const closeBasketSideBtn = document.querySelector('button[data-close-basket-side]')
+  const basketSide = document.querySelector('.basket-side')
+  openBasketSideBtn.addEventListener('click', () => {
+    basketSide.classList.add('is-active')
+  })
+  closeBasketSideBtn.addEventListener('click', () => {
+    basketSide.classList.remove('is-active')
+  })
+}
+
+const openSortDropdown = document.querySelector('button[data-open-sort-dropdown]')
+
+if (openSortDropdown) {
+  const sortDropdown = document.querySelector('.sort-dropdown')
+
+  openSortDropdown.addEventListener('click', () => {
+    sortDropdown.classList.add('is-active')
+  })
+}
+
+function freezeBody() {
+  document.body.classList.toggle('over-hidden')
+}
