@@ -1,42 +1,134 @@
-/*
-import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 
-window.swipers = {}
+window.swipers = []
+
+// Render Navigation + Pagination for sliders
+
+console.log(document.querySelectorAll('.swiper'))
+
+function renderModules(swiper, isRenderNavigation = true, isRenderPagination = true) {
+  if (isRenderNavigation) {
+    const navigationPrevBtn = document.createElement('button')
+    const navigationNextBtn = document.createElement('button')
+    navigationPrevBtn.setAttribute('data-services-list-prev-slide-handler', '')
+    navigationNextBtn.setAttribute('data-services-list-next-slide-handler', '')
+    swiper.insertAdjacentElement('beforeend', navigationPrevBtn)
+    swiper.insertAdjacentElement('beforeend', navigationNextBtn)
+  }
+  if (isRenderPagination) {
+    const pagination = document.createElement('div')
+    pagination.classList.add('swiper-pagination')
+    swiper.insertAdjacentElement('beforeend', pagination)
+  }
+}
+
 
 const standardSwiperConfig = {
   // configure Swiper to use modules
   modules: [Navigation, Pagination],
-  direction: "horizontal",
+  direction: 'horizontal',
   speed: 1000,
   grabCursor: true,
-  slidesPerView: "auto",
-  /!* on: {
-    init: function () {
-      this.el.querySelector(".hero-slider__counter").innerHTML =
-        "<span>" + String(this.realIndex + 1).padStart(2, "0") + "</span><span>/</span><span>" + String(this.slides.length).padStart(2, "0") + "</span>";
+  slidesPerView: 'auto',
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<div class="' + className + '"></div>';
     },
-    slideChange: function () {
-      this.el.querySelector(".hero-slider__counter").innerHTML =
-        "<span>" + String(this.realIndex + 1).padStart(2, "0") + "</span><span>/</span><span>" + String(this.slides.length).padStart(2, "0") + "</span>";
-    },
-  }, *!/
+  },
+  navigation: {
+    nextEl: 'button[data-services-list-next-slide-handler]',
+    prevEl: 'button[data-services-list-prev-slide-handler]',
+  },
 };
 
-const serviceListSwiper = document.querySelector('.services-list.swiper')
-const workflowListSwiper = document.querySelector('.workflow-wrapper .swiper')
+const heroBanner = document.querySelector('.hero-banner .swiper')
+const productSliders = document.querySelectorAll('.product-slider .swiper')
+const productItemSliders = document.querySelector('.product-item__mobile-slider')
+const reviewsSlider = document.querySelector('.reviews.swiper')
 
-if (serviceListSwiper) {
-  const localListSwiperConfig = {
-    ...standardSwiperConfig,
-    navigation: {
-      nextEl: "[data-services-list-next-slide-handler]",
-      prevEl: "[data-services-list-prev-slide-handler]",
-    },
-  }
-  var swiper = new Swiper(serviceListSwiper, localListSwiperConfig);
+if (heroBanner) {
+  renderModules(heroBanner)
+  setTimeout(() => {
+    window.swipers.push(new Swiper(heroBanner, {
+      ...standardSwiperConfig,
+      slidesPerView: 1,
+    }))
+  })
 }
-if (workflowListSwiper) {
+
+if (productSliders.length) {
+  productSliders.forEach(productSlider => {
+    renderModules(productSlider)
+    setTimeout(() => {
+      window.swipers.push(new Swiper(productSlider, {
+        ...standardSwiperConfig
+      }))
+    })
+  })
+}
+
+if (productItemSliders) {
+  const thumbsGallery = document.querySelector('.product-item .thumbs-gallery')
+  const mainSwiper = productItemSliders.cloneNode(true)
+  const thumbSwiper = productItemSliders.cloneNode(true)
+
+  mainSwiper.classList.remove('product-item__mobile-slider')
+  mainSwiper.classList.add('product-item__desktop-slider')
+
+  thumbSwiper.classList.remove('product-item__mobile-slider')
+  thumbSwiper.classList.add('product-item__desktop-thumb-slider')
+
+  thumbsGallery.insertAdjacentElement('beforeend', mainSwiper)
+  thumbsGallery.insertAdjacentElement('beforeend', thumbSwiper)
+
+  renderModules(productItemSliders)
+  renderModules(mainSwiper)
+  renderModules(thumbSwiper)
+  setTimeout(() => {
+    window.swipers.push(new Swiper(productItemSliders, {
+      ...standardSwiperConfig,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+        clickable: true,
+      },
+    }))
+    const thumbSliderInst = new Swiper(thumbSwiper, {
+      ...standardSwiperConfig,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+    })
+    const mainSwiperInst = new Swiper(mainSwiper, {
+      ...standardSwiperConfig,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+        clickable: true,
+      },
+      thumbs: {
+        swiper: thumbSliderInst,
+      },
+    })
+
+    window.swipers.push(thumbSliderInst)
+    window.swipers.push(mainSwiperInst)
+  })
+}
+
+if (reviewsSlider) {
+  renderModules(reviewsSlider)
+  setTimeout(() => {
+    window.swipers.push(new Swiper(reviewsSlider, {
+      ...standardSwiperConfig,
+    }))
+  })
+}
+
+
+/* if (workflowListSwiper) {
   const localListSwiperConfig = {
     ...standardSwiperConfig,
     simulateTouch	: false,
@@ -61,5 +153,4 @@ if (workflowListSwiper) {
       window.swipers.workflowListSwiper = swiper
     }
   }
-}
-*/
+} */

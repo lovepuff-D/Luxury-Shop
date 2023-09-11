@@ -126,12 +126,6 @@
 	  }
 	}
   }
-  
-  &__navigation {
-	display: flex;
-	justify-content: center;
-	margin-top: mobile(24);
-  }
 }
 
 @media screen and (min-width: $desktop_media) {
@@ -196,10 +190,6 @@
 		}
 	  }
 	}
-	
-	&__navigation {
-	  margin-top: tablet(24);
-	}
   }
 }
 
@@ -242,10 +232,6 @@
 		  margin-top: desktop(24);
 		}
 	  }
-	}
-	
-	&__navigation {
-	  margin-top: desktop(24);
 	}
   }
 }
@@ -977,6 +963,7 @@
 
 .product-item {
   display: flex;
+  align-items: flex-start;
   gap: mobile(32);
   
   &__info {
@@ -1034,17 +1021,13 @@
 	gap: mobile(16);
   }
   
-  &__slider {
-	display: flex;
-	width: max-content;
+  &__mobile-slider {
+	/*display: flex;
+	width: max-content;*/
   }
   
-  .swiper-wrapper {
-	display: flex;
-  }
-  
-  &__slider-item {
-	width: mobile(320);
+  &__mobile-slider &__slider-item {
+	max-width: mobile(320);
 	height: mobile(320);
 	
 	img {
@@ -1224,28 +1207,10 @@
 	  gap: tablet(24);
 	}
 	
-	&__slider {
+	&__mobile-slider {
 	  display: none !important;
 	}
-	
-	/*.swiper-wrapper {
-	  display: flex;
-	}*/
-	
-	/*&__slider-item {
-	  width: mobile(320);
-	  height: mobile(320);
-	  
-	  img {
-		width: 100%;
-		height: 100%;
-	  }
-	  
-	  &:not(:last-child) {
-		margin-right: mobile(16);
-	  }
-	}*/
-	
+ 
 	&__name-cost {
 	  gap: tablet(12);
 	}
@@ -1347,6 +1312,10 @@
 	  display: block;
 	  width: tablet(748);
 	  flex-shrink: 0;
+	  
+	  .product-item__slider {
+		display: flex!important;
+	  }
 	}
   }
 }
@@ -1478,10 +1447,10 @@
 .reviews {
   
   &__item {
-	width: mobile(300);
+	max-width: mobile(300);
 	padding: mobile(16);
 	
-	display: flex;
+	display: flex !important;
 	flex-direction: column;
 	gap: mobile(16);
 	
@@ -1559,7 +1528,7 @@
 @media screen and (min-width: $desktop_media) {
   .reviews {
 	&__item {
-	  width: tablet(672);
+	  max-width: tablet(672);
 	  padding: tablet(20);
 	  
 	  gap: tablet(16);
@@ -1620,7 +1589,7 @@
 @media screen and (min-width: $desktop_media_static) {
   .reviews {
 	&__item {
-	  width: desktop(672);
+	  max-width: desktop(672);
 	  padding: desktop(20);
 	  
 	  gap: desktop(16);
