@@ -1,8 +1,7 @@
 const mobileMenuBtn = document.querySelector('.header__burger')
 if (mobileMenuBtn) {
-  const mobileMenu = document.querySelector('.mobile-menu')
   mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('mobile-menu--active')
+    document.body.classList.toggle('mobile-menu-active')
     freezeBody()
   })
 }
@@ -25,16 +24,18 @@ if (openFilterBtn && filterFrame) {
 const addToCartBtn = document.querySelector('button[data-add-to-cart]')
 const showContactModalBtn = document.querySelector('button[data-show-contact-modal]')
 
-const closeModal = document.querySelector('button[data-close-modal]')
+const closeModalBtns = document.querySelectorAll('button[data-close-modal]')
 const overlay = document.querySelector('.overlay')
 
-if (closeModal) {
-  closeModal.addEventListener('click', () => {
-    const activeModal = document.querySelector('.modal.is-active')
-    if (activeModal) {
-      activeModal.classList.remove('is-active')
-      overlay.classList.remove('is-active')
-    }
+if (closeModalBtns.length) {
+  closeModalBtns.forEach(closeModal => {
+    closeModal.addEventListener('click', () => {
+      const activeModal = document.querySelector('.modal.is-active')
+      if (activeModal) {
+        activeModal.classList.remove('is-active')
+        overlay.classList.remove('is-active')
+      }
+    })
   })
 }
 

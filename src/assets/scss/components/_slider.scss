@@ -13,6 +13,7 @@ button[data-services-list-prev-slide-handler], button[data-services-list-next-sl
   
   border-radius: 50%;
   background-color: rgba(white, 70%);
+  box-shadow: -4px -2px 12px 0px rgba(157, 157, 157, 0.10), -4px 8px 12px 0px rgba(157, 157, 157, 0.10);
   
   transition: all 300ms;
   
@@ -23,29 +24,38 @@ button[data-services-list-prev-slide-handler], button[data-services-list-next-sl
   svg {
 	width: mobile(16);
 	height: mobile(16);
-  }
-  
-  &::after {
-	content: "";
-	display: block;
-	width: 100%;
-	height: 100%;
-	background-image: url("data:image/svg+xml,%3Csvg width='24' height='16' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.41637 14.7671L6.76864 13.1336L11.0939 8.80833H0.958984V6.40776H11.0939L6.76864 2.08958L8.41637 0.448952L15.5755 7.60804L8.41637 14.7671Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
-	background-repeat: no-repeat;
-	background-position: center;
+	
+	@media screen and (min-width: $desktop_media) {
+	  width: tablet(16);
+	  height: tablet(16);
+	}
+	@media screen and (min-width: $desktop_media_static) {
+	  width: desktop(16);
+	  height: desktop(16);
+	}
   }
 }
 
 button[data-services-list-prev-slide-handler] {
   left: mobile(16);
   
-  &::after {
-	transform: rotate(-180deg);
+  @media screen and (min-width: $desktop_media) {
+	left: tablet(20);
+  }
+  @media screen and (min-width: $desktop_media_static) {
+	left: desktop(20);
   }
 }
 
 button[data-services-list-next-slide-handler] {
   right: mobile(16);
+  
+  @media screen and (min-width: $desktop_media) {
+	right: tablet(20);
+  }
+  @media screen and (min-width: $desktop_media_static) {
+	right: desktop(20);
+  }
 }
 
 .swiper-button-disabled {
@@ -92,14 +102,6 @@ button[data-services-list-next-slide-handler] {
 	}
   }
   
-  button[data-services-list-prev-slide-handler] {
-	left: tablet(84);
-  }
-  
-  button[data-services-list-next-slide-handler] {
-	right: tablet(84);
-  }
-  
   .swiper-pagination-bullets {
 	gap: tablet(5);
   }
@@ -125,14 +127,6 @@ button[data-services-list-next-slide-handler] {
 	  width: desktop(16);
 	  height: desktop(16);
 	}
-  }
-  
-  button[data-services-list-prev-slide-handler] {
-	left: desktop(84);
-  }
-  
-  button[data-services-list-next-slide-handler] {
-	right: desktop(84);
   }
   
   .swiper-pagination-bullets {
@@ -301,9 +295,35 @@ button[data-services-list-next-slide-handler] {
 .reviews {
   button[data-services-list-prev-slide-handler], button[data-services-list-next-slide-handler] {
 	display: none;
- 
+	
 	@media screen and (min-width: $desktop_media) {
 	  display: block;
+	}
+  }
+  
+  @media screen and (min-width: $desktop_media) {
+	.swiper-pagination {
+	  display: none;
+	}
+  }
+}
+
+.hero__slider {
+  button[data-services-list-prev-slide-handler] {
+	@media screen and (min-width: $desktop_media) {
+	  left: tablet(84);
+	}
+	@media screen and (min-width: $desktop_media_static) {
+	  left: desktop(84);
+	}
+  }
+  
+  button[data-services-list-next-slide-handler] {
+	@media screen and (min-width: $desktop_media) {
+	  right: tablet(84);
+	}
+	@media screen and (min-width: $desktop_media_static) {
+	  right: desktop(84);
 	}
   }
 }

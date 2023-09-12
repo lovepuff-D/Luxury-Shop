@@ -12,6 +12,12 @@ function renderModules(swiper, isRenderNavigation = true, isRenderPagination = t
     const navigationPrevBtn = document.createElement('button')
     const navigationNextBtn = document.createElement('button')
     navigationPrevBtn.setAttribute('data-services-list-prev-slide-handler', '')
+    navigationPrevBtn.innerHTML = '<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+      '<path d="M7.58363 0.204545L9.23136 1.83807L4.90607 6.16335L15.041 6.16335V8.56392L4.90607 8.56392L9.23136 12.8821L7.58363 14.5227L0.424538 7.36364L7.58363 0.204545Z" fill="#1D1D1D"/>\n' +
+      '</svg>\n'
+    navigationNextBtn.innerHTML = '<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+      '<path d="M8.41637 14.7955L6.76864 13.1619L11.0939 8.83665H0.958984V6.43608H11.0939L6.76864 2.1179L8.41637 0.477273L15.5755 7.63636L8.41637 14.7955Z" fill="#1D1D1D"/>\n' +
+      '</svg>\n'
     navigationNextBtn.setAttribute('data-services-list-next-slide-handler', '')
     swiper.insertAdjacentElement('beforeend', navigationPrevBtn)
     swiper.insertAdjacentElement('beforeend', navigationNextBtn)
@@ -48,6 +54,7 @@ const heroBanner = document.querySelector('.hero-banner .swiper')
 const productSliders = document.querySelectorAll('.product-slider .swiper')
 const productItemSliders = document.querySelector('.product-item__mobile-slider')
 const reviewsSlider = document.querySelector('.reviews.swiper')
+const faqTabsSlider = document.querySelector('.faq .swiper')
 
 if (heroBanner) {
   renderModules(heroBanner)
@@ -127,6 +134,16 @@ if (reviewsSlider) {
   })
 }
 
+if (faqTabsSlider) {
+  setTimeout(() => {
+    window.swipers.push(new Swiper(faqTabsSlider, {
+      ...standardSwiperConfig,
+      freeMode: true,
+      pagination: false,
+      navigation: false,
+    }))
+  })
+}
 
 /* if (workflowListSwiper) {
   const localListSwiperConfig = {

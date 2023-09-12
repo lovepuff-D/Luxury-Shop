@@ -515,11 +515,15 @@
 	
 	input {
 	  text-align: center;
-	  width: mobile(16);
+	  width: mobile(20);
 	  
 	  font-size: mobile(22);
 	  line-height: mobile(24.2);
 	  letter-spacing: mobile(-0.44);
+	  
+	  &::-webkit-inner-spin-button {
+		display: none;
+	  }
 	}
  
 	svg {
@@ -573,7 +577,7 @@
 	  gap: tablet(16);
 	  
 	  input {
-		width: tablet(16);
+		width: tablet(20);
 		
 		@include m-20-tb;
 		letter-spacing: normal;
@@ -628,7 +632,7 @@
 	  gap: desktop(16);
 	  
 	  input {
-		width: desktop(16);
+		width: desktop(20);
 		
 		@include m-20-dp;
 	  }

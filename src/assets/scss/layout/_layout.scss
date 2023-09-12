@@ -41,7 +41,6 @@ main {
 /*** Header ***/
 .header {
   position: relative;
-  z-index: 6;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,6 +59,27 @@ main {
   }
   
   &__burger {
+	width: mobile(24);
+	height: mobile(24);
+	
+	div {
+	  height: mobile(2);
+	  background: var(--black);
+	  transform-origin: 0% 0%;
+	  
+	  transition: all 300ms;
+	  
+	  &:not(:last-child) {
+		margin-bottom: mobile(6);
+	  }
+	  
+	  &:not(:nth-child(2)) {
+	  }
+	  
+	  &:nth-child(2) {
+		width: mobile(12);
+	  }
+	}
   }
   
   &__search {

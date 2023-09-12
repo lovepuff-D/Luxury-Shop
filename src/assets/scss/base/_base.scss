@@ -28,7 +28,7 @@ body {
   }
 }
 
-/*::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 4px;
   height: 4px;
 }
@@ -36,7 +36,8 @@ body {
 ::-webkit-scrollbar-thumb {
   border-radius: 20px;
   border: 1px solid transparent;
-}*/
+  background: var(--g-40);
+}
 
 // Helpers
 .clearfix {
