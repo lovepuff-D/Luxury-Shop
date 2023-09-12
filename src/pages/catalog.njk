@@ -77,21 +77,21 @@
               <p class="catalog__qty-result">Affichage de 10 résultats of 30</p>
             </div>
             <div class="catalog__body">
-              <div class="filter">
+              <form class="filter">
                 <div class="filter__header">
                   <p>Filtre</p>
                   <button data-close-filter-frame>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1471_30349)">
-<path d="M18.75 5.25L5.25 18.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M18.75 18.75L5.25 5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<defs>
-<clipPath id="clip0_1471_30349">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
-</svg>
+                      <g clip-path="url(#clip0_1471_30349)">
+                        <path d="M18.75 5.25L5.25 18.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.75 18.75L5.25 5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1471_30349">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
                   </button>
                 </div>
                 <div class="filter__body">
@@ -115,54 +115,66 @@
                       </div>
                       <div class="accordion__content">
                         <div class="filter__group">
-                          <div class="filter__item">
-                            <div></div>
-                            <div>Tous</div>
-                          </div>
-                          <div class="filter__item filter__item--active">
-                            <div></div>
-                            <div>Festina</div>
-                          </div>
-                          <div class="filter__item">
-                            <div></div>
-                            <div>Armani Exchange</div>
-                          </div>
-                          <div class="filter__item filter__item--active">
-                            <div></div>
-                            <div>Fossil</div>
-                          </div>
-                          <div class="filter__item">
-                            <div></div>
-                            <div>Diesel</div>
-                          </div>
-                          <div class="filter__item">
-                            <div></div>
-                            <div>Timberland</div>
-                          </div>
-                          <div class="filter__item">
-                            <div></div>
-                            <div>Versus by Versace</div>
-                          </div>
-                          <div class="filter__item">
-                            <div></div>
-                            <div>Maserati</div>
-                          </div>
-                          <div class="filter__item">
-                            <div></div>
-                            <div>Nautica</div>
-                          </div>
-                          <div class="filter__item">
-                            <div></div>
-                            <div>Morellato</div>
-                          </div>
-                          <div class="filter__item filter__item--active">
-                            <div></div>
-                            <div>Trussardi</div>
-                          </div>
-                          <div class="filter__item">
-                            <div></div>
-                            <div>Cerruti</div>
-                          </div>
+                          <label class="filter__item">
+                            <input type="checkbox" name="Tous">
+                            <span class="checkmark"></span>
+                            Tous
+                          </label>
+                          <label class="filter__item">
+                            <input type="checkbox" checked="checked" name="Festina">
+                            <span class="checkmark"></span>
+                            Festina
+                          </label>
+                          <label class="filter__item">
+                            <input type="checkbox" name="Armani Exchange">
+                            <span class="checkmark"></span>
+                            Armani Exchange
+                          </label>
+                          <label class="filter__item">
+                            <input type="checkbox" name="Fossil">
+                            <span class="checkmark"></span>
+                            Fossil
+                          </label>
+                          <label class="filter__item">
+                            <input type="checkbox" name="Diesel">
+                            <span class="checkmark"></span>
+                            Diesel
+                          </label>
+                          <label class="filter__item">
+                            <input type="checkbox" checked="checked" name="Timberland">
+                            <span class="checkmark"></span>
+                            Timberland
+                          </label>
+                          <label class="filter__item">
+                            <input type="checkbox" checked="checked" name="Versus by Versace">
+                            <span class="checkmark"></span>
+                            Versus by Versace
+                          </label>
+                          <label class="filter__item">
+                            <input type="checkbox" name="Maserati">
+                            <span class="checkmark"></span>
+                            Maserati
+                          </label>
+                          <label class="filter__item">
+                            <input type="checkbox" name="Nautica">
+                            <span class="checkmark"></span>
+                            Nautica
+                          </label>
+                          <label class="filter__item">
+                            <input type="checkbox" name="Morellato">
+                            <span class="checkmark"></span>
+                            Morellato
+                          </label>
+                          <label class="filter__item">
+                            <input type="checkbox" name="Trussardi">
+                            <span class="checkmark"></span>
+                            Trussardi
+                          </label>
+                          <label class="filter__item">
+                            <input type="checkbox" checked="checked" name="Cerruti">
+                            <span class="checkmark"></span>
+                            Cerruti
+                          </label>
                         </div>
                       </div>
                     </div>
@@ -185,18 +197,21 @@
                       </div>
                       <div class="accordion__content">
                         <div class="filter__group">
-                          <div class="filter__item">
-                            <div></div>
-                            <div>Tous</div>
-                          </div>
-                          <div class="filter__item filter__item--active">
-                            <div></div>
-                            <div>Montres pour hommes</div>
-                          </div>
-                          <div class="filter__item">
-                            <div></div>
-                            <div>Montres pour Femmes</div>
-                          </div>
+                          <label class="filter__item">
+                            <input type="checkbox" name="Tous">
+                            <span class="checkmark"></span>
+                            Tous
+                          </label>
+                          <label class="filter__item">
+                            <input type="checkbox" name="Montres pour hommes" checked>
+                            <span class="checkmark"></span>
+                            Montres pour hommes
+                          </label>
+                          <label class="filter__item">
+                            <input type="checkbox" name="Montres pour Femmes">
+                            <span class="checkmark"></span>
+                            Montres pour Femmes
+                          </label>
                         </div>
                       </div>
                     </div>
@@ -219,22 +234,26 @@
                       </div>
                       <div class="accordion__content">
                         <div class="filter__group">
-                          <div class="filter__item">
-                            <div></div>
-                            <div>Jusqu'à 10 000 DA (8)</div>
-                          </div>
-                          <div class="filter__item">
-                            <div></div>
-                            <div>10 000 - 15 000 DA (25)</div>
-                          </div>
-                          <div class="filter__item">
-                            <div></div>
-                            <div>15 000 - 20 000 DA (57)</div>
-                          </div>
-                          <div class="filter__item filter__item--active">
-                            <div></div>
-                            <div>20 000 DA + (25)</div>
-                          </div>
+                          <label class="filter__item">
+                            <input type="checkbox" name="Jusqu'à 10 000 DA (8)">
+                            <span class="checkmark"></span>
+                            Jusqu'à 10 000 DA (8)
+                          </label>
+                          <label class="filter__item">
+                            <input type="checkbox" name="10 000 - 15 000 DA (25)" checked>
+                            <span class="checkmark"></span>
+                            10 000 - 15 000 DA (25)
+                          </label>
+                          <label class="filter__item">
+                            <input type="checkbox" name="15 000 - 20 000 DA (57)">
+                            <span class="checkmark"></span>
+                            15 000 - 20 000 DA (57)
+                          </label>
+                          <label class="filter__item">
+                            <input type="checkbox" name="20 000 DA + (25)">
+                            <span class="checkmark"></span>
+                            20 000 DA + (25)
+                          </label>
                         </div>
                       </div>
                     </div>
@@ -243,7 +262,7 @@
                 <button class="btn btn-flat btn-flat--outline btn-text-black">
                   appliquer (82)
                 </button>
-              </div>
+              </form>
               <div class="catalog__product-list">
                 <div class="product-list">
                   <div class="product-card product-card--simplified">
