@@ -266,6 +266,11 @@ button[data-services-list-next-slide-handler] {
 	.swiper-pagination {
 	  display: none;
 	}
+ 
+ 
+	*:not(.swiper-slide-thumb-active).swiper-slide {
+	  opacity: 0.5;
+	}
   }
 }
 

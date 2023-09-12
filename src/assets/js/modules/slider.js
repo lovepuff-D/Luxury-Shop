@@ -1,5 +1,8 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Controller, Navigation, Pagination, Thumbs } from 'swiper/modules';
+
+Swiper.use([Controller, Thumbs]);
+
 
 window.swipers = []
 
@@ -119,6 +122,7 @@ if (productItemSliders) {
         swiper: thumbSliderInst,
       },
     })
+
 
     window.swipers.push(thumbSliderInst)
     window.swipers.push(mainSwiperInst)
