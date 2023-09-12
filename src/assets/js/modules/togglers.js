@@ -1,8 +1,8 @@
 const mobileMenuBtn = document.querySelector('.header__burger')
 if (mobileMenuBtn) {
   mobileMenuBtn.addEventListener('click', () => {
-    document.body.classList.toggle('mobile-menu-active')
-    freezeBody()
+    document.documentElement.classList.toggle('mobile-menu-active')
+    freezeScroll()
   })
 }
 
@@ -13,11 +13,11 @@ const filterFrame = document.querySelector('.filter')
 if (openFilterBtn && filterFrame) {
   openFilterBtn.addEventListener('click', () => {
     filterFrame.classList.add('filter--active')
-    freezeBody()
+    freezeScroll()
   })
   closeFilterBtn.addEventListener('click', () => {
     filterFrame.classList.remove('filter--active')
-    freezeBody()
+    freezeScroll()
   })
 }
 
@@ -87,6 +87,6 @@ if (openSortDropdown) {
   })
 }
 
-function freezeBody() {
-  document.body.classList.toggle('over-hidden')
+function freezeScroll() {
+  document.documentElement.classList.toggle('over-hidden')
 }

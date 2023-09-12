@@ -269,6 +269,7 @@
 
 .mobile-menu {
   position: fixed;
+  top: var(--header-height);
   left: 0;
   bottom: 0;
   right: 0;
@@ -684,8 +685,8 @@
   }
   
   &__tab {
-	width: max-content !important;
-	white-space: nowrap;
+	max-width: max-content !important;
+	/*white-space: nowrap;*/
 	padding: mobile(8) 0;
 	
 	@include r-18-mb;
@@ -705,6 +706,10 @@
 	&.is-active {
 	  display: block;
 	}
+  }
+  
+  .swiper {
+	margin: unset;
   }
   
   @media screen and (min-width: $desktop_media) {

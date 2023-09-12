@@ -4,6 +4,8 @@ import "./modules/teleport.js";
 import "./modules/togglers.js";
 import "./modules/floating-blocks.js";
 import "./modules/tabs.js";
+import "./modules/form.js";
+
 
 document.documentElement.style.setProperty('--header-height', document.querySelector('.header').clientHeight + 'px');
 
@@ -17,7 +19,6 @@ resizeObserver.observe(document.querySelector('.header'));
 /*
 import "./modules/marquee.js";
 import "./modules/togglers.js";
-import "./modules/form.js";
 import "./modules/video.js";
 import "./modules/timeSlider.js";
 

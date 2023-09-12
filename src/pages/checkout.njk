@@ -208,13 +208,13 @@
                 <div class="checkout-order-form__header">
                   Remplissez votre numéro de téléphone
                 </div>
-                <form>
-                  <input type="text" class="main-input" placeholder="Name *">
-                  <input type="text" class="main-input" placeholder="Téléphone *">
-                  <input type="text" class="main-input" placeholder="Adresse *">
+                <form action="" id="checkout-order">
+                  <input type="text" class="main-input" data-required placeholder="Name *">
+                  <input type="text" class="main-input" data-required placeholder="Téléphone *">
+                  <input type="text" class="main-input" data-required placeholder="Adresse *">
                 </form>
                 <div class="checkout-order-form__actions">
-                  <button data-add-to-cart class="btn btn-flat btn-flat--main">Commander</button>
+                  <button type="submit" form="checkout-order" class="btn btn-flat btn-flat--main">Commander</button>
                   <button data-show-contact-modal class="btn btn-flat btn-flat--outline">
                   <span><svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1471_29160)">

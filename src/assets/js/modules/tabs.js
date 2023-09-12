@@ -13,6 +13,7 @@ if (tabs.length && tabItems.length) {
           tabItem.classList.add('is-active')
         }
       })
+      tab.blur() // Need for swiper, although swiper-slide work improperly
     })
   })
 }
