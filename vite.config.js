@@ -4,6 +4,11 @@ import viteJoinMediaQueries from 'vite-join-media-queries';
 import posthtmlExpressions from 'posthtml-expressions';
 import nunjucks from '@vituum/vite-plugin-nunjucks'
 
+/* , viteJoinMediaQueries({
+        paths2css: ['./dist/assets/css'],
+        cssnanoConfig: { preset: 'default' },
+    }) */
+
 export default {
     plugins: [vituum(), nunjucks(), posthtml({
         root: './src',
@@ -28,7 +33,7 @@ export default {
         sourcemap: true,
         minify: true,
         rollupOptions: {
-            input: ["./src/pages/**/*.html"],
+            input: ["./src/pages/**/*.njk"],
             output: {
                 chunkFileNames: "assets/js/[name].js",
                 entryFileNames: "assets/js/[name].js",
@@ -39,7 +44,7 @@ export default {
                     if (/\.(mp4)$/.test(name ?? "")) {
                         return "assets/video/[name].[ext]";
                     }
-                    if (/\.(ttf|woff)$/.test(name ?? "")) {
+                    if (/\.(ttf|woff|otf)$/.test(name ?? "")) {
                         return "assets/fonts/[name].[ext]";
                     }
                     if (/\.css$/.test(name ?? "")) {

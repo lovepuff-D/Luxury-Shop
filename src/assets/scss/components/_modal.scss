@@ -1,8 +1,8 @@
 .modal {
+  overflow: auto;
   min-width: 100%;
   height: max-content;
   max-height: 80vh;
-  overflow: scroll;
   position: fixed;
   z-index: 15;
   bottom: 0;

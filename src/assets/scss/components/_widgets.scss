@@ -914,6 +914,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 2;
   
   display: flex;
   flex-direction: column;
@@ -2091,7 +2092,6 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1;
   
   display: flex;
   flex-direction: column;
@@ -2361,5 +2361,64 @@
   }
   @media screen and (min-width: $desktop_media_static) {
 	height: desktop(800);
+  }
+}
+
+// Whats App widget
+
+.whats-app-widget {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  position: fixed;
+  bottom: mobile(32);
+  right: mobile(32);
+  z-index: 1;
+  
+  width: mobile(70);
+  height: mobile(70);
+  
+  background: var(--gold);
+  border-radius: 50%;
+  
+  transition: background 300ms;
+  
+  svg {
+	width: mobile(32);
+	height: mobile(32);
+  }
+  
+  &:hover {
+	background: #C6973E;
+  }
+}
+
+@media screen and (min-width: $desktop_media) {
+  .whats-app-widget {
+	bottom: tablet(60);
+	right: tablet(60);
+	
+	width: tablet(70);
+	height: tablet(70);
+	
+	svg {
+	  width: tablet(32);
+	  height: tablet(32);
+	}
+  }
+}
+@media screen and (min-width: $desktop_media_static) {
+  .whats-app-widget {
+	bottom: desktop(60);
+	right: desktop(60);
+	
+	width: desktop(70);
+	height: desktop(70);
+	
+	svg {
+	  width: desktop(32);
+	  height: desktop(32);
+	}
   }
 }
