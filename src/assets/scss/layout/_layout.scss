@@ -82,13 +82,17 @@ main {
 	}
   }
   
-  &__search {
-	&--mobile {
+  &__search-icon {
+	svg:first-child {
+	  display: block;
 	}
-	
-	&--desktop {
+	svg:last-child {
 	  display: none;
 	}
+  }
+  
+  &__search {
+	display: none;
   }
   
   &__chat, &__phone-number {
@@ -136,6 +140,25 @@ main {
   }
 }
 
+.header.search-is-active {
+  .header__logo {
+	display: none;
+  }
+  
+  .header__search-icon {
+	svg:first-child {
+	  display: none;
+	}
+	svg:last-child {
+	  display: block;
+	}
+  }
+  
+  .header__search {
+	display: block;
+  }
+}
+
 @media screen and (min-width: $desktop_media) {
   .header {
 	padding: tablet(24) 0;
@@ -154,14 +177,12 @@ main {
 	  display: none;
 	}
 	
+	&__search-icon {
+	  display: none;
+	}
+	
 	&__search {
-	  &--mobile {
-		display: none;
-	  }
-	  
-	  &--desktop {
-		display: block;
-	  }
+	  display: block;
 	}
 	
 	&__chat, &__phone-number {

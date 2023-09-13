@@ -87,6 +87,21 @@ if (openSortDropdown) {
   })
 }
 
+const showMobileSearch = document.querySelector('button[data-open-header-mobile-search]')
+
+if (showMobileSearch) {
+  const header = document.querySelector('.header')
+  const searchInput = document.querySelector('.header .search-input input')
+
+  showMobileSearch.addEventListener('click', () => {
+    header.classList.toggle('search-is-active')
+    if (header.classList.contains('search-is-active')) {
+      console.log(searchInput)
+      searchInput.focus()
+    }
+  })
+}
+
 function freezeScroll() {
   document.documentElement.classList.toggle('over-hidden')
 }
