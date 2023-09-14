@@ -5,6 +5,7 @@ import "./modules/togglers.js";
 import "./modules/floating-blocks.js";
 import "./modules/tabs.js";
 import "./modules/form.js";
+import "./modules/stories.js";
 
 
 document.documentElement.style.setProperty('--header-height', document.querySelector('.header').clientHeight + 'px');

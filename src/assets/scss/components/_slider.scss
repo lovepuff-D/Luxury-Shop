@@ -1,10 +1,14 @@
-.swiper .swiper-wrapper {
-  align-items: flex-start;
-  height: auto;
-}
-
-.swiper .swiper-slide {
-  height: auto;
+.swiper {
+  z-index: 0 !important;
+  
+  .swiper-wrapper {
+	align-items: flex-start;
+	height: auto;
+  }
+  
+  .swiper-slide {
+	height: auto;
+  }
 }
 
 button[data-services-list-prev-slide-handler], button[data-services-list-next-slide-handler] {
