@@ -54,6 +54,7 @@ const standardSwiperConfig = {
 };
 
 const heroBanner = document.querySelector('.hero-banner .swiper')
+const storiesListSwiper = document.querySelector('.stories-list.swiper')
 const productSliders = document.querySelectorAll('.product-slider .swiper')
 const productItemSliders = document.querySelector('.product-item__mobile-slider')
 const reviewsSlider = document.querySelector('.reviews.swiper')
@@ -65,6 +66,14 @@ if (heroBanner) {
     window.swipers.push(new Swiper(heroBanner, {
       ...standardSwiperConfig,
       slidesPerView: 1,
+    }))
+  })
+}
+
+if (storiesListSwiper) {
+  setTimeout(() => {
+    window.swipers.push(new Swiper(storiesListSwiper, {
+      ...standardSwiperConfig,
     }))
   })
 }

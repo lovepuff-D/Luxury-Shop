@@ -25,7 +25,6 @@ const addToCartBtn = document.querySelector('button[data-add-to-cart]')
 const showContactModalBtn = document.querySelector('button[data-show-contact-modal]')
 
 const closeModalBtns = document.querySelectorAll('button[data-close-modal]')
-const overlay = document.querySelector('.overlay')
 
 if (closeModalBtns.length) {
   closeModalBtns.forEach(closeModal => {
@@ -33,7 +32,7 @@ if (closeModalBtns.length) {
       const activeModal = document.querySelector('.modal.is-active')
       if (activeModal) {
         activeModal.classList.remove('is-active')
-        overlay.classList.remove('is-active')
+        window.overlay.hide()
       }
     })
   })
@@ -41,25 +40,26 @@ if (closeModalBtns.length) {
 
 if (addToCartBtn) {
   const checkoutFrame = document.querySelector('.modal[data-checkout-modal]')
-
-  overlay.addEventListener('click', () => {
-    overlay.classList.remove('is-active')
+  setTimeout(() => {
+    window.overlay.el.addEventListener('onClickOutside', () => {
     checkoutFrame.classList.remove('is-active')
   })
+  })
   addToCartBtn.addEventListener('click', () => {
-    overlay.classList.add('is-active')
+    window.overlay.show()
     checkoutFrame.classList.add('is-active')
   })
 }
 if (showContactModalBtn) {
   const contactFrame = document.querySelector('.modal[data-contact-modal]')
 
-  overlay.addEventListener('click', () => {
-    overlay.classList.remove('is-active')
-    contactFrame.classList.remove('is-active')
+  setTimeout(() => {
+    window.overlay.el.addEventListener('onClickOutside', () => {
+      contactFrame.classList.remove('is-active')
+    })
   })
   showContactModalBtn.addEventListener('click', () => {
-    overlay.classList.add('is-active')
+    window.overlay.show()
     contactFrame.classList.add('is-active')
   })
 }
@@ -71,9 +71,15 @@ if (openBasketSideBtn) {
   const basketSide = document.querySelector('.basket-side')
   openBasketSideBtn.addEventListener('click', () => {
     basketSide.classList.add('is-active')
+    if (window.innerWidth < 768) {
+      freezeScroll()
+    }
   })
   closeBasketSideBtn.addEventListener('click', () => {
     basketSide.classList.remove('is-active')
+    if (window.innerWidth < 768) {
+      freezeScroll()
+    }
   })
 }
 

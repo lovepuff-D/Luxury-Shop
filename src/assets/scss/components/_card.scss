@@ -521,6 +521,8 @@
 	  line-height: mobile(24.2);
 	  letter-spacing: mobile(-0.44);
 	  
+	  -moz-appearance: textfield;
+	  
 	  &::-webkit-inner-spin-button {
 		display: none;
 	  }
@@ -581,8 +583,6 @@
 		
 		@include m-20-tb;
 		letter-spacing: normal;
-	 
-		-moz-appearance: textfield;
 	  }
 	  
 	  svg {

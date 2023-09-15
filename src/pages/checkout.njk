@@ -19,10 +19,10 @@
                     <span>30 000 DA</span>
                   </div>
                   <div class="product-checkout-card__qty">
-                    <button data-add-qty>
+                    <button data-remove-qty>
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1471_28957)">
-                          <path d="M2.5 8H13.5" stroke="#8E8E8E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M2.5 8H13.5" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </g>
                         <defs>
                           <clipPath id="clip0_1471_28957">
@@ -32,7 +32,7 @@
                       </svg>
                     </button>
                     <input type="number" disabled value="1">
-                    <button data-remove-qty>
+                    <button data-add-qty>
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1471_28961)">
                           <path d="M2.5 8H13.5" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -77,10 +77,10 @@
                     <span>34 000 DA</span>
                   </div>
                   <div class="product-checkout-card__qty">
-                    <button data-add-qty>
+                    <button data-remove-qty>
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1471_28957)">
-                          <path d="M2.5 8H13.5" stroke="#8E8E8E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M2.5 8H13.5" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </g>
                         <defs>
                           <clipPath id="clip0_1471_28957">
@@ -90,7 +90,7 @@
                       </svg>
                     </button>
                     <input type="number" disabled value="1">
-                    <button data-remove-qty>
+                    <button data-add-qty>
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1471_28961)">
                           <path d="M2.5 8H13.5" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -135,10 +135,10 @@
                     <span>28 000 DA</span>
                   </div>
                   <div class="product-checkout-card__qty">
-                    <button data-add-qty>
+                    <button data-remove-qty>
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1471_28957)">
-                          <path d="M2.5 8H13.5" stroke="#8E8E8E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M2.5 8H13.5" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </g>
                         <defs>
                           <clipPath id="clip0_1471_28957">
@@ -148,7 +148,7 @@
                       </svg>
                     </button>
                     <input type="number" disabled value="1">
-                    <button data-remove-qty>
+                    <button data-add-qty>
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1471_28961)">
                           <path d="M2.5 8H13.5" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -242,30 +242,29 @@
       <include src="components/widget/faq.html"></include>
     </main>
     <include src="components/layout/footer.html"></include>
-  </block>
-  <div data-contact-modal class="modal">
-    <div class="modal__header">
-      <p>Contactez-nous</p>
-      <button data-close-modal>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_1469_25747)">
-            <path d="M18.75 5.25L5.25 18.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M18.75 18.75L5.25 5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </g>
-          <defs>
-            <clipPath id="clip0_1469_25747">
-              <rect width="24" height="24" fill="white"/>
-            </clipPath>
-          </defs>
-        </svg>
-      </button>
-    </div>
-    <div class="modal__content">
-      <div class="contacts-card gap-xs">
-        <div class="contacts-list">
-          <div>
-            <p>Clients de Service</p>
-            <a href="tel:023 804 474">
+    <div data-contact-modal class="modal">
+      <div class="modal__header">
+        <p>Contactez-nous</p>
+        <button data-close-modal>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_1469_25747)">
+              <path d="M18.75 5.25L5.25 18.75" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18.75 18.75L5.25 5.25" stroke="#1D1D1D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_1469_25747">
+                <rect width="24" height="24" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </button>
+      </div>
+      <div class="modal__content">
+        <div class="contacts-card gap-xs">
+          <div class="contacts-list">
+            <div>
+              <p>Clients de Service</p>
+              <a href="tel:023 804 474">
                     <span>
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1471_30625)">
@@ -280,9 +279,9 @@
 </defs>
 </svg>
                     </span>
-              <span>023 804 474</span>
-            </a>
-            <a href="mailto:contact@luxuryshopdz.com">
+                <span>023 804 474</span>
+              </a>
+              <a href="mailto:contact@luxuryshopdz.com">
                     <span>
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1471_30630)">
@@ -296,12 +295,12 @@
 </defs>
 </svg>
                     </span>
-              <span>contact@luxuryshopdz.com</span>
-            </a>
-          </div>
-          <div>
-            <p>Technique de soutien</p>
-            <a href="tel:021 436 272">
+                <span>contact@luxuryshopdz.com</span>
+              </a>
+            </div>
+            <div>
+              <p>Technique de soutien</p>
+              <a href="tel:021 436 272">
                     <span>
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1471_30625)">
@@ -316,9 +315,9 @@
 </defs>
 </svg>
                     </span>
-              <span>021 436 272</span>
-            </a>
-            <a href="mailto:support@luxuryshopdz.com ">
+                <span>021 436 272</span>
+              </a>
+              <a href="mailto:support@luxuryshopdz.com ">
                     <span>
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1471_30630)">
@@ -332,14 +331,15 @@
 </defs>
 </svg>
                     </span>
-              <span>support@luxuryshopdz.com </span>
-            </a>
+                <span>support@luxuryshopdz.com </span>
+              </a>
+            </div>
           </div>
+          <div class="divider"></div>
+          {% set socialMediaClass = '' %}
+          {% include "src/components/widget/social-media.html" %}
         </div>
-        <div class="divider"></div>
-        {% set socialMediaClass = '' %}
-        {% include "src/components/widget/social-media.html" %}
       </div>
     </div>
-  </div>
+  </block>
 </extends>

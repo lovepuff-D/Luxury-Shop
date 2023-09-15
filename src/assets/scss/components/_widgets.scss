@@ -396,22 +396,24 @@
 // Stories
 
 .stories-list {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: mobile(16);
   padding: mobile(16) 0;
-  overflow: hidden;
-  text-align: center;
+  margin: unset;
   
   &__item {
+	width: max-content !important;
 	cursor: pointer;
-	
+	text-align: center;
+ 
 	&:hover {
 	  color: var(--gold);
 	}
+	
+	&:not(:last-child) {
+	  margin-right: mobile(16);
+	}
   }
   
-  &__item--disabled {
+  &__item--checked {
 	.stories-list__circle-wrapper {
 	  background: var(--g-10);
 	}
@@ -451,9 +453,13 @@
 
 @media screen and (min-width: $desktop_media) {
   .stories-list {
-	justify-content: space-between;
-	gap: tablet(32);
 	padding: 0;
+	
+	&__item {
+	  &:not(:last-child) {
+		margin-right: tablet(32);
+	  }
+	}
 	
 	&__circle-wrapper {
 	  width: tablet(94);
@@ -473,7 +479,13 @@
 
 @media screen and (min-width: $desktop_media_static) {
   .stories-list {
-	gap: desktop(32);
+	/*gap: desktop(32);*/
+ 
+	&__item {
+	  &:not(:last-child) {
+		margin-right: desktop(32);
+	  }
+	}
 	
 	&__circle-wrapper {
 	  width: desktop(94);
@@ -497,10 +509,11 @@
   
   &__group {
 	display: none;
+	height: 100%;
 	
 	position: fixed;
 	inset: 0;
-	z-index: 10;
+	z-index: 12;
 	
 	padding: $padding-frame;
 	
@@ -642,8 +655,10 @@
   }
   
   &__like-btn {
-	width: mobile(24);
-	height: mobile(24);
+	svg {
+	  width: mobile(24);
+	  height: mobile(24);
+	}
 	
 	&.is-active {
 	  svg path {
@@ -669,6 +684,144 @@
   button[data-next-stories-item] {
 	left: 50%;
 	right: 0;
+  }
+}
+
+@media screen and (min-width: $desktop_media) {
+  .stories {
+	$padding-frame: tablet(16);
+	
+	&__group {
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  
+	  max-width: tablet(414);
+	  height: tablet(896);
+	  max-height: 90vh;
+	  
+	  padding: $padding-frame;
+	}
+	
+	&__slider {
+	  gap: tablet(4);
+	  
+	  height: tablet(2);
+	}
+	
+	&__header {
+	  gap: tablet(16);
+	  margin-top: tablet(24);
+	}
+	
+	&__title {
+	  font-size: tablet(18);
+	  line-height: tablet(27);
+	  letter-spacing: tablet(-0.42);
+	}
+	
+	&__author {
+	  gap: tablet(8);
+	  margin-top: tablet(16);
+	}
+	
+	&__author-img {
+	  width: tablet(32);
+	  height: tablet(32);
+	  padding: tablet(2);
+	}
+	
+	&__author-info {
+	  p:first-child {
+		font-size: tablet(14);
+		line-height: tablet(16.8);
+		letter-spacing: tablet(0.3);
+	  }
+	  
+	  p:last-child {
+		font-size: tablet(12);
+		line-height: tablet(14.4);
+	  }
+	}
+	
+	&__actions {
+	  bottom: $padding-frame;
+	  left: $padding-frame;
+	  right: $padding-frame;
+	  gap: tablet(24);
+	}
+	
+	&__like-btn {
+	  svg {
+		width: tablet(24);
+		height: tablet(24);
+	  }
+	}
+  }
+}
+@media screen and (min-width: $desktop_media_static) {
+  .stories {
+	$padding-frame: desktop(16);
+	
+	&__group {
+	  max-width: desktop(414);
+	  height: desktop(896);
+	  
+	  padding: $padding-frame;
+	}
+	
+	&__slider {
+	  gap: desktop(4);
+	  
+	  height: desktop(2);
+	}
+	
+	&__header {
+	  gap: desktop(16);
+	  margin-top: desktop(24);
+	}
+	
+	&__title {
+	  font-size: desktop(18);
+	  line-height: desktop(27);
+	  letter-spacing: desktop(-0.42);
+	}
+	
+	&__author {
+	  gap: desktop(8);
+	  margin-top: desktop(16);
+	}
+	
+	&__author-img {
+	  width: desktop(32);
+	  height: desktop(32);
+	  padding: desktop(2);
+	}
+	
+	&__author-info {
+	  p:first-child {
+		font-size: desktop(14);
+		line-height: desktop(16.8);
+		letter-spacing: desktop(0.3);
+	  }
+	  
+	  p:last-child {
+		font-size: desktop(12);
+		line-height: desktop(14.4);
+	  }
+	}
+	
+	&__actions {
+	  bottom: $padding-frame;
+	  left: $padding-frame;
+	  right: $padding-frame;
+	  gap: desktop(24);
+	}
+	
+	&__like-btn {
+	  width: desktop(24);
+	  height: desktop(24);
+	}
   }
 }
 

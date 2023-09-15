@@ -2,7 +2,7 @@ const storiesEl = document.querySelector('.stories')
 
 if (storiesEl) {
   const groups = Array.from(document.querySelectorAll('.stories__group'))
-  const storiesList = Array.from(document.querySelectorAll('div[data-story-open-key]'))
+  const activatorButtons = Array.from(document.querySelectorAll('div[data-story-open-key]'))
   storiesEl.story = {
     groups: []
   }
@@ -12,11 +12,23 @@ if (storiesEl) {
     const prevStoryBtn = group.querySelector('button[data-prev-stories-item]')
     const nextStoryBtn = group.querySelector('button[data-next-stories-item]')
     const sliderIndicators = []
+
+    for (let i = 0; i < stories.length; i++) {
+      const indicator = document.createElement('div')
+      /* if (i === 0) {
+        indicator.classList.add('is-active')
+      } */
+      sliderIndicators.push(indicator)
+      slider.insertAdjacentElement('beforeend', indicator)
+      indicator.insertAdjacentElement('beforeend', document.createElement('div'))
+    }
+
     // Instance
     group.stories = {
       prevStory: prevStory,
       nextStory: nextStory,
       stories: stories,
+      sliderIndicators: sliderIndicators,
       timer: {
         startTimer: startTimer,
         stopTimer: function () {
@@ -29,26 +41,19 @@ if (storiesEl) {
         timerStopTime: null,
         leftTimeToNextSlider: null
       },
-      evalBtn: storiesList.find(storyListItem => storyListItem.dataset.storyOpenKey === group.dataset.storyKey)
+      evalBtn: activatorButtons.find(storyListItem => storyListItem.dataset.storyOpenKey === group.dataset.storyKey)
     }
 
     group.stories.evalBtn.story = group
-
-    for (let i = 0; i < stories.length; i++) {
-      const indicator = document.createElement('div')
-      if (i === 0) {
-        indicator.classList.add('is-active')
-      }
-      sliderIndicators.push(indicator)
-      slider.insertAdjacentElement('beforeend', indicator)
-      indicator.insertAdjacentElement('beforeend', document.createElement('div'))
-    }
 
     // Manually Switch
     let mouseDownTime
 
     group.querySelectorAll('.stories__header, .stories__actions').forEach(el => {
-      el.addEventListener('click', e => {
+      el.addEventListener('mousedown', e => {
+        e.stopPropagation()
+      })
+      el.addEventListener('mouseup', e => {
         e.stopPropagation()
       })
     })
@@ -64,23 +69,23 @@ if (storiesEl) {
       sliderIndicators[findIndexActiveStory()].children[0].style.animationPlayState = 'running'
 
       if (timeDifference < 400) {
-        const halfOfFrame = group.clientWidth / 2
+        const halfOfFrame = window.innerWidth / 2
+
         if (e.clientX > halfOfFrame) {
           nextStory(true)
         } else {
           prevStory(true)
         }
       } else {
-        /* group.stories.timer.startTimer(group.stories.timer.leftTimeToNextSlider) */
+        group.stories.timer.startTimer(group.stories.timer.leftTimeToNextSlider)
       }
     })
 
     function prevStory(isManually = false) {
       const indexActiveStory = findIndexActiveStory()
       if (stories[indexActiveStory - 1]) {
-        stories[indexActiveStory].classList.remove('is-active')
-        stories[indexActiveStory - 1].classList.add('is-active')
-        changeActiveSlider()
+        if (isManually) group.stories.timer.stopTimer()
+        setVisibilityToStory(indexActiveStory - 1, group)
       }
     }
 
@@ -88,34 +93,16 @@ if (storiesEl) {
       const indexActiveStory = findIndexActiveStory()
       const activeGroup = groups.findIndex(storyItem => storyItem.classList.contains('is-active'))
       if (stories[indexActiveStory + 1]) {
-        stories[indexActiveStory].classList.remove('is-active')
-        stories[indexActiveStory + 1].classList.add('is-active')
-        changeActiveSlider()
         if (isManually) group.stories.timer.stopTimer()
-        group.stories.timer.startTimer()
-
-        stories[indexActiveStory + 1].isStoryViewed  = true
-        console.log(group.stories.stories.length, group.stories.stories.filter(el => el.isStoryViewed).length)
-        if (group.stories.stories.length === group.stories.stories.filter(el => el.isStoryViewed).length) {
-          console.log('CHECKED ALL')
-          group.stories.evalBtn.classList.add('stories-list__item--disabled')
-        }
+        setVisibilityToStory(indexActiveStory + 1, group)
       } else {
         console.log('change to other group')
-
         const nextGroup = groups[activeGroup + 1]
         if (nextGroup) {
-          const indexActiveStory = findIndexActiveStory()
-          sliderIndicators[indexActiveStory].classList.remove('is-active')
-          sliderIndicators[0].classList.add('is-active')
-
-          stories[indexActiveStory].classList.remove('is-active')
-          stories[0].classList.add('is-active')
-
+          console.log('nextGroup')
+          setVisibilityToStory(0, nextGroup)
           groups[activeGroup].classList.remove('is-active')
           nextGroup.classList.add('is-active')
-          if (isManually) group.stories.timer.stopTimer()
-          nextGroup.stories.timer.startTimer()
         } else {
           document.querySelector('.stories__group.is-active')?.classList.remove('is-active')
         }
@@ -149,14 +136,37 @@ if (storiesEl) {
     }
   })
 
-  storiesList.forEach(storiesListItem => {
+  function setVisibilityToStory(index, group) {
+    document.querySelector('.stories__item.is-active')?.classList.remove('is-active')
+    document.querySelector('.stories__slider .is-active')?.classList.remove('is-active')
+    const story = group.stories.stories[index]
+    group.stories.sliderIndicators[index].classList.add('is-active')
+    story.classList.add('is-active')
+    story.isStoryViewed = true
+    /* group.stories.timer.startTimer() */
+
+    console.log(group.stories.stories.map(el => el.isStoryViewed))
+
+    if (group.stories.stories.length === group.stories.stories.filter(el => Boolean(el.isStoryViewed)).length) {
+      group.stories.evalBtn.classList.add('stories-list__item--checked')
+    }
+  }
+
+  activatorButtons.forEach(storiesListItem => {
     storiesListItem.addEventListener('click', () => {
+      window.overlay.show()
+      setTimeout(() => {
+        window.overlay.el.addEventListener('onClickOutside', () => {
+          const activeGroup = document.querySelector('.stories__group.is-active')
+          console.log(activeGroup, 'activeGroup')
+          activeGroup?.classList.remove('is-active')
+          activeGroup?.stories.timer.stopTimer()
+        })
+      })
       storiesListItem.story.classList.add('is-active')
-      storiesListItem.story.stories.timer.startTimer()
-      storiesListItem.story.stories.stories[0].isStoryViewed = true
+      setVisibilityToStory(0, storiesListItem.story)
     })
   })
-
   const closeBtns = document.querySelectorAll('button[data-close-stories]')
   closeBtns.forEach(closeBtn => {
     closeBtn.addEventListener('click', () => {
@@ -164,6 +174,7 @@ if (storiesEl) {
       if (activeGroup) {
         activeGroup.classList.remove('is-active')
         activeGroup.stories.timer.stopTimer()
+        window.overlay.hide()
       }
     })
   })
